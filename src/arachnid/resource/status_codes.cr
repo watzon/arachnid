@@ -1,7 +1,7 @@
 module Arachnid
-  class Page
+  class Resource
     module StatusCodes
-      # The response code from the page.
+      # The response code from the resource.
       def code
         @response.status_code.to_i
       end
@@ -42,7 +42,7 @@ module Arachnid
       end
 
       # Determines if the response code is `300`, `301`, `302`, `303`
-      # or `307`. Also checks for "soft" redirects added at the page
+      # or `307`. Also checks for "soft" redirects added at the resource
       # level by a meta refresh tag.
       def redirect?
         case code

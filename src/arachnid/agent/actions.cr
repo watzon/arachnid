@@ -14,8 +14,8 @@ module Arachnid
       # Exception which causes a running `Agent` to skip a link.
       class SkipLink < Action; end
 
-      # Exception which caises a running `Agent` to skip a page.
-      class SkipPage < Action; end
+      # Exception which caises a running `Agent` to skip a resource.
+      class SkipResource < Action; end
     end
 
     # Continue spidering
@@ -45,9 +45,9 @@ module Arachnid
       raise Actions::SkipLink.new
     end
 
-    # Causes the agent to skip the page being visited.
-    def skip_page!
-      raise Actions::SkipPage
+    # Causes the agent to skip the resource being visited.
+    def skip_resource!
+      raise Actions::SkipResource
     end
   end
 end

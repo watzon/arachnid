@@ -1,4 +1,4 @@
-require "../page"
+require "../resource"
 
 module Arachnid
   class Agent
@@ -10,11 +10,11 @@ module Arachnid
       hash[key] = [] of Proc(URI, Nil)
     end
 
-    @every_page_blocks = [] of Proc(Page, Nil)
+    @every_resource_blocks = [] of Proc(Resource, Nil)
 
     @every_link_blocks = [] of Proc(URI, URI, Nil)
 
-    # Pass each URL from each page visited to the given block.
+    # Pass each URL from each resource visited to the given block.
     def every_url(&block : URI ->)
       @every_url_blocks << block
       self
@@ -42,200 +42,207 @@ module Arachnid
     # block.
     def all_headers(&block)
       headers = [] of HTTP::Headers
-      every_page { |page| headers << page.headers }
+      every_resource { |resource| headers << resource.headers }
       headers.each { |header| yield headers }
     end
 
-    # Pass every page that the agent visits to a given block.
-    def every_page(&block : Page ->)
-      @every_page_blocks << block
+    # Pass every resource that the agent visits to a given block.
+    def every_resource(&block : Resource ->)
+      @every_resource_blocks << block
       self
     end
 
-    # Pass every OK page that the agent visits to a given block.
-    def every_ok_page(&block : Page ->)
-      pages = [] of Page
-      every_page { |page| (pages << page) if page.ok? }
-      pages.each { |page| yield page }
+    # Pass every OK resource that the agent visits to a given block.
+    def every_ok_page(&block : Resource ->)
+      resources = [] of Resource
+      every_resource { |resource| (resources << resource) if resource.ok? }
+      resources.each { |resource| yield resource }
     end
 
-    # Pass every Redirect page that the agent visits to a given block.
-    def every_redirect_page(&block : Page ->)
-      pages = [] of Page
-      every_page { |page| (pages << page) if page.redirect? }
-      pages.each { |page| yield page }
+    # Pass every Redirect resource that the agent visits to a given block.
+    def every_redirect_page(&block : Resource ->)
+      resources = [] of Resource
+      every_resource { |resource| (resources << resource) if resource.redirect? }
+      resources.each { |resource| yield resource }
     end
 
-    # Pass every Timeout page that the agent visits to a given block.
-    def every_timedout_page(&block : Page ->)
-      pages = [] of Page
-      every_page { |page| (pages << page) if page.timeout? }
-      pages.each { |page| yield page }
+    # Pass every Timeout resource that the agent visits to a given block.
+    def every_timedout_page(&block : Resource ->)
+      resources = [] of Resource
+      every_resource { |resource| (resources << resource) if resource.timeout? }
+      resources.each { |resource| yield resource }
     end
 
-    # Pass every Bad Request page that the agent visits to a given block.
-    def every_bad_request_page(&block : Page ->)
-      pages = [] of Page
-      every_page { |page| (pages << page) if page.bad_request? }
-      pages.each { |page| yield page }
+    # Pass every Bad Request resource that the agent visits to a given block.
+    def every_bad_request_page(&block : Resource ->)
+      resources = [] of Resource
+      every_resource { |resource| (resources << resource) if resource.bad_request? }
+      resources.each { |resource| yield resource }
     end
 
-    # Pass every Unauthorized page that the agent visits to a given block.
-    def every_unauthorized_page(&block : Page ->)
-      pages = [] of Page
-      every_page { |page| (pages << page) if page.unauthorized? }
-      pages.each { |page| yield page }
+    # Pass every Unauthorized resource that the agent visits to a given block.
+    def every_unauthorized_page(&block : Resource ->)
+      resources = [] of Resource
+      every_resource { |resource| (resources << resource) if resource.unauthorized? }
+      resources.each { |resource| yield resource }
     end
 
-    # Pass every Forbidden page that the agent visits to a given block.
-    def every_forbidden_page(&block : Page ->)
-      pages = [] of Page
-      every_page { |page| (pages << page) if page.forbidden? }
-      pages.each { |page| yield page }
+    # Pass every Forbidden resource that the agent visits to a given block.
+    def every_forbidden_page(&block : Resource ->)
+      resources = [] of Resource
+      every_resource { |resource| (resources << resource) if resource.forbidden? }
+      resources.each { |resource| yield resource }
     end
 
-    # Pass every Missing page that the agent visits to a given block.
-    def every_missing_page(&block : Page ->)
-      pages = [] of Page
-      every_page { |page| (pages << page) if page.missing? }
-      pages.each { |page| yield page }
+    # Pass every Missing resource that the agent visits to a given block.
+    def every_missing_page(&block : Resource ->)
+      resources = [] of Resource
+      every_resource { |resource| (resources << resource) if resource.missing? }
+      resources.each { |resource| yield resource }
     end
 
-    # Pass every Internal Server Error page that the agent visits to a
+    # Pass every Internal Server Error resource that the agent visits to a
     # given block.
-    def every_internal_server_error_page(&block : Page ->)
-      pages = [] of Page
-      every_page { |page| (pages << page) if page.had_internal_server_error? }
-      pages.each { |page| yield page }
+    def every_internal_server_error_page(&block : Resource ->)
+      resources = [] of Resource
+      every_resource { |resource| (resources << resource) if resource.had_internal_server_error? }
+      resources.each { |resource| yield resource }
     end
 
-    # Pass every Plain Text page that the agent visits to a given block.
-    def every_txt_page(&block : Page ->)
-      pages = [] of Page
-      every_page { |page| (pages << page) if page.txt? }
-      pages.each { |page| yield page }
+    # Pass every Plain Text resource that the agent visits to a given block.
+    def every_txt_page(&block : Resource ->)
+      resources = [] of Resource
+      every_resource { |resource| (resources << resource) if resource.txt? }
+      resources.each { |resource| yield resource }
     end
 
-    # Pass every HTML page that the agent visits to a given block.
-    def every_html_page(&block : Page ->)
-      pages = [] of Page
-      every_page { |page| (pages << page) if page.html? }
-      pages.each { |page| yield page }
+    # Pass every HTML resource that the agent visits to a given block.
+    def every_html_page(&block : Resource ->)
+      @every_resource_blocks << ->(resource : Resource) {
+        block.call(resource) if resource.html?
+      }
     end
 
-    # Pass every XML page that the agent visits to a given block.
-    def every_xml_page(&block : Page ->)
-      pages = [] of Page
-      every_page { |page| (pages << page) if page.xml? }
-      pages.each { |page| yield page }
+    # Pass every XML resource that the agent visits to a given block.
+    def every_xml_page(&block : Resource ->)
+      @every_resource_blocks << ->(resource : Resource) {
+        block.call(resource) if resource.xml?
+      }
     end
 
-    # Pass every XML Stylesheet (XSL) page that the agent visits to a
+    # Pass every XML Stylesheet (XSL) resource that the agent visits to a
     # given block.
-    def every_xsl_page(&block : Page ->)
-      pages = [] of Page
-      every_page { |page| (pages << page) if page.xsl? }
-      pages.each { |page| yield page }
+    def every_xsl_page(&block : Resource ->)
+      @every_resource_blocks << ->(resource : Resource) {
+        block.call(resource) if resource.xsl?
+      }
     end
 
     # Pass every HTML or XML document that the agent parses to a given
     # block.
     def every_doc(&block : Document::HTML | XML::Node ->)
-      docs = [] of Document::HTML || XML::Node
-      every_page { |page| docs << page.doc.not_nil! if page.doc }
-      docs.each { |doc| yield doc }
+      @every_resource_blocks << ->(doc : Resource) {
+        block.call(resource.doc.not_nil!) if resource.doc
+      }
     end
 
     # Pass every HTML document that the agent parses to a given block.
     def every_html_doc(&block : Document::HTML | XML::Node ->)
-      docs = [] of Document::HTML
-      every_page { |page| docs << page.doc.not_nil! if page.html? }
-      docs.each { |doc| yield doc }
+      @every_resource_blocks << ->(doc : Resource) {
+        block.call(resource.doc.not_nil!) if resource.html?
+      }
     end
 
     # Pass every XML document that the agent parses to a given block.
     def every_xml_doc(&block : XML::Node ->)
-      docs = [] of XML::Node
-      every_page { |page| docs << page.doc.not_nil! if page.xml? }
-      docs.each { |doc| yield doc }
+      @every_resource_blocks << ->(doc : Resource) {
+        block.call(resource.doc.not_nil!) if resource.xml?
+      }
     end
 
     # Pass every XML Stylesheet (XSL) that the agent parses to a given
     # block.
     def every_xsl_doc(&block : XML::Node ->)
-      docs = [] of XML::Node
-      every_page { |page| docs << page.doc.not_nil! if page.xsl? }
-      docs.each { |doc| yield doc }
+      @every_resource_blocks << ->(doc : Resource) {
+        block.call(resource.doc.not_nil!) if resource.xsl?
+      }
     end
 
     # Pass every RSS document that the agent parses to a given block.
     def every_rss_doc(&block : XML::Node ->)
-      docs = [] of XML::Node
-      every_page { |page| docs << page.doc.not_nil! if page.rss? }
-      docs.each { |doc| yield doc }
+      @every_resource_blocks << ->(resource : Resource) {
+        block.call(resource) if resource.rss?
+      }
     end
 
     # Pass every Atom document that the agent parses to a given block.
     def every_atom_doc(&block : XML::Node ->)
-      docs = [] of XML::Node
-      every_page { |page| docs << page.doc.not_nil! if page.atom? }
-      docs.each { |doc| yield doc }
+      @every_resource_blocks << ->(resource : Resource) {
+        block.call(resource) if resource.atom?
+      }
     end
 
-    # Pass every JavaScript page that the agent visits to a given block.
-    def every_javascript_page(&block : Page ->)
-      pages = [] of Page
-      every_page { |page| (pages << page) if page.javascript? }
-      pages.each { |page| yield page }
+    # Pass every JavaScript resource that the agent visits to a given blocevery_javascript_resource(&block : Resource ->)
+    def every_javascript(&block : Resource ->)
+      @every_resource_blocks << ->(resource : Resource) {
+        block.call(resource) if resource.javascript?
+      }
     end
 
-    # Pass every CSS page that the agent visits to a given block.
-    def every_css_page(&block : Page ->)
-      pages = [] of Page
-      every_page { |page| (pages << page) if page.css? }
-      pages.each { |page| yield page }
+    # Pass every CSS resource that the agent visits to a given block.
+    def every_css(&block : Resource ->)
+      @every_resource_blocks << ->(resource : Resource) {
+        block.call(resource) if resource.css?
+      }
     end
 
     # Pass every RSS feed that the agent visits to a given block.
-    def every_rss_page(&block : Page ->)
-      pages = [] of Page
-      every_page { |page| (pages << page) if page.rss? }
-      pages.each { |page| yield page }
+    def every_rss(&block : Resource ->)
+      @every_resource_blocks << ->(resource : Resource) {
+        block.call(resource) if resource.rss?
+      }
     end
 
     # Pass every Atom feed that the agent visits to a given block.
-    def every_atom_page(&block : Page ->)
-      pages = [] of Page
-      every_page { |page| (pages << page) if page.atom? }
-      pages.each { |page| yield page }
+    def every_atom(&block : Resource ->)
+      @every_resource_blocks << ->(resource : Resource) {
+        block.call(resource) if resource.atom?
+      }
     end
 
-    # Pass every MS Word page that the agent visits to a given block.
-    def every_ms_word_page(&block : Page ->)
-      pages = [] of Page
-      every_page { |page| (pages << page) if page.ms_word? }
-      pages.each { |page| yield page }
+    # Pass every MS Word resource that the agent visits to a given block.
+    def every_ms_word(&block : Resource ->)
+      @every_resource_blocks << ->(resource : Resource) {
+        block.call(resource) if resource.ms_word?
+      }
     end
 
-    # Pass every PDF page that the agent visits to a given block.
-    def every_pdf_page(&block : Page ->)
-      pages = [] of Page
-      every_page { |page| (pages << page) if page.pdf? }
-      pages.each { |page| yield page }
+    # Pass every PDF resource that the agent visits to a given block.
+    def every_pdf(&block : Resource ->)
+      @every_resource_blocks << ->(resource : Resource) {
+        block.call(resource) if resource.pdf?
+      }
     end
 
-    # Pass every ZIP page that the agent visits to a given block.
-    def every_zip_page(&block : Page ->)
-      pages = [] of Page
-      every_page { |page| (pages << page) if page.zip? }
-      pages.each { |page| yield page }
+    # Pass every ZIP resource that the agent visits to a given block.
+    def every_zip(&block : Resource ->)
+      @every_resource_blocks << ->(resource : Resource) {
+        block.call(resource) if resource.zip?
+      }
     end
 
-    # Passes every image URI to the given blocks.
-    def every_image(&block : Page ->)
-      pages = [] of Page
-      every_page { |page| (pages << page) if page.image? }
-      pages.each { |page| yield page }
+    # Passes every image resource to the given block.
+    def every_image(&block : Resource ->)
+      @every_resource_blocks << ->(resource : Resource) {
+        block.call(resource) if resource.image?
+      }
+    end
+
+    # Passes every resource with a matching content type to the given block.
+    def every_content_type(content_type : String | Regex, &block : Resource ->)
+      @every_resource_blocks << ->(resource : Resource) {
+        block.call(resource) if resource.is_content_type?(content_type)
+      }
     end
 
     # Passes every origin and destination URI of each link to a given

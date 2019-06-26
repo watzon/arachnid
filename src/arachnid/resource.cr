@@ -1,22 +1,22 @@
 require "uri"
 require "halite"
 
-require "./page/content_types"
-require "./page/cookies"
-require "./page/html"
-require "./page/status_codes"
+require "./resource/content_types"
+require "./resource/cookies"
+require "./resource/html"
+require "./resource/status_codes"
 
 require "./document/html"
 
 module Arachnid
-  # Represents a page requested from a website
-  class Page
-    include Page::ContentTypes
-    include Page::Cookies
-    include Page::HTML
-    include Page::StatusCodes
+  # Represents a resource requested from a website
+  class Resource
+    include Resource::ContentTypes
+    include Resource::Cookies
+    include Resource::HTML
+    include Resource::StatusCodes
 
-    # URL of the page
+    # URL of the resource
     getter url : URI
 
     # HTTP response
@@ -30,9 +30,9 @@ module Arachnid
     delegate xpath, xpath_node, xpath_nodes, xpath_bool, xpath_float, xpath_string,
       root, at_tag, where_tag, where_class, at_id, css, at_css, to: @doc
 
-    forward_missing_to @headers
+    # forward_missing_to @headers
 
-    # Creates a new `Page` object.
+    # Creates a new `Resource` object.
     def initialize(url : URI, response : Halite::Response)
       @url = url
       @response = response
@@ -44,7 +44,7 @@ module Arachnid
       @response.body || ""
     end
 
-    # Returns a parsed document for HTML, XML, RSS, and Atom pages.
+    # Returns a parsed document for HTML, XML, RSS, and Atom resources.
     def doc
       unless body.empty?
         doc_class = if html?
@@ -78,14 +78,17 @@ module Arachnid
       end
     end
 
+    # Alias for `#search`
     def /(path)
       search(path)
     end
 
+    # Alias for `#at`
     def %(path)
       at(path)
     end
 
+    # Get the size of the body in bytes (useful for binaries)
     def size
       @response.body.bytesize
     end

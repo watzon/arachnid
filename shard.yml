@@ -7,10 +7,7 @@ authors:
 dependencies:
   halite:
     github: icyleaf/halite
-    version: ~> 0.10.1
-  crystagiri:
-    github: madeindjs/crystagiri
-    branch: master
+    version: ~> 0.10.2
 
 crystal: 0.29.0
 

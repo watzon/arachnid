@@ -1,12 +1,12 @@
 module Arachnid
-  class Page
+  class Resource
     module ContentTypes
-      # The Content-Type of the page.
+      # The Content-Type of the resource.
       def content_type
         @response.content_type || ""
       end
 
-      # The content types of the page.
+      # The content types of the resource.
       def content_types
         types = @response.headers.get?("content-type") || [] of String
       end
@@ -28,7 +28,7 @@ module Arachnid
         return nil
       end
 
-      # Determines if any of the content-types of the page include a given
+      # Determines if any of the content-types of the resource include a given
       # type.
       def is_content_type?(type : String | Regex)
         content_types.any? do |value|
@@ -42,7 +42,7 @@ module Arachnid
         end
       end
 
-      # Determines if the page is plain-text.
+      # Determines if the resource is plain-text.
       def plain_text?
         is_content_type?("text/plain")
       end
@@ -52,67 +52,67 @@ module Arachnid
         plain_text?
       end
 
-      # Determines if the page is a Directory Listing.
+      # Determines if the resource is a Directory Listing.
       def directory?
         is_content_type?("text/directory")
       end
 
-      # Determines if the page is HTML document.
+      # Determines if the resource is HTML document.
       def html?
         is_content_type?("text/html")
       end
 
-      # Determines if the page is XML document.
+      # Determines if the resource is XML document.
       def xml?
         is_content_type?(/(text|application)\/xml/)
       end
 
-      # Determines if the page is XML Stylesheet (XSL).
+      # Determines if the resource is XML Stylesheet (XSL).
       def xsl?
         is_content_type?("text/xsl")
       end
 
-      # Determines if the page is JavaScript.
+      # Determines if the resource is JavaScript.
       def javascript?
         is_content_type?(/(text|application)\/javascript/)
       end
 
-      # Determines if the page is JSON.
+      # Determines if the resource is JSON.
       def json?
         is_content_type?("application/json")
       end
 
-      # Determines if the page is a CSS stylesheet.
+      # Determines if the resource is a CSS stylesheet.
       def css?
         is_content_type?("text/css")
       end
 
-      # Determines if the page is a RSS feed.
+      # Determines if the resource is a RSS feed.
       def rss?
         is_content_type?(/application\/(rss\+xml|rdf\+xml)/)
       end
 
-      # Determines if the page is an Atom feed.
+      # Determines if the resource is an Atom feed.
       def atom?
         is_content_type?("application/atom+xml")
       end
 
-      # Determines if the page is a MS Word document.
+      # Determines if the resource is a MS Word document.
       def ms_word?
         is_content_type?("application/msword")
       end
 
-      # Determines if the page is a PDF document.
+      # Determines if the resource is a PDF document.
       def pdf?
         is_content_type?("application/pdf")
       end
 
-      # Determines if the page is a ZIP archive.
+      # Determines if the resource is a ZIP archive.
       def zip?
         is_content_type?("application/zip")
       end
 
-      # Determine if the page is an image.
+      # Determine if the resource is an image.
       def image?
         is_content_type?(/image\//)
       end

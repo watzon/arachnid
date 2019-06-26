@@ -23,7 +23,7 @@ require "arachnid"
 require "json"
 
 # Let's build a sitemap of crystal-lang.org
-# Links will be a hash of url to page title
+# Links will be a hash of url to resource title
 links = {} of String => String
 
 # Visit a particular host, in this case `crystal-lang.org`. This will
@@ -32,13 +32,13 @@ Arachnid.host("https://crystal-lang.org") do |spider|
   # Ignore the API secion. It's a little big.
   spider.ignore_urls_like(/.*\/api.*/)
 
-  spider.every_page do |page|
-    puts "Visiting #{page.url.to_s}"
+  spider.every_resource do |resource|
+    puts "Visiting #{resource.url.to_s}"
 
     # Ignore redirects for our sitemap
-    unless page.redirect?
-      # Add the url of every visited page to our sitemap
-      links[page.url.to_s] = page.title.to_s.strip
+    unless resource.redirect?
+      # Add the url of every visited resource to our sitemap
+      links[resource.url.to_s] = resource.title.to_s.strip
     end
   end
 end
@@ -56,24 +56,26 @@ Arachnid.start_at("https://crystal-lang.org") do |spider|
   base_image_dir = File.expand_path("~/Pictures/arachnid")
   Dir.mkdir_p(base_image_dir)
 
-  spider.every_page do |page|
-    puts "Scanning #{page.url.to_s}"
+  # You could also use `every_image`. This allows us to
+  # track the crawler though.
+  spider.every_resource do |resource|
+    puts "Scanning #{resource.url.to_s}"
 
-    if page.image?
+    if resource.image?
       # Since we're going to be saving a lot of images
       # let's spawn a new fiber for each one. This
       # makes things so much faster.
       spawn do
         # Output directory for images for this host
-        directory = File.join(base_image_dir, page.url.host.to_s)
+        directory = File.join(base_image_dir, resource.url.host.to_s)
         Dir.mkdir_p(directory)
 
         # The name of the image
-        filename = File.basename(page.url.path)
+        filename = File.basename(resource.url.path)
 
-        # Save the image using the body of the page
+        # Save the image using the body of the resource
         puts "Saving #{filename} to #{directory}"
-        File.write(File.join(directory, filename), page.body)
+        File.write(File.join(directory, filename), resource.body)
       end
     end
   end

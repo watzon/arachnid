@@ -1,4 +1,5 @@
 module Arachnid
+  # As hosts are scanned their cookies are stored here.
   class CookieJar
     include Enumerable(HTTP::Cookies)
 
@@ -47,11 +48,11 @@ module Arachnid
     end
 
     # Retrieve cookies for a domain from the response.
-    def from_page(page)
-      cookies = page.cookies
+    def from_resource(resource)
+      cookies = resource.cookies
 
       unless cookies.empty?
-        self[page.url.host.to_s] = cookies
+        self[resource.url.host.to_s] = cookies
         return true
       end
 

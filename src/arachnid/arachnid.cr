@@ -1,4 +1,4 @@
-require "./page"
+require "./resource"
 require "./agent"
 
 module Arachnid
@@ -11,7 +11,7 @@ module Arachnid
   class_property? do_not_track : Bool = false
 
   # Maximum amount of redirects to follow
-  class_property max_redirects : Int32 = 0
+  class_property max_redirects : Int32 = 5
 
   # Connect timeout.
   class_property connect_timeout : Int32 = 10

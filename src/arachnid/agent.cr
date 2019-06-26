@@ -3,7 +3,7 @@ require "./agent/filters"
 require "./agent/events"
 require "./agent/actions"
 require "./agent/robots"
-require "./page"
+require "./resource"
 require "./session_cache"
 require "./cookie_jar"
 require "./auth_store"
@@ -34,7 +34,7 @@ module Arachnid
     # Referer to use.
     property referer : String?
 
-    # Delay in between fetching pages.
+    # Delay in between fetching resources.
     property fetch_delay : Time::Span | Int32
 
     # History containing visited URLs.
@@ -44,7 +44,7 @@ module Arachnid
     getter failures : Set(URI)
 
     # Queue of URLs to visit.
-    getter queue : Array(URI)
+    getter queue : Hash(String, URI)
 
     # The session cache.
     property sessions : SessionCache
@@ -52,7 +52,7 @@ module Arachnid
     # Cached cookies.
     property cookies : CookieJar
 
-    # Maximum number of pages to visit.
+    # Maximum number of resources to visit.
     property limit : Int32?
 
     # Maximum depth.
@@ -75,7 +75,7 @@ module Arachnid
       user_agent : String? = nil,
       referer : String? = nil,
       fetch_delay : (Int32 | Time::Span)? = nil,
-      queue : Set(URI)? = nil,
+      queue : Hash(String, URI)? = nil,
       history : Set(URI)? = nil,
       limit : Int32? = nil,
       max_depth : Int32? = nil,
@@ -95,7 +95,7 @@ module Arachnid
       @fetch_delay = fetch_delay || 0
       @history = history || Set(URI).new
       @failures = Set(URI).new
-      @queue = queue || [] of URI
+      @queue = queue || {} of String => URI
 
       @limit = limit
       @levels = {} of URI => Int32
@@ -165,7 +165,7 @@ module Arachnid
     end
 
     # Start spidering at a given URL.
-    # def start_at(url, &block : Page ->)
+    # def start_at(url, &block : Resource ->)
     #   enqueue(url)
     #   run(&block)
     # end
@@ -178,12 +178,12 @@ module Arachnid
 
     # Start spidering until the queue becomes empty or the
     # agent is paused.
-    # def run(&block : Page ->)
+    # def run(&block : Resource ->)
     #   @running = true
 
     #   until @queue.empty? || paused? || limit_reached?
     #     begin
-    #       visit_page(dequeue, &block)
+    #       visit_resource(dequeue, &block)
     #     rescue Actions::Paused
     #       return self
     #     rescue Actions::Action
@@ -202,7 +202,7 @@ module Arachnid
 
       until @queue.empty? || paused? || limit_reached? || !running?
         begin
-          visit_page(dequeue)
+          visit_resource(dequeue)
         rescue Actions::Paused
           return self
         rescue Actions::Action
@@ -264,16 +264,15 @@ module Arachnid
       @queue.clear
 
       new_queue.each do |url|
-        @queue << url.is_a?(URI) ? url : URI.parse(url)
+        @queue[queue_key(url)] = url
       end
 
       @queue
     end
 
     # Determines whether the given URL has been queued for visiting.
-    def queued?(url)
-      url = url.is_a?(URI) ? url : URI.parse(url)
-      @queue.includes?(url)
+    def queued?(key)
+      @queue.has_key?(key)
     end
 
     # Enqueues a given URL for visiting, only if it passes all
@@ -308,94 +307,94 @@ module Arachnid
         rescue Actions::Action
         end
 
-        @queue << url
+        @queue[queue_key(url)] = url
         @levels[url] = level
         true
       end
     end
 
-    # Gets and creates a new `Page` object from a given URL,
-    # yielding the newly created page.
-    def get_page(url, &block)
+    # Gets and creates a new `Resource` object from a given URL,
+    # yielding the newly created resource.
+    def get_resource(url, &block)
       url = url.is_a?(URI) ? url : URI.parse(url)
 
       prepare_request(url) do |session, path, handlers|
-        new_page = Page.new(url, session.get(path, headers: handlers))
+        new_resource = Resource.new(url, session.get(path, headers: handlers))
 
         # save any new cookies
-        @cookies.from_page(new_page)
+        @cookies.from_resource(new_resource)
 
-        yield new_page
-        return new_page
+        yield new_resource
+        return new_resource
       end
     end
 
-    # Gets and creates a new `Page` object from a given URL.
-    def get_page(url)
+    # Gets and creates a new `Resource` object from a given URL.
+    def get_resource(url)
       url = url.is_a?(URI) ? url : URI.parse(url)
 
       prepare_request(url) do |session, path, handlers|
-        new_page = Page.new(url, session.get(path, handlers))
+        new_resource = Resource.new(url, session.get(path, handlers))
 
         # save any new cookies
-        @cookies.from_page(new_page)
+        @cookies.from_resource(new_resource)
 
-        return new_page
+        return new_resource
       end
     end
 
-    # Posts supplied form data and creates a new Page from a given URL,
-    # yielding the newly created page.
-    def post_page(url, post_data = "", &block)
+    # Posts supplied form data and creates a new Resource from a given URL,
+    # yielding the newly created resource.
+    def post_resource(url, post_data = "", &block)
       url = url.is_a?(URI) ? url : URI.parse(url)
 
       prepare_request(url) do |session, path, handlers|
-        new_page = Page.new(url, session.post(path, post_data, handlers))
+        new_resource = Resource.new(url, session.post(path, post_data, handlers))
 
         # save any new cookies
-        @cookies.from_page(new_page)
+        @cookies.from_resource(new_resource)
 
-        yield new_page
-        return new_page
+        yield new_resource
+        return new_resource
       end
     end
 
-    # Posts supplied form data and creates a new Page from a given URL.
-    def post_page(url, post_data = "")
+    # Posts supplied form data and creates a new Resource from a given URL.
+    def post_resource(url, post_data = "")
       url = url.is_a?(URI) ? url : URI.parse(url)
 
       prepare_request(url) do |session, path, handlers|
-        new_page = Page.new(url, session.post(path, post_data, handlers))
+        new_resource = Resource.new(url, session.post(path, post_data, handlers))
 
         # save any new cookies
-        @cookies.from_page(new_page)
+        @cookies.from_resource(new_resource)
 
-        return new_page
+        return new_resource
       end
     end
 
     # Visits a given URL and enqueues the links recovered
-    # from the page to be visited later.
-    # def visit_page(url, &block : Page ->)
+    # from the resource to be visited later.
+    # def visit_resource(url, &block : Resource ->)
     #   url = sanitize_url(url)
 
-    #   get_page(url) do |page|
-    #     @history << page.url
+    #   get_resource(url) do |resource|
+    #     @history << resource.url
 
     #     begin
-    #       @every_page_blocks.each { |page_block| page_block.call(page) }
-    #       yield page
+    #       @every_resource_blocks.each { |resource_block| resource_block.call(resource) }
+    #       yield resource
     #     rescue action : Actions::Paused
     #       raise(action)
-    #     rescue Actions::SkipPage
+    #     rescue Actions::SkipResource
     #       return Nil
     #     rescue Actions::Action
     #     end
 
-    #     page.each_url do |next_url|
+    #     resource.each_url do |next_url|
     #       begin
     #         @every_link_blocks.each do |link_block|
-    #           link_block.call(page.url, next_url)
+    #           link_block.call(resource.url, next_url)
     #         end
     #       rescue action : Actions::Paused
     #         raise(action)
@@ -413,26 +412,26 @@ module Arachnid
     # end
 
     # Visits a given URL and enqueues the links recovered
-    # from the page to be visited later.
-    def visit_page(url)
+    # from the resource to be visited later.
+    def visit_resource(url)
       url = sanitize_url(url)
 
-      get_page(url) do |page|
-        @history << page.url
+      get_resource(url) do |resource|
+        @history << resource.url
 
         begin
-          @every_page_blocks.each { |page_block| page_block.call(page) }
+          @every_resource_blocks.each { |resource_block| resource_block.call(resource) }
         rescue action : Actions::Paused
           raise(action)
-        rescue Actions::SkipPage
+        rescue Actions::SkipResource
           return nil
         rescue Actions::Action
         end
 
-        page.each_url do |next_url|
+        resource.each_url do |next_url|
           begin
             @every_link_blocks.each do |link_block|
-              link_block.call(page.url, next_url)
+              link_block.call(resource.url, next_url)
             end
           rescue action : Actions::Paused
             raise(action)
@@ -484,7 +483,7 @@ module Arachnid
     end
 
     # Normalizes the request path and grabs a session to handle
-    # page get and post requests.
+    # resource get and post requests.
     def prepare_request(url, &block)
       path = if url.path.empty?
                "/"
@@ -509,7 +508,7 @@ module Arachnid
 
     # Dequeues a URL that will later be visited.
     def dequeue
-      @queue.shift
+      @queue.shift[1]
     end
 
     # Determines if the maximum limit has been reached.
@@ -522,7 +521,6 @@ module Arachnid
 
     # Determines if a given URL should be visited.
     def visit?(url)
-      # puts [url.to_s, visited?(url), visit_scheme?(url.scheme.to_s), visit_host?(url.host.to_s), visit_port?(url.port || -1), visit_link?(url.to_s), visit_url?(url), visit_ext?(url.path)]
       !visited?(url) &&
         visit_scheme?(url.scheme.to_s) &&
         visit_host?(url.host.to_s) &&
@@ -538,6 +536,10 @@ module Arachnid
       @failures << url
       @every_failed_url_blocks.each { |fail_block| fail_block.call(url) }
       true
+    end
+
+    private def queue_key(url)
+      "#{url.host}:#{url.port}"
     end
   end
 end

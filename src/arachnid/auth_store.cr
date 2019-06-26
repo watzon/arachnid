@@ -1,7 +1,7 @@
 require "base64"
 require "./extensions/uri"
 require "./auth_credential"
-require "./page"
+require "./resource"
 
 module Arachnid
   class AuthStore
