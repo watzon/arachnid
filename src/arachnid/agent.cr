@@ -138,7 +138,7 @@ module Arachnid
     # at the given URL.
     def self.site(url, **options, &block : Agent ->)
       url = url.is_a?(URI) ? url : URI.parse(url)
-      url_regex = Regex.new(Regex.escape(url.host.to_s))
+      url_regex = Regex.new(url.host.to_s)
 
       agent = new(**options, &block)
       agent.visit_hosts_like(url_regex)
