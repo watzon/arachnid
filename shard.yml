@@ -1,0 +1,17 @@
+name: arachnid
+version: 0.1.0
+
+authors:
+  - Chris Watson <chris@watzon.me>
+
+dependencies:
+  halite:
+    github: icyleaf/halite
+    version: ~> 0.10.1
+  crystagiri:
+    github: madeindjs/crystagiri
+    branch: master
+
+crystal: 0.29.0
+
+license: MIT
