@@ -153,7 +153,6 @@ Arachnid has a ton of configration options which can be passed to the mehthods l
 - **history** - Links that should not be visited
 - **limit** - Maximum number of resources to visit
 - **max_depth** - Maximum crawl depth
-- **filter_options** - Passed to [`initialize_filters`]()
 
 There are also a few class properties on `Arachnid` itself which are used as the defaults, unless overrided.
 
@@ -185,27 +184,24 @@ Arachnid provides 3 interfaces to use for crawling:
 
 Arachnid has the concept of **filters** for the purpose of filtering urls before visiting them. They are as follows:
 
-- **schemes**
-  - [visit_schemes_like(pattern : String | Regex)]()
-  - [ignore_schemes_like(pattern : String | Regex)]()
 - **hosts**
-  - [visit_hosts_like(pattern : String | Regex)]()
-  - [ignore_hosts_like(pattern : String | Regex)]()
+  - [visit_hosts_like(pattern : String | Regex)](https://watzon.github.io/arachnid/Arachnid/Agent.html#visit_hosts_like%28pattern%29-instance-method)
+  - [ignore_hosts_like(pattern : String | Regex)](https://watzon.github.io/arachnid/Arachnid/Agent.html#ignore_hosts_like%28pattern%29-instance-method)
 - **ports**
-  - [visit_ports_like(pattern : String | Regex)]()
-  - [ignore_ports_like(pattern : String | Regex)]()
+  - [visit_ports_like(pattern : String | Regex)](https://watzon.github.io/arachnid/Arachnid/Agent.html#visit_ports-instance-method)
+  - [ignore_ports_like(pattern : String | Regex)](https://watzon.github.io/arachnid/Arachnid/Agent.html#ignore_ports-instance-method)
 - **ports**
-  - [visit_ports_like(pattern : String | Regex)]()
-  - [ignore_ports_like(pattern : String | Regex)]()
+  - [visit_ports_like(pattern : String | Regex)](https://watzon.github.io/arachnid/Arachnid/Agent.html#visit_ports_like%28pattern%29-instance-method)
+  - [ignore_ports_like(pattern : String | Regex)](https://watzon.github.io/arachnid/Arachnid/Agent.html#ignore_ports_like%28pattern%29-instance-method)
 - **links**
-  - [visit_links_like(pattern : String | Regex)]()
-  - [ignore_links_like(pattern : String | Regex)]()
+  - [visit_links_like(pattern : String | Regex)](https://watzon.github.io/arachnid/Arachnid/Agent.html#visit_links_like(pattern)-instance-method)
+  - [ignore_links_like(pattern : String | Regex)](https://watzon.github.io/arachnid/Arachnid/Agent.html#ignore_links_like(pattern)-instance-method)
 - **urls**
-  - [visit_urls_like(pattern : String | Regex)]()
-  - [ignore_urls_like(pattern : String | Regex)]()
+  - [visit_urls_like(pattern : String | Regex)](https://watzon.github.io/arachnid/Arachnid/Agent.html#visit_urls_like%28pattern%29-instance-method)
+  - [ignore_urls_like(pattern : String | Regex)](https://watzon.github.io/arachnid/Arachnid/Agent.html#ignore_urls_like%28pattern%29-instance-method)
 - **exts**
-  - [visit_exts_like(pattern : String | Regex)]()
-  - [ignore_exts_like(pattern : String | Regex)]()
+  - [visit_exts_like(pattern : String | Regex)](https://watzon.github.io/arachnid/Arachnid/Agent.html#visit_exts_like%28pattern%29-instance-method)
+  - [ignore_exts_like(pattern : String | Regex)](https://watzon.github.io/arachnid/Arachnid/Agent.html#ignore_exts_like%28pattern%29-instance-method)
 
 All of these methods have the ability to also take a block instead of a pattern, where the block returns true or false. The only difference between `links` and `urls` in this case is with the block argument. `links` receives a `String` and `urls` a `URI`. Honestly I'll probably get rid of `links` soon and just make it `urls`.
 
@@ -319,11 +315,11 @@ Passes every origin and destination URI of each link to a given block.
 
 ### Content Types
 
-Every resource has an associated content type and the `Resource` class itself provides several easy methods to check it. You can find all of them [here]().
+Every resource has an associated content type and the `Resource` class itself provides several easy methods to check it. You can find all of them [here](https://watzon.github.io/arachnid/Arachnid/Resource/ContentTypes.html).
 
 ### Parsing HTML
 
-Every HTML/XML resource has full access to the suite of methods provided by [Crystagiri]() allowing you to more easily search by css selector.
+Every HTML/XML resource has full access to the suite of methods provided by [Crystagiri](https://github.com/madeindjs/Crystagiri/) allowing you to more easily search by css selector.
 
 ## Contributing
 
