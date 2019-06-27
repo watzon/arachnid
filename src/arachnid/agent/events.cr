@@ -40,7 +40,7 @@ module Arachnid
 
     # Pass the headers from every response the agent receives to a given
     # block.
-    def all_headers(&block)
+    def all_headers(&block : HTTP::Headers)
       @every_resource_blocks << ->(resource : Resource) {
         block.call(resource.headers)
       }
@@ -182,7 +182,7 @@ module Arachnid
       }
     end
 
-    # Pass every JavaScript resource that the agent visits to a given blocevery_javascript_resource(&block : Resource ->)
+    # Pass every JavaScript resource that the agent visits to a given block
     def every_javascript(&block : Resource ->)
       @every_resource_blocks << ->(resource : Resource) {
         block.call(resource) if resource.javascript?

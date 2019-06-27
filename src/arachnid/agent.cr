@@ -19,7 +19,7 @@ module Arachnid
     # User agent to use.
     property user_agent : String
 
-    # HTTP Hoes Header to use.
+    # HTTP Host Header to use.
     property host_header : String?
 
     # HTTP Host Headers to use for specific hosts.
@@ -66,7 +66,6 @@ module Arachnid
       host : String? = nil,
       read_timeout : Int32? = nil,
       connect_timeout : Int32? = nil,
-      follow_redirects : Bool? = nil,
       max_redirects : Int32? = nil,
       do_not_track : Bool? = nil,
       default_headers : Hash(String, String)? = nil,
@@ -104,7 +103,6 @@ module Arachnid
       @sessions = SessionCache.new(
         read_timeout,
         connect_timeout,
-        follow_redirects,
         max_redirects,
         do_not_track
       )

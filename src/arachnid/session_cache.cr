@@ -23,7 +23,6 @@ module Arachnid
     def initialize(
       read_timeout : Int32? = nil,
       connect_timeout : Int32? = nil,
-      follow_redirects : Bool? = nil,
       max_redirects : Int32? = nil,
       do_not_track : Bool? = nil
     )
