@@ -16,13 +16,10 @@ module Arachnid
 
     # Determines whether the data should be accepted or rejected.
     def accept?(data : T)
-      return true if accept.empty? && reject.empty?
-
-      unless @accept.empty?
-        @accept.any? { |rule| test_data(data, rule) }
-      else
-        !@reject.any? { |rule| test_data(data, rule) }
-      end
+      result = true
+      result = @accept.any? { |rule| test_data(data, rule) } unless @accept.empty?
+      result = !@reject.any? { |rule| test_data(data, rule) } unless @reject.empty? || result == false
+      result
     end
 
     def accept=(value)

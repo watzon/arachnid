@@ -41,9 +41,9 @@ module Arachnid
     # Pass the headers from every response the agent receives to a given
     # block.
     def all_headers(&block)
-      headers = [] of HTTP::Headers
-      every_resource { |resource| headers << resource.headers }
-      headers.each { |header| yield headers }
+      @every_resource_blocks << ->(resource : Resource) {
+        block.call(resource.headers)
+      }
     end
 
     # Pass every resource that the agent visits to a given block.
@@ -54,66 +54,66 @@ module Arachnid
 
     # Pass every OK resource that the agent visits to a given block.
     def every_ok_page(&block : Resource ->)
-      resources = [] of Resource
-      every_resource { |resource| (resources << resource) if resource.ok? }
-      resources.each { |resource| yield resource }
+      @every_resource_blocks << ->(resource : Resource) {
+        block.call(resource) if resource.ok?
+      }
     end
 
     # Pass every Redirect resource that the agent visits to a given block.
     def every_redirect_page(&block : Resource ->)
-      resources = [] of Resource
-      every_resource { |resource| (resources << resource) if resource.redirect? }
-      resources.each { |resource| yield resource }
+      @every_resource_blocks << ->(resource : Resource) {
+        block.call(resource) if resource.redirect?
+      }
     end
 
     # Pass every Timeout resource that the agent visits to a given block.
     def every_timedout_page(&block : Resource ->)
-      resources = [] of Resource
-      every_resource { |resource| (resources << resource) if resource.timeout? }
-      resources.each { |resource| yield resource }
+      @every_resource_blocks << ->(resource : Resource) {
+        block.call(resource) if resource.timeout?
+      }
     end
 
     # Pass every Bad Request resource that the agent visits to a given block.
     def every_bad_request_page(&block : Resource ->)
-      resources = [] of Resource
-      every_resource { |resource| (resources << resource) if resource.bad_request? }
-      resources.each { |resource| yield resource }
+      @every_resource_blocks << ->(resource : Resource) {
+        block.call(resource) if resource.bad_request?
+      }
     end
 
     # Pass every Unauthorized resource that the agent visits to a given block.
     def every_unauthorized_page(&block : Resource ->)
-      resources = [] of Resource
-      every_resource { |resource| (resources << resource) if resource.unauthorized? }
-      resources.each { |resource| yield resource }
+      @every_resource_blocks << ->(resource : Resource) {
+        block.call(resource) if resource.unauthorized?
+      }
     end
 
     # Pass every Forbidden resource that the agent visits to a given block.
     def every_forbidden_page(&block : Resource ->)
-      resources = [] of Resource
-      every_resource { |resource| (resources << resource) if resource.forbidden? }
-      resources.each { |resource| yield resource }
+      @every_resource_blocks << ->(resource : Resource) {
+        block.call(resource) if resource.forbidden?
+      }
     end
 
     # Pass every Missing resource that the agent visits to a given block.
     def every_missing_page(&block : Resource ->)
-      resources = [] of Resource
-      every_resource { |resource| (resources << resource) if resource.missing? }
-      resources.each { |resource| yield resource }
+      @every_resource_blocks << ->(resource : Resource) {
+        block.call(resource) if resource.missing?
+      }
     end
 
     # Pass every Internal Server Error resource that the agent visits to a
     # given block.
     def every_internal_server_error_page(&block : Resource ->)
-      resources = [] of Resource
-      every_resource { |resource| (resources << resource) if resource.had_internal_server_error? }
-      resources.each { |resource| yield resource }
+      @every_resource_blocks << ->(resource : Resource) {
+        block.call(resource) if resource.had_internal_server_error?
+      }
     end
 
     # Pass every Plain Text resource that the agent visits to a given block.
     def every_txt_page(&block : Resource ->)
-      resources = [] of Resource
-      every_resource { |resource| (resources << resource) if resource.txt? }
-      resources.each { |resource| yield resource }
+      @every_resource_blocks << ->(resource : Resource) {
+        block.call(resource) if resource.txt?
+      }
     end
 
     # Pass every HTML resource that the agent visits to a given block.
