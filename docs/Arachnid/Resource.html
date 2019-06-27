@@ -1,0 +1,1522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Crystal Docs 0.29.0">
+
+
+<link href="../css/style.css" rel="stylesheet" type="text/css">
+
+<script type="text/javascript" src="../js/doc.js"></script>
+<script type="text/javascript">
+  CrystalDoc.base_path = "../";
+</script>
+
+  <meta id="repository-name" content="github.com/watzon/arachnid">
+  <title>Arachnid::Resource - github.com/watzon/arachnid</title>
+</head>
+<body>
+
+<div class="sidebar">
+  <div class="sidebar-header">
+    <div class="search-box">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false" aria-label="Search">
+    </div>
+
+    <div class="repository-links">
+      <a href="../index.html">README</a>
+    </div>
+  </div>
+
+  <div class="search-results" class="hidden">
+    <ul class="search-list"></ul>
+  </div>
+
+  <div class="types-list">
+    <ul>
+  
+  <li class="parent open current" data-id="github.com/watzon/arachnid/Arachnid" data-name="arachnid">
+      <a href="../Arachnid.html">Arachnid</a>
+      
+        <ul>
+  
+  <li class="parent " data-id="github.com/watzon/arachnid/Arachnid/Agent" data-name="arachnid::agent">
+      <a href="../Arachnid/Agent.html">Agent</a>
+      
+        <ul>
+  
+  <li class="parent " data-id="github.com/watzon/arachnid/Arachnid/Agent/Actions" data-name="arachnid::agent::actions">
+      <a href="../Arachnid/Agent/Actions.html">Actions</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/watzon/arachnid/Arachnid/Agent/Actions/Action" data-name="arachnid::agent::actions::action">
+      <a href="../Arachnid/Agent/Actions/Action.html">Action</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/watzon/arachnid/Arachnid/Agent/Actions/Paused" data-name="arachnid::agent::actions::paused">
+      <a href="../Arachnid/Agent/Actions/Paused.html">Paused</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/watzon/arachnid/Arachnid/Agent/Actions/RuntimeError" data-name="arachnid::agent::actions::runtimeerror">
+      <a href="../Arachnid/Agent/Actions/RuntimeError.html">RuntimeError</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/watzon/arachnid/Arachnid/Agent/Actions/SkipLink" data-name="arachnid::agent::actions::skiplink">
+      <a href="../Arachnid/Agent/Actions/SkipLink.html">SkipLink</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/watzon/arachnid/Arachnid/Agent/Actions/SkipResource" data-name="arachnid::agent::actions::skipresource">
+      <a href="../Arachnid/Agent/Actions/SkipResource.html">SkipResource</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="github.com/watzon/arachnid/Arachnid/Agent/Queue" data-name="arachnid::agent::queue">
+      <a href="../Arachnid/Agent/Queue.html">Queue</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="github.com/watzon/arachnid/Arachnid/AuthCredential" data-name="arachnid::authcredential">
+      <a href="../Arachnid/AuthCredential.html">AuthCredential</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/watzon/arachnid/Arachnid/AuthStore" data-name="arachnid::authstore">
+      <a href="../Arachnid/AuthStore.html">AuthStore</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/watzon/arachnid/Arachnid/CookieJar" data-name="arachnid::cookiejar">
+      <a href="../Arachnid/CookieJar.html">CookieJar</a>
+      
+    </li>
+  
+  <li class="parent " data-id="github.com/watzon/arachnid/Arachnid/Document" data-name="arachnid::document">
+      <a href="../Arachnid/Document.html">Document</a>
+      
+        <ul>
+  
+  <li class="parent " data-id="github.com/watzon/arachnid/Arachnid/Document/HTML" data-name="arachnid::document::html">
+      <a href="../Arachnid/Document/HTML.html">HTML</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/watzon/arachnid/Arachnid/Document/HTML/Tag" data-name="arachnid::document::html::tag">
+      <a href="../Arachnid/Document/HTML/Tag.html">Tag</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class="parent open current" data-id="github.com/watzon/arachnid/Arachnid/Resource" data-name="arachnid::resource">
+      <a href="../Arachnid/Resource.html">Resource</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/watzon/arachnid/Arachnid/Resource/ContentTypes" data-name="arachnid::resource::contenttypes">
+      <a href="../Arachnid/Resource/ContentTypes.html">ContentTypes</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/watzon/arachnid/Arachnid/Resource/Cookies" data-name="arachnid::resource::cookies">
+      <a href="../Arachnid/Resource/Cookies.html">Cookies</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/watzon/arachnid/Arachnid/Resource/HTML" data-name="arachnid::resource::html">
+      <a href="../Arachnid/Resource/HTML.html">HTML</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/watzon/arachnid/Arachnid/Resource/StatusCodes" data-name="arachnid::resource::statuscodes">
+      <a href="../Arachnid/Resource/StatusCodes.html">StatusCodes</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="github.com/watzon/arachnid/Arachnid/Rules" data-name="arachnid::rules(t)">
+      <a href="../Arachnid/Rules.html">Rules</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/watzon/arachnid/Arachnid/SessionCache" data-name="arachnid::sessioncache">
+      <a href="../Arachnid/SessionCache.html">SessionCache</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="github.com/watzon/arachnid/URI" data-name="uri">
+      <a href="../URI.html">URI</a>
+      
+    </li>
+  
+</ul>
+
+  </div>
+</div>
+
+
+<div class="main-content">
+<h1 class="type-name">
+
+  <span class="kind">class</span> Arachnid::Resource
+
+</h1>
+
+
+  <ul class="superclass-hierarchy"><li class="superclass"><a href="../Arachnid/Resource.html">Arachnid::Resource</a></li><li class="superclass">Reference</li><li class="superclass">Object</li></ul>
+
+
+
+
+  <h2>Overview</h2>
+
+  <p>Represents a resource requested from a website</p>
+
+
+
+
+
+  <h2>Included Modules</h2>
+  <ul class="other-types-list">
+  
+    <li class="other-type"><a href="../Arachnid/Resource/ContentTypes.html">Arachnid::Resource::ContentTypes</a></li>
+  
+    <li class="other-type"><a href="../Arachnid/Resource/Cookies.html">Arachnid::Resource::Cookies</a></li>
+  
+    <li class="other-type"><a href="../Arachnid/Resource/HTML.html">Arachnid::Resource::HTML</a></li>
+  
+    <li class="other-type"><a href="../Arachnid/Resource/StatusCodes.html">Arachnid::Resource::StatusCodes</a></li>
+  
+  </ul>
+
+
+
+
+
+
+
+
+
+
+  <h2>Defined in:</h2>
+  
+    
+      <a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/resource/content_types.cr#L2" target="_blank">
+        arachnid/resource/content_types.cr
+      </a>
+    
+    <br/>
+  
+    
+      <a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/resource/cookies.cr#L2" target="_blank">
+        arachnid/resource/cookies.cr
+      </a>
+    
+    <br/>
+  
+    
+      <a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/resource/html.cr#L4" target="_blank">
+        arachnid/resource/html.cr
+      </a>
+    
+    <br/>
+  
+    
+      <a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/resource/status_codes.cr#L2" target="_blank">
+        arachnid/resource/status_codes.cr
+      </a>
+    
+    <br/>
+  
+    
+      <a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/resource.cr#L13" target="_blank">
+        arachnid/resource.cr
+      </a>
+    
+    <br/>
+  
+
+
+
+
+
+  <h2>Constructors</h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#new%28url%3AURI%2Cresponse%3AHalite%3A%3AResponse%29-class-method" class="signature"><strong>.new</strong>(url : URI, response : Halite::Response)</a>
+        
+          <div class="summary"><p>Creates a new <code><a href="../Arachnid/Resource.html">Resource</a></code> object.</p></div>
+        
+      </li>
+    
+  </ul>
+
+
+
+
+
+  <h2>Instance Method Summary</h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#%25%28path%29-instance-method" class="signature"><strong>#%</strong>(path)</a>
+        
+          <div class="summary"><p>Alias for <code><a href="../Arachnid/Resource.html#at%28path%29-instance-method">#at</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#%2F%28path%29-instance-method" class="signature"><strong>#/</strong>(path)</a>
+        
+          <div class="summary"><p>Alias for <code><a href="../Arachnid/Resource.html#search%28path%29-instance-method">#search</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#at%28path%29-instance-method" class="signature"><strong>#at</strong>(path)</a>
+        
+          <div class="summary"><p>Searches for the first occurrence of an XPath or CSS path</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#at_css%28%2Aargs%2C%2A%2Aoptions%29-instance-method" class="signature"><strong>#at_css</strong>(*args, **options)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#at_css%28%2Aargs%2C%2A%2Aoptions%2C%26block%29-instance-method" class="signature"><strong>#at_css</strong>(*args, **options, &block)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#at_id%28%2Aargs%2C%2A%2Aoptions%29-instance-method" class="signature"><strong>#at_id</strong>(*args, **options)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#at_id%28%2Aargs%2C%2A%2Aoptions%2C%26block%29-instance-method" class="signature"><strong>#at_id</strong>(*args, **options, &block)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#at_tag%28%2Aargs%2C%2A%2Aoptions%29-instance-method" class="signature"><strong>#at_tag</strong>(*args, **options)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#at_tag%28%2Aargs%2C%2A%2Aoptions%2C%26block%29-instance-method" class="signature"><strong>#at_tag</strong>(*args, **options, &block)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#body-instance-method" class="signature"><strong>#body</strong></a>
+        
+          <div class="summary"><p>The body of the response</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#css%28%2Aargs%2C%2A%2Aoptions%2C%26block%29-instance-method" class="signature"><strong>#css</strong>(*args, **options, &block)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#css%28%2Aargs%2C%2A%2Aoptions%29-instance-method" class="signature"><strong>#css</strong>(*args, **options)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#doc-instance-method" class="signature"><strong>#doc</strong></a>
+        
+          <div class="summary"><p>Returns a parsed document for HTML, XML, RSS, and Atom resources.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#headers%3AHTTP%3A%3AHeaders-instance-method" class="signature"><strong>#headers</strong> : HTTP::Headers</a>
+        
+          <div class="summary"><p>Headers returned with the body</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#response%3AHalite%3A%3AResponse-instance-method" class="signature"><strong>#response</strong> : Halite::Response</a>
+        
+          <div class="summary"><p>HTTP response</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#root%28%2Aargs%2C%2A%2Aoptions%29-instance-method" class="signature"><strong>#root</strong>(*args, **options)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#root%28%2Aargs%2C%2A%2Aoptions%2C%26block%29-instance-method" class="signature"><strong>#root</strong>(*args, **options, &block)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#search%28path%29-instance-method" class="signature"><strong>#search</strong>(path)</a>
+        
+          <div class="summary"><p>Searches the document for XPath or CSS paths</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#size-instance-method" class="signature"><strong>#size</strong></a>
+        
+          <div class="summary"><p>Get the size of the body in bytes (useful for binaries)</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#to_s-instance-method" class="signature"><strong>#to_s</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#url%3AURI-instance-method" class="signature"><strong>#url</strong> : URI</a>
+        
+          <div class="summary"><p>URL of the resource</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#where_class%28%2Aargs%2C%2A%2Aoptions%29-instance-method" class="signature"><strong>#where_class</strong>(*args, **options)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#where_class%28%2Aargs%2C%2A%2Aoptions%2C%26block%29-instance-method" class="signature"><strong>#where_class</strong>(*args, **options, &block)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#where_tag%28%2Aargs%2C%2A%2Aoptions%29-instance-method" class="signature"><strong>#where_tag</strong>(*args, **options)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#where_tag%28%2Aargs%2C%2A%2Aoptions%2C%26block%29-instance-method" class="signature"><strong>#where_tag</strong>(*args, **options, &block)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#xpath%28%2Aargs%2C%2A%2Aoptions%2C%26block%29-instance-method" class="signature"><strong>#xpath</strong>(*args, **options, &block)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#xpath%28%2Aargs%2C%2A%2Aoptions%29-instance-method" class="signature"><strong>#xpath</strong>(*args, **options)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#xpath_bool%28%2Aargs%2C%2A%2Aoptions%29-instance-method" class="signature"><strong>#xpath_bool</strong>(*args, **options)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#xpath_bool%28%2Aargs%2C%2A%2Aoptions%2C%26block%29-instance-method" class="signature"><strong>#xpath_bool</strong>(*args, **options, &block)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#xpath_float%28%2Aargs%2C%2A%2Aoptions%2C%26block%29-instance-method" class="signature"><strong>#xpath_float</strong>(*args, **options, &block)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#xpath_float%28%2Aargs%2C%2A%2Aoptions%29-instance-method" class="signature"><strong>#xpath_float</strong>(*args, **options)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#xpath_node%28%2Aargs%2C%2A%2Aoptions%2C%26block%29-instance-method" class="signature"><strong>#xpath_node</strong>(*args, **options, &block)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#xpath_node%28%2Aargs%2C%2A%2Aoptions%29-instance-method" class="signature"><strong>#xpath_node</strong>(*args, **options)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#xpath_nodes%28%2Aargs%2C%2A%2Aoptions%2C%26block%29-instance-method" class="signature"><strong>#xpath_nodes</strong>(*args, **options, &block)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#xpath_nodes%28%2Aargs%2C%2A%2Aoptions%29-instance-method" class="signature"><strong>#xpath_nodes</strong>(*args, **options)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#xpath_string%28%2Aargs%2C%2A%2Aoptions%2C%26block%29-instance-method" class="signature"><strong>#xpath_string</strong>(*args, **options, &block)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#xpath_string%28%2Aargs%2C%2A%2Aoptions%29-instance-method" class="signature"><strong>#xpath_string</strong>(*args, **options)</a>
+        
+      </li>
+    
+  </ul>
+
+
+
+
+
+<div class="methods-inherited">
+  
+    
+
+  <h3>Instance methods inherited from module <code><a href="../Arachnid/Resource/StatusCodes.html">Arachnid::Resource::StatusCodes</a></code></h3>
+  
+  
+    <a href="../Arachnid/Resource/StatusCodes.html#bad_request%3F-instance-method" class="tooltip">
+      <span>bad_request?</span>
+    bad_request?</a>, 
+    
+  
+    <a href="../Arachnid/Resource/StatusCodes.html#code-instance-method" class="tooltip">
+      <span>code</span>
+    code</a>, 
+    
+  
+    <a href="../Arachnid/Resource/StatusCodes.html#forbidden%3F-instance-method" class="tooltip">
+      <span>forbidden?</span>
+    forbidden?</a>, 
+    
+  
+    <a href="../Arachnid/Resource/StatusCodes.html#had_internal_server_error%3F-instance-method" class="tooltip">
+      <span>had_internal_server_error?</span>
+    had_internal_server_error?</a>, 
+    
+  
+    <a href="../Arachnid/Resource/StatusCodes.html#missing%3F-instance-method" class="tooltip">
+      <span>missing?</span>
+    missing?</a>, 
+    
+  
+    <a href="../Arachnid/Resource/StatusCodes.html#ok%3F-instance-method" class="tooltip">
+      <span>ok?</span>
+    ok?</a>, 
+    
+  
+    <a href="../Arachnid/Resource/StatusCodes.html#redirect%3F-instance-method" class="tooltip">
+      <span>redirect?</span>
+    redirect?</a>, 
+    
+  
+    <a href="../Arachnid/Resource/StatusCodes.html#timedout%3F-instance-method" class="tooltip">
+      <span>timedout?</span>
+    timedout?</a>, 
+    
+  
+    <a href="../Arachnid/Resource/StatusCodes.html#unauthorized%3F-instance-method" class="tooltip">
+      <span>unauthorized?</span>
+    unauthorized?</a>
+    
+  
+
+
+    
+
+
+    
+
+
+  
+    
+
+  <h3>Instance methods inherited from module <code><a href="../Arachnid/Resource/HTML.html">Arachnid::Resource::HTML</a></code></h3>
+  
+  
+    <a href="../Arachnid/Resource/HTML.html#each%28%26block%29-instance-method" class="tooltip">
+      <span>each(&block)</span>
+    each</a>, 
+    
+  
+    <a href="../Arachnid/Resource/HTML.html#each_image%28%26block%3AURI-%3E%29-instance-method" class="tooltip">
+      <span>each_image(&block : URI -> )</span>
+    each_image</a>, 
+    
+  
+    <a href="../Arachnid/Resource/HTML.html#each_link%28%26block%3AURI-%3E%29-instance-method" class="tooltip">
+      <span>each_link(&block : URI -> )</span>
+    each_link</a>, 
+    
+  
+    <a href="../Arachnid/Resource/HTML.html#each_mailto%28%26block%29-instance-method" class="tooltip">
+      <span>each_mailto(&block)</span>
+    each_mailto</a>, 
+    
+  
+    <a href="../Arachnid/Resource/HTML.html#each_meta_redirect%28%26block%3AURI-%3E%29-instance-method" class="tooltip">
+      <span>each_meta_redirect(&block : URI -> )</span>
+    each_meta_redirect</a>, 
+    
+  
+    <a href="../Arachnid/Resource/HTML.html#each_redirect%28%26block%3AURI-%3E%29-instance-method" class="tooltip">
+      <span>each_redirect(&block : URI -> )</span>
+    each_redirect</a>, 
+    
+  
+    <a href="../Arachnid/Resource/HTML.html#each_resource%28%26block%3AURI-%3E%29-instance-method" class="tooltip">
+      <span>each_resource(&block : URI -> )</span>
+    each_resource</a>, 
+    
+  
+    <a href="../Arachnid/Resource/HTML.html#each_script%28%26block%3AURI-%3E%29-instance-method" class="tooltip">
+      <span>each_script(&block : URI -> )</span>
+    each_script</a>, 
+    
+  
+    <a href="../Arachnid/Resource/HTML.html#each_url%28%26block%3AURI-%3E%29-instance-method" class="tooltip">
+      <span>each_url(&block : URI -> )</span>
+    each_url</a>, 
+    
+  
+    <a href="../Arachnid/Resource/HTML.html#each_video%28%26block%3AURI-%3E%29-instance-method" class="tooltip">
+      <span>each_video(&block : URI -> )</span>
+    each_video</a>, 
+    
+  
+    <a href="../Arachnid/Resource/HTML.html#links-instance-method" class="tooltip">
+      <span>links</span>
+    links</a>, 
+    
+  
+    <a href="../Arachnid/Resource/HTML.html#mailtos-instance-method" class="tooltip">
+      <span>mailtos</span>
+    mailtos</a>, 
+    
+  
+    <a href="../Arachnid/Resource/HTML.html#meta_redirect%3F-instance-method" class="tooltip">
+      <span>meta_redirect?</span>
+    meta_redirect?</a>, 
+    
+  
+    <a href="../Arachnid/Resource/HTML.html#meta_redirects-instance-method" class="tooltip">
+      <span>meta_redirects</span>
+    meta_redirects</a>, 
+    
+  
+    <a href="../Arachnid/Resource/HTML.html#redirects_to-instance-method" class="tooltip">
+      <span>redirects_to</span>
+    redirects_to</a>, 
+    
+  
+    <a href="../Arachnid/Resource/HTML.html#title-instance-method" class="tooltip">
+      <span>title</span>
+    title</a>, 
+    
+  
+    <a href="../Arachnid/Resource/HTML.html#to_absolute%28link%29-instance-method" class="tooltip">
+      <span>to_absolute(link)</span>
+    to_absolute</a>, 
+    
+  
+    <a href="../Arachnid/Resource/HTML.html#urls-instance-method" class="tooltip">
+      <span>urls</span>
+    urls</a>
+    
+  
+
+
+    
+
+
+    
+
+
+  
+    
+
+  <h3>Instance methods inherited from module <code><a href="../Arachnid/Resource/Cookies.html">Arachnid::Resource::Cookies</a></code></h3>
+  
+  
+    <a href="../Arachnid/Resource/Cookies.html#cookie-instance-method" class="tooltip">
+      <span>cookie</span>
+    cookie</a>, 
+    
+  
+    <a href="../Arachnid/Resource/Cookies.html#cookies-instance-method" class="tooltip">
+      <span>cookies</span>
+    cookies</a>
+    
+  
+
+
+    
+
+
+    
+
+
+  
+    
+
+  <h3>Instance methods inherited from module <code><a href="../Arachnid/Resource/ContentTypes.html">Arachnid::Resource::ContentTypes</a></code></h3>
+  
+  
+    <a href="../Arachnid/Resource/ContentTypes.html#atom%3F-instance-method" class="tooltip">
+      <span>atom?</span>
+    atom?</a>, 
+    
+  
+    <a href="../Arachnid/Resource/ContentTypes.html#avi%3F-instance-method" class="tooltip">
+      <span>avi?</span>
+    avi?</a>, 
+    
+  
+    <a href="../Arachnid/Resource/ContentTypes.html#content_charset-instance-method" class="tooltip">
+      <span>content_charset</span>
+    content_charset</a>, 
+    
+  
+    <a href="../Arachnid/Resource/ContentTypes.html#content_type-instance-method" class="tooltip">
+      <span>content_type</span>
+    content_type</a>, 
+    
+  
+    <a href="../Arachnid/Resource/ContentTypes.html#content_types-instance-method" class="tooltip">
+      <span>content_types</span>
+    content_types</a>, 
+    
+  
+    <a href="../Arachnid/Resource/ContentTypes.html#css%3F-instance-method" class="tooltip">
+      <span>css?</span>
+    css?</a>, 
+    
+  
+    <a href="../Arachnid/Resource/ContentTypes.html#directory%3F-instance-method" class="tooltip">
+      <span>directory?</span>
+    directory?</a>, 
+    
+  
+    <a href="../Arachnid/Resource/ContentTypes.html#flash%3F-instance-method" class="tooltip">
+      <span>flash?</span>
+    flash?</a>, 
+    
+  
+    <a href="../Arachnid/Resource/ContentTypes.html#gif%3F-instance-method" class="tooltip">
+      <span>gif?</span>
+    gif?</a>, 
+    
+  
+    <a href="../Arachnid/Resource/ContentTypes.html#html%3F-instance-method" class="tooltip">
+      <span>html?</span>
+    html?</a>, 
+    
+  
+    <a href="../Arachnid/Resource/ContentTypes.html#image%3F-instance-method" class="tooltip">
+      <span>image?</span>
+    image?</a>, 
+    
+  
+    <a href="../Arachnid/Resource/ContentTypes.html#is_content_type%3F%28type%3AString%7CRegex%29-instance-method" class="tooltip">
+      <span>is_content_type?(type : String | Regex)</span>
+    is_content_type?</a>, 
+    
+  
+    <a href="../Arachnid/Resource/ContentTypes.html#javascript%3F-instance-method" class="tooltip">
+      <span>javascript?</span>
+    javascript?</a>, 
+    
+  
+    <a href="../Arachnid/Resource/ContentTypes.html#jpg%3F-instance-method" class="tooltip">
+      <span>jpg?</span>
+    jpg?</a>, 
+    
+  
+    <a href="../Arachnid/Resource/ContentTypes.html#json%3F-instance-method" class="tooltip">
+      <span>json?</span>
+    json?</a>, 
+    
+  
+    <a href="../Arachnid/Resource/ContentTypes.html#mp4%3F-instance-method" class="tooltip">
+      <span>mp4?</span>
+    mp4?</a>, 
+    
+  
+    <a href="../Arachnid/Resource/ContentTypes.html#ms_word%3F-instance-method" class="tooltip">
+      <span>ms_word?</span>
+    ms_word?</a>, 
+    
+  
+    <a href="../Arachnid/Resource/ContentTypes.html#pdf%3F-instance-method" class="tooltip">
+      <span>pdf?</span>
+    pdf?</a>, 
+    
+  
+    <a href="../Arachnid/Resource/ContentTypes.html#plain_text%3F-instance-method" class="tooltip">
+      <span>plain_text?</span>
+    plain_text?</a>, 
+    
+  
+    <a href="../Arachnid/Resource/ContentTypes.html#png%3F-instance-method" class="tooltip">
+      <span>png?</span>
+    png?</a>, 
+    
+  
+    <a href="../Arachnid/Resource/ContentTypes.html#quicktime%3F-instance-method" class="tooltip">
+      <span>quicktime?</span>
+    quicktime?</a>, 
+    
+  
+    <a href="../Arachnid/Resource/ContentTypes.html#rss%3F-instance-method" class="tooltip">
+      <span>rss?</span>
+    rss?</a>, 
+    
+  
+    <a href="../Arachnid/Resource/ContentTypes.html#svg%3F-instance-method" class="tooltip">
+      <span>svg?</span>
+    svg?</a>, 
+    
+  
+    <a href="../Arachnid/Resource/ContentTypes.html#text%3F-instance-method" class="tooltip">
+      <span>text?</span>
+    text?</a>, 
+    
+  
+    <a href="../Arachnid/Resource/ContentTypes.html#video%3F-instance-method" class="tooltip">
+      <span>video?</span>
+    video?</a>, 
+    
+  
+    <a href="../Arachnid/Resource/ContentTypes.html#wmv%3F-instance-method" class="tooltip">
+      <span>wmv?</span>
+    wmv?</a>, 
+    
+  
+    <a href="../Arachnid/Resource/ContentTypes.html#xml%3F-instance-method" class="tooltip">
+      <span>xml?</span>
+    xml?</a>, 
+    
+  
+    <a href="../Arachnid/Resource/ContentTypes.html#xsl%3F-instance-method" class="tooltip">
+      <span>xsl?</span>
+    xsl?</a>, 
+    
+  
+    <a href="../Arachnid/Resource/ContentTypes.html#zip%3F-instance-method" class="tooltip">
+      <span>zip?</span>
+    zip?</a>
+    
+  
+
+
+    
+
+
+    
+
+
+  
+    
+
+
+    
+
+
+    
+
+
+  
+    
+
+
+    
+
+
+    
+
+
+  
+</div>
+
+
+  <h2>Constructor Detail</h2>
+  
+    <div class="entry-detail" id="new(url:URI,response:Halite::Response)-class-method">
+      <div class="signature">
+        
+        def self.<strong>new</strong>(url : <a href="../URI.html">URI</a>, response : Halite::Response)
+
+        <a class="method-permalink" href="#new%28url%3AURI%2Cresponse%3AHalite%3A%3AResponse%29-class-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Creates a new <code><a href="../Arachnid/Resource.html">Resource</a></code> object.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/resource.cr#L36" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+
+
+
+
+
+  <h2>Instance Method Detail</h2>
+  
+    <div class="entry-detail" id="%(path)-instance-method">
+      <div class="signature">
+        
+        def <strong>%</strong>(path)
+
+        <a class="method-permalink" href="#%25%28path%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Alias for <code><a href="../Arachnid/Resource.html#at%28path%29-instance-method">#at</a></code></p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/resource.cr#L87" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="/(path)-instance-method">
+      <div class="signature">
+        
+        def <strong>/</strong>(path)
+
+        <a class="method-permalink" href="#%2F%28path%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Alias for <code><a href="../Arachnid/Resource.html#search%28path%29-instance-method">#search</a></code></p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/resource.cr#L82" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="at(path)-instance-method">
+      <div class="signature">
+        
+        def <strong>at</strong>(path)
+
+        <a class="method-permalink" href="#at%28path%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Searches for the first occurrence of an XPath or CSS path</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/resource.cr#L75" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="at_css(*args,**options)-instance-method">
+      <div class="signature">
+        
+        def <strong>at_css</strong>(*args, **options)
+
+        <a class="method-permalink" href="#at_css%28%2Aargs%2C%2A%2Aoptions%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/resource.cr#L30" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="at_css(*args,**options,&amp;block)-instance-method">
+      <div class="signature">
+        
+        def <strong>at_css</strong>(*args, **options, &block)
+
+        <a class="method-permalink" href="#at_css%28%2Aargs%2C%2A%2Aoptions%2C%26block%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/resource.cr#L30" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="at_id(*args,**options)-instance-method">
+      <div class="signature">
+        
+        def <strong>at_id</strong>(*args, **options)
+
+        <a class="method-permalink" href="#at_id%28%2Aargs%2C%2A%2Aoptions%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/resource.cr#L30" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="at_id(*args,**options,&amp;block)-instance-method">
+      <div class="signature">
+        
+        def <strong>at_id</strong>(*args, **options, &block)
+
+        <a class="method-permalink" href="#at_id%28%2Aargs%2C%2A%2Aoptions%2C%26block%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/resource.cr#L30" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="at_tag(*args,**options)-instance-method">
+      <div class="signature">
+        
+        def <strong>at_tag</strong>(*args, **options)
+
+        <a class="method-permalink" href="#at_tag%28%2Aargs%2C%2A%2Aoptions%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/resource.cr#L30" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="at_tag(*args,**options,&amp;block)-instance-method">
+      <div class="signature">
+        
+        def <strong>at_tag</strong>(*args, **options, &block)
+
+        <a class="method-permalink" href="#at_tag%28%2Aargs%2C%2A%2Aoptions%2C%26block%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/resource.cr#L30" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="body-instance-method">
+      <div class="signature">
+        
+        def <strong>body</strong>
+
+        <a class="method-permalink" href="#body-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>The body of the response</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/resource.cr#L43" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="css(*args,**options,&amp;block)-instance-method">
+      <div class="signature">
+        
+        def <strong>css</strong>(*args, **options, &block)
+
+        <a class="method-permalink" href="#css%28%2Aargs%2C%2A%2Aoptions%2C%26block%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/resource.cr#L30" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="css(*args,**options)-instance-method">
+      <div class="signature">
+        
+        def <strong>css</strong>(*args, **options)
+
+        <a class="method-permalink" href="#css%28%2Aargs%2C%2A%2Aoptions%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/resource.cr#L30" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="doc-instance-method">
+      <div class="signature">
+        
+        def <strong>doc</strong>
+
+        <a class="method-permalink" href="#doc-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Returns a parsed document for HTML, XML, RSS, and Atom resources.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/resource.cr#L48" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="headers:HTTP::Headers-instance-method">
+      <div class="signature">
+        
+        def <strong>headers</strong> : HTTP::Headers
+
+        <a class="method-permalink" href="#headers%3AHTTP%3A%3AHeaders-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Headers returned with the body</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/resource.cr#L28" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="response:Halite::Response-instance-method">
+      <div class="signature">
+        
+        def <strong>response</strong> : Halite::Response
+
+        <a class="method-permalink" href="#response%3AHalite%3A%3AResponse-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>HTTP response</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/resource.cr#L25" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="root(*args,**options)-instance-method">
+      <div class="signature">
+        
+        def <strong>root</strong>(*args, **options)
+
+        <a class="method-permalink" href="#root%28%2Aargs%2C%2A%2Aoptions%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/resource.cr#L30" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="root(*args,**options,&amp;block)-instance-method">
+      <div class="signature">
+        
+        def <strong>root</strong>(*args, **options, &block)
+
+        <a class="method-permalink" href="#root%28%2Aargs%2C%2A%2Aoptions%2C%26block%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/resource.cr#L30" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="search(path)-instance-method">
+      <div class="signature">
+        
+        def <strong>search</strong>(path)
+
+        <a class="method-permalink" href="#search%28path%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Searches the document for XPath or CSS paths</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/resource.cr#L66" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="size-instance-method">
+      <div class="signature">
+        
+        def <strong>size</strong>
+
+        <a class="method-permalink" href="#size-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Get the size of the body in bytes (useful for binaries)</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/resource.cr#L92" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="to_s-instance-method">
+      <div class="signature">
+        
+        def <strong>to_s</strong>
+
+        <a class="method-permalink" href="#to_s-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/resource.cr#L96" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="url:URI-instance-method">
+      <div class="signature">
+        
+        def <strong>url</strong> : <a href="../URI.html">URI</a>
+
+        <a class="method-permalink" href="#url%3AURI-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>URL of the resource</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/resource.cr#L22" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="where_class(*args,**options)-instance-method">
+      <div class="signature">
+        
+        def <strong>where_class</strong>(*args, **options)
+
+        <a class="method-permalink" href="#where_class%28%2Aargs%2C%2A%2Aoptions%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/resource.cr#L30" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="where_class(*args,**options,&amp;block)-instance-method">
+      <div class="signature">
+        
+        def <strong>where_class</strong>(*args, **options, &block)
+
+        <a class="method-permalink" href="#where_class%28%2Aargs%2C%2A%2Aoptions%2C%26block%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/resource.cr#L30" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="where_tag(*args,**options)-instance-method">
+      <div class="signature">
+        
+        def <strong>where_tag</strong>(*args, **options)
+
+        <a class="method-permalink" href="#where_tag%28%2Aargs%2C%2A%2Aoptions%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/resource.cr#L30" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="where_tag(*args,**options,&amp;block)-instance-method">
+      <div class="signature">
+        
+        def <strong>where_tag</strong>(*args, **options, &block)
+
+        <a class="method-permalink" href="#where_tag%28%2Aargs%2C%2A%2Aoptions%2C%26block%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/resource.cr#L30" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="xpath(*args,**options,&amp;block)-instance-method">
+      <div class="signature">
+        
+        def <strong>xpath</strong>(*args, **options, &block)
+
+        <a class="method-permalink" href="#xpath%28%2Aargs%2C%2A%2Aoptions%2C%26block%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/resource.cr#L30" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="xpath(*args,**options)-instance-method">
+      <div class="signature">
+        
+        def <strong>xpath</strong>(*args, **options)
+
+        <a class="method-permalink" href="#xpath%28%2Aargs%2C%2A%2Aoptions%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/resource.cr#L30" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="xpath_bool(*args,**options)-instance-method">
+      <div class="signature">
+        
+        def <strong>xpath_bool</strong>(*args, **options)
+
+        <a class="method-permalink" href="#xpath_bool%28%2Aargs%2C%2A%2Aoptions%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/resource.cr#L30" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="xpath_bool(*args,**options,&amp;block)-instance-method">
+      <div class="signature">
+        
+        def <strong>xpath_bool</strong>(*args, **options, &block)
+
+        <a class="method-permalink" href="#xpath_bool%28%2Aargs%2C%2A%2Aoptions%2C%26block%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/resource.cr#L30" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="xpath_float(*args,**options,&amp;block)-instance-method">
+      <div class="signature">
+        
+        def <strong>xpath_float</strong>(*args, **options, &block)
+
+        <a class="method-permalink" href="#xpath_float%28%2Aargs%2C%2A%2Aoptions%2C%26block%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/resource.cr#L30" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="xpath_float(*args,**options)-instance-method">
+      <div class="signature">
+        
+        def <strong>xpath_float</strong>(*args, **options)
+
+        <a class="method-permalink" href="#xpath_float%28%2Aargs%2C%2A%2Aoptions%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/resource.cr#L30" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="xpath_node(*args,**options,&amp;block)-instance-method">
+      <div class="signature">
+        
+        def <strong>xpath_node</strong>(*args, **options, &block)
+
+        <a class="method-permalink" href="#xpath_node%28%2Aargs%2C%2A%2Aoptions%2C%26block%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/resource.cr#L30" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="xpath_node(*args,**options)-instance-method">
+      <div class="signature">
+        
+        def <strong>xpath_node</strong>(*args, **options)
+
+        <a class="method-permalink" href="#xpath_node%28%2Aargs%2C%2A%2Aoptions%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/resource.cr#L30" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="xpath_nodes(*args,**options,&amp;block)-instance-method">
+      <div class="signature">
+        
+        def <strong>xpath_nodes</strong>(*args, **options, &block)
+
+        <a class="method-permalink" href="#xpath_nodes%28%2Aargs%2C%2A%2Aoptions%2C%26block%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/resource.cr#L30" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="xpath_nodes(*args,**options)-instance-method">
+      <div class="signature">
+        
+        def <strong>xpath_nodes</strong>(*args, **options)
+
+        <a class="method-permalink" href="#xpath_nodes%28%2Aargs%2C%2A%2Aoptions%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/resource.cr#L30" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="xpath_string(*args,**options,&amp;block)-instance-method">
+      <div class="signature">
+        
+        def <strong>xpath_string</strong>(*args, **options, &block)
+
+        <a class="method-permalink" href="#xpath_string%28%2Aargs%2C%2A%2Aoptions%2C%26block%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/resource.cr#L30" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="xpath_string(*args,**options)-instance-method">
+      <div class="signature">
+        
+        def <strong>xpath_string</strong>(*args, **options)
+
+        <a class="method-permalink" href="#xpath_string%28%2Aargs%2C%2A%2Aoptions%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/resource.cr#L30" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+
+
+
+
+</div>
+
+</body>
+</html>

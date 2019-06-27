@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Crystal Docs 0.29.0">
+
+
+<link href="../css/style.css" rel="stylesheet" type="text/css">
+
+<script type="text/javascript" src="../js/doc.js"></script>
+<script type="text/javascript">
+  CrystalDoc.base_path = "../";
+</script>
+
+  <meta id="repository-name" content="github.com/watzon/arachnid">
+  <title>Arachnid::Rules(T) - github.com/watzon/arachnid</title>
+</head>
+<body>
+
+<div class="sidebar">
+  <div class="sidebar-header">
+    <div class="search-box">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false" aria-label="Search">
+    </div>
+
+    <div class="repository-links">
+      <a href="../index.html">README</a>
+    </div>
+  </div>
+
+  <div class="search-results" class="hidden">
+    <ul class="search-list"></ul>
+  </div>
+
+  <div class="types-list">
+    <ul>
+  
+  <li class="parent open current" data-id="github.com/watzon/arachnid/Arachnid" data-name="arachnid">
+      <a href="../Arachnid.html">Arachnid</a>
+      
+        <ul>
+  
+  <li class="parent " data-id="github.com/watzon/arachnid/Arachnid/Agent" data-name="arachnid::agent">
+      <a href="../Arachnid/Agent.html">Agent</a>
+      
+        <ul>
+  
+  <li class="parent " data-id="github.com/watzon/arachnid/Arachnid/Agent/Actions" data-name="arachnid::agent::actions">
+      <a href="../Arachnid/Agent/Actions.html">Actions</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/watzon/arachnid/Arachnid/Agent/Actions/Action" data-name="arachnid::agent::actions::action">
+      <a href="../Arachnid/Agent/Actions/Action.html">Action</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/watzon/arachnid/Arachnid/Agent/Actions/Paused" data-name="arachnid::agent::actions::paused">
+      <a href="../Arachnid/Agent/Actions/Paused.html">Paused</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/watzon/arachnid/Arachnid/Agent/Actions/RuntimeError" data-name="arachnid::agent::actions::runtimeerror">
+      <a href="../Arachnid/Agent/Actions/RuntimeError.html">RuntimeError</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/watzon/arachnid/Arachnid/Agent/Actions/SkipLink" data-name="arachnid::agent::actions::skiplink">
+      <a href="../Arachnid/Agent/Actions/SkipLink.html">SkipLink</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/watzon/arachnid/Arachnid/Agent/Actions/SkipResource" data-name="arachnid::agent::actions::skipresource">
+      <a href="../Arachnid/Agent/Actions/SkipResource.html">SkipResource</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="github.com/watzon/arachnid/Arachnid/Agent/Queue" data-name="arachnid::agent::queue">
+      <a href="../Arachnid/Agent/Queue.html">Queue</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="github.com/watzon/arachnid/Arachnid/AuthCredential" data-name="arachnid::authcredential">
+      <a href="../Arachnid/AuthCredential.html">AuthCredential</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/watzon/arachnid/Arachnid/AuthStore" data-name="arachnid::authstore">
+      <a href="../Arachnid/AuthStore.html">AuthStore</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/watzon/arachnid/Arachnid/CookieJar" data-name="arachnid::cookiejar">
+      <a href="../Arachnid/CookieJar.html">CookieJar</a>
+      
+    </li>
+  
+  <li class="parent " data-id="github.com/watzon/arachnid/Arachnid/Document" data-name="arachnid::document">
+      <a href="../Arachnid/Document.html">Document</a>
+      
+        <ul>
+  
+  <li class="parent " data-id="github.com/watzon/arachnid/Arachnid/Document/HTML" data-name="arachnid::document::html">
+      <a href="../Arachnid/Document/HTML.html">HTML</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/watzon/arachnid/Arachnid/Document/HTML/Tag" data-name="arachnid::document::html::tag">
+      <a href="../Arachnid/Document/HTML/Tag.html">Tag</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class="parent " data-id="github.com/watzon/arachnid/Arachnid/Resource" data-name="arachnid::resource">
+      <a href="../Arachnid/Resource.html">Resource</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/watzon/arachnid/Arachnid/Resource/ContentTypes" data-name="arachnid::resource::contenttypes">
+      <a href="../Arachnid/Resource/ContentTypes.html">ContentTypes</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/watzon/arachnid/Arachnid/Resource/Cookies" data-name="arachnid::resource::cookies">
+      <a href="../Arachnid/Resource/Cookies.html">Cookies</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/watzon/arachnid/Arachnid/Resource/HTML" data-name="arachnid::resource::html">
+      <a href="../Arachnid/Resource/HTML.html">HTML</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/watzon/arachnid/Arachnid/Resource/StatusCodes" data-name="arachnid::resource::statuscodes">
+      <a href="../Arachnid/Resource/StatusCodes.html">StatusCodes</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" current" data-id="github.com/watzon/arachnid/Arachnid/Rules" data-name="arachnid::rules(t)">
+      <a href="../Arachnid/Rules.html">Rules</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/watzon/arachnid/Arachnid/SessionCache" data-name="arachnid::sessioncache">
+      <a href="../Arachnid/SessionCache.html">SessionCache</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="github.com/watzon/arachnid/URI" data-name="uri">
+      <a href="../URI.html">URI</a>
+      
+    </li>
+  
+</ul>
+
+  </div>
+</div>
+
+
+<div class="main-content">
+<h1 class="type-name">
+
+  <span class="kind">class</span> Arachnid::Rules(T)
+
+</h1>
+
+
+  <ul class="superclass-hierarchy"><li class="superclass"><a href="../Arachnid/Rules.html">Arachnid::Rules(T)</a></li><li class="superclass">Reference</li><li class="superclass">Object</li></ul>
+
+
+
+
+  <h2>Overview</h2>
+
+  <p>The <code><a href="../Arachnid/Rules.html">Rules</a></code> class represents collections of acceptance and rejection
+rules, which are used to filter data.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2>Defined in:</h2>
+  
+    
+      <a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/rules.cr#L4" target="_blank">
+        arachnid/rules.cr
+      </a>
+    
+    <br/>
+  
+
+
+
+
+
+  <h2>Constructors</h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#new%28accept%3AArray%28Proc%28T%3F%2CBool%29%7CT%7CRegex%7CString%29%3F%3Dnil%2Creject%3AArray%28Proc%28T%3F%2CBool%29%7CT%7CRegex%7CString%29%3F%3Dnil%29-class-method" class="signature"><strong>.new</strong>(accept : Array(Proc(T?, Bool) | T | Regex | String)? = <span class="n">nil</span>, reject : Array(Proc(T?, Bool) | T | Regex | String)? = <span class="n">nil</span>)</a>
+        
+          <div class="summary"><p>Creates a new <code><a href="../Arachnid/Rules.html">Rules</a></code> object.</p></div>
+        
+      </li>
+    
+  </ul>
+
+
+
+
+
+  <h2>Instance Method Summary</h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#accept%3AArray%28Proc%28T%3F%2CBool%29%7CT%7CRegex%7CString%29-instance-method" class="signature"><strong>#accept</strong> : Array(Proc(T?, Bool) | T | Regex | String)</a>
+        
+          <div class="summary"><p>Accept rules</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#accept%3D%28value%29-instance-method" class="signature"><strong>#accept=</strong>(value)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#accept%3F%28data%3AT%29-instance-method" class="signature"><strong>#accept?</strong>(data : T)</a>
+        
+          <div class="summary"><p>Determines whether the data should be accepted or rejected.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#reject%3AArray%28Proc%28T%3F%2CBool%29%7CT%7CRegex%7CString%29-instance-method" class="signature"><strong>#reject</strong> : Array(Proc(T?, Bool) | T | Regex | String)</a>
+        
+          <div class="summary"><p>Reject rules</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#reject%3D%28value%29-instance-method" class="signature"><strong>#reject=</strong>(value)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#reject%3F%28data%3AT%29-instance-method" class="signature"><strong>#reject?</strong>(data : T)</a>
+        
+          <div class="summary"><p>Determines whether the data should be rejected or accepted.</p></div>
+        
+      </li>
+    
+  </ul>
+
+
+
+
+
+<div class="methods-inherited">
+  
+    
+
+
+    
+
+
+    
+
+
+  
+    
+
+
+    
+
+
+    
+
+
+  
+</div>
+
+
+  <h2>Constructor Detail</h2>
+  
+    <div class="entry-detail" id="new(accept:Array(Proc(T?,Bool)|T|Regex|String)?=nil,reject:Array(Proc(T?,Bool)|T|Regex|String)?=nil)-class-method">
+      <div class="signature">
+        
+        def self.<strong>new</strong>(accept : Array(Proc(T?, Bool) | T | Regex | String)? = <span class="n">nil</span>, reject : Array(Proc(T?, Bool) | T | Regex | String)? = <span class="n">nil</span>)
+
+        <a class="method-permalink" href="#new%28accept%3AArray%28Proc%28T%3F%2CBool%29%7CT%7CRegex%7CString%29%3F%3Dnil%2Creject%3AArray%28Proc%28T%3F%2CBool%29%7CT%7CRegex%7CString%29%3F%3Dnil%29-class-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Creates a new <code><a href="../Arachnid/Rules.html">Rules</a></code> object.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/rules.cr#L12" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+
+
+
+
+
+  <h2>Instance Method Detail</h2>
+  
+    <div class="entry-detail" id="accept:Array(Proc(T?,Bool)|T|Regex|String)-instance-method">
+      <div class="signature">
+        
+        def <strong>accept</strong> : Array(Proc(T?, Bool) | T | Regex | String)
+
+        <a class="method-permalink" href="#accept%3AArray%28Proc%28T%3F%2CBool%29%7CT%7CRegex%7CString%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Accept rules</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/rules.cr#L8" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="accept=(value)-instance-method">
+      <div class="signature">
+        
+        def <strong>accept=</strong>(value)
+
+        <a class="method-permalink" href="#accept%3D%28value%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/rules.cr#L25" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="accept?(data:T)-instance-method">
+      <div class="signature">
+        
+        def <strong>accept?</strong>(data : T)
+
+        <a class="method-permalink" href="#accept%3F%28data%3AT%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Determines whether the data should be accepted or rejected.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/rules.cr#L18" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="reject:Array(Proc(T?,Bool)|T|Regex|String)-instance-method">
+      <div class="signature">
+        
+        def <strong>reject</strong> : Array(Proc(T?, Bool) | T | Regex | String)
+
+        <a class="method-permalink" href="#reject%3AArray%28Proc%28T%3F%2CBool%29%7CT%7CRegex%7CString%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Reject rules</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/rules.cr#L11" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="reject=(value)-instance-method">
+      <div class="signature">
+        
+        def <strong>reject=</strong>(value)
+
+        <a class="method-permalink" href="#reject%3D%28value%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/rules.cr#L34" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="reject?(data:T)-instance-method">
+      <div class="signature">
+        
+        def <strong>reject?</strong>(data : T)
+
+        <a class="method-permalink" href="#reject%3F%28data%3AT%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Determines whether the data should be rejected or accepted.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/rules.cr#L30" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+
+
+
+
+</div>
+
+</body>
+</html>

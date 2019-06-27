@@ -1,0 +1,3710 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Crystal Docs 0.29.0">
+
+
+<link href="../css/style.css" rel="stylesheet" type="text/css">
+
+<script type="text/javascript" src="../js/doc.js"></script>
+<script type="text/javascript">
+  CrystalDoc.base_path = "../";
+</script>
+
+  <meta id="repository-name" content="github.com/watzon/arachnid">
+  <title>Arachnid::Agent - github.com/watzon/arachnid</title>
+</head>
+<body>
+
+<div class="sidebar">
+  <div class="sidebar-header">
+    <div class="search-box">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false" aria-label="Search">
+    </div>
+
+    <div class="repository-links">
+      <a href="../index.html">README</a>
+    </div>
+  </div>
+
+  <div class="search-results" class="hidden">
+    <ul class="search-list"></ul>
+  </div>
+
+  <div class="types-list">
+    <ul>
+  
+  <li class="parent open current" data-id="github.com/watzon/arachnid/Arachnid" data-name="arachnid">
+      <a href="../Arachnid.html">Arachnid</a>
+      
+        <ul>
+  
+  <li class="parent open current" data-id="github.com/watzon/arachnid/Arachnid/Agent" data-name="arachnid::agent">
+      <a href="../Arachnid/Agent.html">Agent</a>
+      
+        <ul>
+  
+  <li class="parent " data-id="github.com/watzon/arachnid/Arachnid/Agent/Actions" data-name="arachnid::agent::actions">
+      <a href="../Arachnid/Agent/Actions.html">Actions</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/watzon/arachnid/Arachnid/Agent/Actions/Action" data-name="arachnid::agent::actions::action">
+      <a href="../Arachnid/Agent/Actions/Action.html">Action</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/watzon/arachnid/Arachnid/Agent/Actions/Paused" data-name="arachnid::agent::actions::paused">
+      <a href="../Arachnid/Agent/Actions/Paused.html">Paused</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/watzon/arachnid/Arachnid/Agent/Actions/RuntimeError" data-name="arachnid::agent::actions::runtimeerror">
+      <a href="../Arachnid/Agent/Actions/RuntimeError.html">RuntimeError</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/watzon/arachnid/Arachnid/Agent/Actions/SkipLink" data-name="arachnid::agent::actions::skiplink">
+      <a href="../Arachnid/Agent/Actions/SkipLink.html">SkipLink</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/watzon/arachnid/Arachnid/Agent/Actions/SkipResource" data-name="arachnid::agent::actions::skipresource">
+      <a href="../Arachnid/Agent/Actions/SkipResource.html">SkipResource</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="github.com/watzon/arachnid/Arachnid/Agent/Queue" data-name="arachnid::agent::queue">
+      <a href="../Arachnid/Agent/Queue.html">Queue</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="github.com/watzon/arachnid/Arachnid/AuthCredential" data-name="arachnid::authcredential">
+      <a href="../Arachnid/AuthCredential.html">AuthCredential</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/watzon/arachnid/Arachnid/AuthStore" data-name="arachnid::authstore">
+      <a href="../Arachnid/AuthStore.html">AuthStore</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/watzon/arachnid/Arachnid/CookieJar" data-name="arachnid::cookiejar">
+      <a href="../Arachnid/CookieJar.html">CookieJar</a>
+      
+    </li>
+  
+  <li class="parent " data-id="github.com/watzon/arachnid/Arachnid/Document" data-name="arachnid::document">
+      <a href="../Arachnid/Document.html">Document</a>
+      
+        <ul>
+  
+  <li class="parent " data-id="github.com/watzon/arachnid/Arachnid/Document/HTML" data-name="arachnid::document::html">
+      <a href="../Arachnid/Document/HTML.html">HTML</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/watzon/arachnid/Arachnid/Document/HTML/Tag" data-name="arachnid::document::html::tag">
+      <a href="../Arachnid/Document/HTML/Tag.html">Tag</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class="parent " data-id="github.com/watzon/arachnid/Arachnid/Resource" data-name="arachnid::resource">
+      <a href="../Arachnid/Resource.html">Resource</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/watzon/arachnid/Arachnid/Resource/ContentTypes" data-name="arachnid::resource::contenttypes">
+      <a href="../Arachnid/Resource/ContentTypes.html">ContentTypes</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/watzon/arachnid/Arachnid/Resource/Cookies" data-name="arachnid::resource::cookies">
+      <a href="../Arachnid/Resource/Cookies.html">Cookies</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/watzon/arachnid/Arachnid/Resource/HTML" data-name="arachnid::resource::html">
+      <a href="../Arachnid/Resource/HTML.html">HTML</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/watzon/arachnid/Arachnid/Resource/StatusCodes" data-name="arachnid::resource::statuscodes">
+      <a href="../Arachnid/Resource/StatusCodes.html">StatusCodes</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="github.com/watzon/arachnid/Arachnid/Rules" data-name="arachnid::rules(t)">
+      <a href="../Arachnid/Rules.html">Rules</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/watzon/arachnid/Arachnid/SessionCache" data-name="arachnid::sessioncache">
+      <a href="../Arachnid/SessionCache.html">SessionCache</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="github.com/watzon/arachnid/URI" data-name="uri">
+      <a href="../URI.html">URI</a>
+      
+    </li>
+  
+</ul>
+
+  </div>
+</div>
+
+
+<div class="main-content">
+<h1 class="type-name">
+
+  <span class="kind">class</span> Arachnid::Agent
+
+</h1>
+
+
+  <ul class="superclass-hierarchy"><li class="superclass"><a href="../Arachnid/Agent.html">Arachnid::Agent</a></li><li class="superclass">Reference</li><li class="superclass">Object</li></ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2>Defined in:</h2>
+  
+    
+      <a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/agent/sanitizers.cr#L2" target="_blank">
+        arachnid/agent/sanitizers.cr
+      </a>
+    
+    <br/>
+  
+    
+      <a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/agent/filters.cr#L4" target="_blank">
+        arachnid/agent/filters.cr
+      </a>
+    
+    <br/>
+  
+    
+      <a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/agent/events.cr#L4" target="_blank">
+        arachnid/agent/events.cr
+      </a>
+    
+    <br/>
+  
+    
+      <a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/agent/actions.cr#L2" target="_blank">
+        arachnid/agent/actions.cr
+      </a>
+    
+    <br/>
+  
+    
+      <a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/agent/robots.cr#L2" target="_blank">
+        arachnid/agent/robots.cr
+      </a>
+    
+    <br/>
+  
+    
+      <a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/agent.cr#L12" target="_blank">
+        arachnid/agent.cr
+      </a>
+    
+    <br/>
+  
+    
+      <a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/agent/queue.cr#L6" target="_blank">
+        arachnid/agent/queue.cr
+      </a>
+    
+    <br/>
+  
+
+
+
+
+
+  <h2>Constructors</h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#new%28host%3AString%3F%3Dnil%2Cread_timeout%3AInt32%3F%3Dnil%2Cconnect_timeout%3AInt32%3F%3Dnil%2Cmax_redirects%3AInt32%3F%3Dnil%2Cdo_not_track%3ABool%3F%3Dnil%2Cdefault_headers%3AHash%28String%2CString%29%3F%3Dnil%2Chost_header%3AString%3F%3Dnil%2Chost_headers%3AHash%28String%7CRegex%2CString%29%3F%3Dnil%2Cuser_agent%3AString%3F%3Dnil%2Creferer%3AString%3F%3Dnil%2Cfetch_delay%3AInt32%7CTime%3A%3ASpan%3F%3Dnil%2Cqueue%3AHash%28String%2CURI%29%3F%3Dnil%2Chistory%3ASet%28URI%29%3F%3Dnil%2Climit%3AInt32%3F%3Dnil%2Cmax_depth%3AInt32%3F%3Dnil%2Crobots%3ABool%3F%3Dnil%2Cfilter_options%3Dnil%29-class-method" class="signature"><strong>.new</strong>(host : String? = <span class="n">nil</span>, read_timeout : Int32? = <span class="n">nil</span>, connect_timeout : Int32? = <span class="n">nil</span>, max_redirects : Int32? = <span class="n">nil</span>, do_not_track : Bool? = <span class="n">nil</span>, default_headers : Hash(String, String)? = <span class="n">nil</span>, host_header : String? = <span class="n">nil</span>, host_headers : Hash(String | Regex, String)? = <span class="n">nil</span>, user_agent : String? = <span class="n">nil</span>, referer : String? = <span class="n">nil</span>, fetch_delay : Int32 | Time::Span? = <span class="n">nil</span>, queue : Hash(String, URI)? = <span class="n">nil</span>, history : Set(URI)? = <span class="n">nil</span>, limit : Int32? = <span class="n">nil</span>, max_depth : Int32? = <span class="n">nil</span>, robots : Bool? = <span class="n">nil</span>, filter_options = <span class="n">nil</span>)</a>
+        
+          <div class="summary"><p>Creates a new <code><a href="../Arachnid/Agent.html">Agent</a></code> object.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#new%28%2A%2Aoptions%2C%26block%3AAgent-%3E%29-class-method" class="signature"><strong>.new</strong>(**options, &block : Agent -> )</a>
+        
+          <div class="summary"><p>Create a new scoped <code><a href="../Arachnid/Agent.html">Agent</a></code> in a block.</p></div>
+        
+      </li>
+    
+  </ul>
+
+
+
+  <h2>Class Method Summary</h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#host%28url%2C%2A%2Aoptions%2C%26block%3AAgent-%3E%29-class-method" class="signature"><strong>.host</strong>(url, **options, &block : Agent -> )</a>
+        
+          <div class="summary"><p>Creates a new <code><a href="../Arachnid/Agent.html">Agent</a></code> and spiders the given host.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#site%28url%2C%2A%2Aoptions%2C%26block%3AAgent-%3E%29-class-method" class="signature"><strong>.site</strong>(url, **options, &block : Agent -> )</a>
+        
+          <div class="summary"><p>Creates a new <code><a href="../Arachnid/Agent.html">Agent</a></code> and spiders the web site located at the given URL.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#start_at%28url%2C%2A%2Aoptions%2C%26block%3AAgent-%3E%29-class-method" class="signature"><strong>.start_at</strong>(url, **options, &block : Agent -> )</a>
+        
+          <div class="summary"><p>Creates a new <code><a href="../Arachnid/Agent.html">Agent</a></code> and begins spidering at the given URL.</p></div>
+        
+      </li>
+    
+  </ul>
+
+
+
+  <h2>Instance Method Summary</h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#all_headers%28%26block%3AHTTP%3A%3AHeaders%29-instance-method" class="signature"><strong>#all_headers</strong>(&block : HTTP::Headers)</a>
+        
+          <div class="summary"><p>Pass the headers from every response the agent receives to a given block.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#authorized%3AAuthStore-instance-method" class="signature"><strong>#authorized</strong> : AuthStore</a>
+        
+          <div class="summary"><p>HTTP Authentication credentials.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#authorized%3D%28authorized%3AAuthStore%29-instance-method" class="signature"><strong>#authorized=</strong>(authorized : AuthStore)</a>
+        
+          <div class="summary"><p>HTTP Authentication credentials.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#clear-instance-method" class="signature"><strong>#clear</strong></a>
+        
+          <div class="summary"><p>Clears the history of the <code><a href="../Arachnid/Agent.html">Agent</a></code>.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#continue%21%28%26block%29-instance-method" class="signature"><strong>#continue!</strong>(&block)</a>
+        
+          <div class="summary"><p>Continue spidering</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#cookies%3ACookieJar-instance-method" class="signature"><strong>#cookies</strong> : CookieJar</a>
+        
+          <div class="summary"><p>Cached cookies.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#cookies%3D%28cookies%3ACookieJar%29-instance-method" class="signature"><strong>#cookies=</strong>(cookies : CookieJar)</a>
+        
+          <div class="summary"><p>Cached cookies.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#default_headers%3AHash%28String%2CString%29-instance-method" class="signature"><strong>#default_headers</strong> : Hash(String, String)</a>
+        
+          <div class="summary"><p>HTTP Headers to use for every request.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#default_headers%3D%28default_headers%3AHash%28String%2CString%29%29-instance-method" class="signature"><strong>#default_headers=</strong>(default_headers : Hash(String, String))</a>
+        
+          <div class="summary"><p>HTTP Headers to use for every request.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#dequeue-instance-method" class="signature"><strong>#dequeue</strong></a>
+        
+          <div class="summary"><p>Dequeues a URL that will later be visited.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#enqueue%28url%2Clevel%3D0%2Cforce%3Dfalse%29-instance-method" class="signature"><strong>#enqueue</strong>(url, level = <span class="n">0</span>, force = <span class="n">false</span>)</a>
+        
+          <div class="summary"><p>Enqueues a given URL for visiting, only if it passes all of the agent's rules for visiting a given URL.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#every_atom%28%26block%3AResource-%3E%29-instance-method" class="signature"><strong>#every_atom</strong>(&block : Resource -> )</a>
+        
+          <div class="summary"><p>Pass every Atom feed that the agent visits to a given block.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#every_atom_doc%28%26block%3AXML%3A%3ANode-%3E%29-instance-method" class="signature"><strong>#every_atom_doc</strong>(&block : XML::Node -> )</a>
+        
+          <div class="summary"><p>Pass every Atom document that the agent parses to a given block.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#every_bad_request_page%28%26block%3AResource-%3E%29-instance-method" class="signature"><strong>#every_bad_request_page</strong>(&block : Resource -> )</a>
+        
+          <div class="summary"><p>Pass every Bad Request resource that the agent visits to a given block.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#every_content_type%28content_type%3AString%7CRegex%2C%26block%3AResource-%3E%29-instance-method" class="signature"><strong>#every_content_type</strong>(content_type : String | Regex, &block : Resource -> )</a>
+        
+          <div class="summary"><p>Passes every resource with a matching content type to the given block.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#every_css%28%26block%3AResource-%3E%29-instance-method" class="signature"><strong>#every_css</strong>(&block : Resource -> )</a>
+        
+          <div class="summary"><p>Pass every CSS resource that the agent visits to a given block.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#every_doc%28%26block%3ADocument%3A%3AHTML%7CXML%3A%3ANode-%3E%29-instance-method" class="signature"><strong>#every_doc</strong>(&block : Document::HTML | XML::Node -> )</a>
+        
+          <div class="summary"><p>Pass every HTML or XML document that the agent parses to a given block.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#every_failed_url%28%26block%3AURI-%3E%29-instance-method" class="signature"><strong>#every_failed_url</strong>(&block : URI -> )</a>
+        
+          <div class="summary"><p>Pass each URL that could not be requested to the given block.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#every_forbidden_page%28%26block%3AResource-%3E%29-instance-method" class="signature"><strong>#every_forbidden_page</strong>(&block : Resource -> )</a>
+        
+          <div class="summary"><p>Pass every Forbidden resource that the agent visits to a given block.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#every_html_doc%28%26block%3ADocument%3A%3AHTML%7CXML%3A%3ANode-%3E%29-instance-method" class="signature"><strong>#every_html_doc</strong>(&block : Document::HTML | XML::Node -> )</a>
+        
+          <div class="summary"><p>Pass every HTML document that the agent parses to a given block.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#every_html_page%28%26block%3AResource-%3E%29-instance-method" class="signature"><strong>#every_html_page</strong>(&block : Resource -> )</a>
+        
+          <div class="summary"><p>Pass every HTML resource that the agent visits to a given block.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#every_image%28%26block%3AResource-%3E%29-instance-method" class="signature"><strong>#every_image</strong>(&block : Resource -> )</a>
+        
+          <div class="summary"><p>Passes every image resource to the given block.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#every_internal_server_error_page%28%26block%3AResource-%3E%29-instance-method" class="signature"><strong>#every_internal_server_error_page</strong>(&block : Resource -> )</a>
+        
+          <div class="summary"><p>Pass every Internal Server Error resource that the agent visits to a given block.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#every_javascript%28%26block%3AResource-%3E%29-instance-method" class="signature"><strong>#every_javascript</strong>(&block : Resource -> )</a>
+        
+          <div class="summary"><p>Pass every JavaScript resource that the agent visits to a given block</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#every_link%28%26block%3AURI%2CURI-%3E%29-instance-method" class="signature"><strong>#every_link</strong>(&block : URI, URI -> )</a>
+        
+          <div class="summary"><p>Passes every origin and destination URI of each link to a given block.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#every_missing_page%28%26block%3AResource-%3E%29-instance-method" class="signature"><strong>#every_missing_page</strong>(&block : Resource -> )</a>
+        
+          <div class="summary"><p>Pass every Missing resource that the agent visits to a given block.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#every_ms_word%28%26block%3AResource-%3E%29-instance-method" class="signature"><strong>#every_ms_word</strong>(&block : Resource -> )</a>
+        
+          <div class="summary"><p>Pass every MS Word resource that the agent visits to a given block.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#every_ok_page%28%26block%3AResource-%3E%29-instance-method" class="signature"><strong>#every_ok_page</strong>(&block : Resource -> )</a>
+        
+          <div class="summary"><p>Pass every OK resource that the agent visits to a given block.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#every_pdf%28%26block%3AResource-%3E%29-instance-method" class="signature"><strong>#every_pdf</strong>(&block : Resource -> )</a>
+        
+          <div class="summary"><p>Pass every PDF resource that the agent visits to a given block.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#every_redirect_page%28%26block%3AResource-%3E%29-instance-method" class="signature"><strong>#every_redirect_page</strong>(&block : Resource -> )</a>
+        
+          <div class="summary"><p>Pass every Redirect resource that the agent visits to a given block.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#every_resource%28%26block%3AResource-%3E%29-instance-method" class="signature"><strong>#every_resource</strong>(&block : Resource -> )</a>
+        
+          <div class="summary"><p>Pass every resource that the agent visits to a given block.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#every_rss%28%26block%3AResource-%3E%29-instance-method" class="signature"><strong>#every_rss</strong>(&block : Resource -> )</a>
+        
+          <div class="summary"><p>Pass every RSS feed that the agent visits to a given block.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#every_rss_doc%28%26block%3AXML%3A%3ANode-%3E%29-instance-method" class="signature"><strong>#every_rss_doc</strong>(&block : XML::Node -> )</a>
+        
+          <div class="summary"><p>Pass every RSS document that the agent parses to a given block.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#every_timedout_page%28%26block%3AResource-%3E%29-instance-method" class="signature"><strong>#every_timedout_page</strong>(&block : Resource -> )</a>
+        
+          <div class="summary"><p>Pass every Timeout resource that the agent visits to a given block.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#every_txt_page%28%26block%3AResource-%3E%29-instance-method" class="signature"><strong>#every_txt_page</strong>(&block : Resource -> )</a>
+        
+          <div class="summary"><p>Pass every Plain Text resource that the agent visits to a given block.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#every_unauthorized_page%28%26block%3AResource-%3E%29-instance-method" class="signature"><strong>#every_unauthorized_page</strong>(&block : Resource -> )</a>
+        
+          <div class="summary"><p>Pass every Unauthorized resource that the agent visits to a given block.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#every_url%28%26block%3AURI-%3E%29-instance-method" class="signature"><strong>#every_url</strong>(&block : URI -> )</a>
+        
+          <div class="summary"><p>Pass each URL from each resource visited to the given block.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#every_url_like%28pattern%2C%26block%3AURI-%3E%29-instance-method" class="signature"><strong>#every_url_like</strong>(pattern, &block : URI -> )</a>
+        
+          <div class="summary"><p>Pass every URL that the agent visits, and matches a given pattern, to a given block.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#every_xml_doc%28%26block%3AXML%3A%3ANode-%3E%29-instance-method" class="signature"><strong>#every_xml_doc</strong>(&block : XML::Node -> )</a>
+        
+          <div class="summary"><p>Pass every XML document that the agent parses to a given block.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#every_xml_page%28%26block%3AResource-%3E%29-instance-method" class="signature"><strong>#every_xml_page</strong>(&block : Resource -> )</a>
+        
+          <div class="summary"><p>Pass every XML resource that the agent visits to a given block.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#every_xsl_doc%28%26block%3AXML%3A%3ANode-%3E%29-instance-method" class="signature"><strong>#every_xsl_doc</strong>(&block : XML::Node -> )</a>
+        
+          <div class="summary"><p>Pass every XML Stylesheet (XSL) that the agent parses to a given block.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#every_xsl_page%28%26block%3AResource-%3E%29-instance-method" class="signature"><strong>#every_xsl_page</strong>(&block : Resource -> )</a>
+        
+          <div class="summary"><p>Pass every XML Stylesheet (XSL) resource that the agent visits to a given block.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#every_zip%28%26block%3AResource-%3E%29-instance-method" class="signature"><strong>#every_zip</strong>(&block : Resource -> )</a>
+        
+          <div class="summary"><p>Pass every ZIP resource that the agent visits to a given block.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#failed%28url%29-instance-method" class="signature"><strong>#failed</strong>(url)</a>
+        
+          <div class="summary"><p>Adds a given URL to the failures list.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#failed%3F%28url%29-instance-method" class="signature"><strong>#failed?</strong>(url)</a>
+        
+          <div class="summary"><p>Determines whether a given URL could not be visited.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#failures%3ASet%28URI%29-instance-method" class="signature"><strong>#failures</strong> : Set(URI)</a>
+        
+          <div class="summary"><p>List of unreachable URIs.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#failures%3D%28new_failures%29-instance-method" class="signature"><strong>#failures=</strong>(new_failures)</a>
+        
+          <div class="summary"><p>Sets the list of failed URLs.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#fetch_delay%3ATime%3A%3ASpan%7CInt32-instance-method" class="signature"><strong>#fetch_delay</strong> : Time::Span | Int32</a>
+        
+          <div class="summary"><p>Delay in between fetching resources.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#fetch_delay%3D%28fetch_delay%3ATime%3A%3ASpan%7CInt32%29-instance-method" class="signature"><strong>#fetch_delay=</strong>(fetch_delay : Time::Span | Int32)</a>
+        
+          <div class="summary"><p>Delay in between fetching resources.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#get_resource%28url%2C%26block%29-instance-method" class="signature"><strong>#get_resource</strong>(url, &block)</a>
+        
+          <div class="summary"><p>Gets and creates a new <code><a href="../Arachnid/Resource.html">Resource</a></code> object from a given URL, yielding the newly created resource.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#get_resource%28url%29-instance-method" class="signature"><strong>#get_resource</strong>(url)</a>
+        
+          <div class="summary"><p>Gets and creates a new <code><a href="../Arachnid/Resource.html">Resource</a></code> object from a given URL.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#history%3ASet%28URI%29-instance-method" class="signature"><strong>#history</strong> : Set(URI)</a>
+        
+          <div class="summary"><p>History containing visited URLs.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#history%3D%28new_history%29-instance-method" class="signature"><strong>#history=</strong>(new_history)</a>
+        
+          <div class="summary"><p>Sets the history of URLs that were previously visited.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#host%3AString%3F-instance-method" class="signature"><strong>#host</strong> : String?</a>
+        
+          <div class="summary"><p>Set to limit to a single host.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#host%3D%28host%3AString%3F%29-instance-method" class="signature"><strong>#host=</strong>(host : String?)</a>
+        
+          <div class="summary"><p>Set to limit to a single host.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#host_header%3AString%3F-instance-method" class="signature"><strong>#host_header</strong> : String?</a>
+        
+          <div class="summary"><p>HTTP Host Header to use.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#host_header%3D%28host_header%3AString%3F%29-instance-method" class="signature"><strong>#host_header=</strong>(host_header : String?)</a>
+        
+          <div class="summary"><p>HTTP Host Header to use.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#host_headers%3AHash%28String%7CRegex%2CString%29-instance-method" class="signature"><strong>#host_headers</strong> : Hash(String | Regex, String)</a>
+        
+          <div class="summary"><p>HTTP Host Headers to use for specific hosts.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#host_headers%3D%28host_headers%3AHash%28String%7CRegex%2CString%29%29-instance-method" class="signature"><strong>#host_headers=</strong>(host_headers : Hash(String | Regex, String))</a>
+        
+          <div class="summary"><p>HTTP Host Headers to use for specific hosts.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#ignore_exts-instance-method" class="signature"><strong>#ignore_exts</strong></a>
+        
+          <div class="summary"><p>Specifies the patterns that match URI path extensions to not visit.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#ignore_exts_like%28%26block%3AString-%3EBool%29-instance-method" class="signature"><strong>#ignore_exts_like</strong>(&block : String -> Bool)</a>
+        
+          <div class="summary"><p>Adds a given pattern to the <code><a href="../Arachnid/Agent.html#ignore_exts-instance-method">#ignore_exts</a></code>.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#ignore_exts_like%28pattern%29-instance-method" class="signature"><strong>#ignore_exts_like</strong>(pattern)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#ignore_hosts-instance-method" class="signature"><strong>#ignore_hosts</strong></a>
+        
+          <div class="summary"><p>Specifies the patterns that match host-names to not visit.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#ignore_hosts_like%28pattern%29-instance-method" class="signature"><strong>#ignore_hosts_like</strong>(pattern)</a>
+        
+          <div class="summary"><p>Adds a given pattern to the <code><a href="../Arachnid/Agent.html#ignore_hosts-instance-method">#ignore_hosts</a></code>.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#ignore_hosts_like%28%26block%29-instance-method" class="signature"><strong>#ignore_hosts_like</strong>(&block)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#ignore_links-instance-method" class="signature"><strong>#ignore_links</strong></a>
+        
+          <div class="summary"><p>Specifies the patterns that match links to not visit.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#ignore_links_like%28%26block%3AString-%3EBool%29-instance-method" class="signature"><strong>#ignore_links_like</strong>(&block : String -> Bool)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#ignore_links_like%28pattern%29-instance-method" class="signature"><strong>#ignore_links_like</strong>(pattern)</a>
+        
+          <div class="summary"><p>Adds a given pattern to the <code><a href="../Arachnid/Agent.html#ignore_links-instance-method">#ignore_links</a></code>.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#ignore_ports-instance-method" class="signature"><strong>#ignore_ports</strong></a>
+        
+          <div class="summary"><p>Specifies the patterns that match ports to not visit.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#ignore_ports_like%28pattern%29-instance-method" class="signature"><strong>#ignore_ports_like</strong>(pattern)</a>
+        
+          <div class="summary"><p>Adds a given pattern to the <code><a href="../Arachnid/Agent.html#ignore_ports-instance-method">#ignore_ports</a></code>.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#ignore_ports_like%28%26block%3AInt32-%3EBool%29-instance-method" class="signature"><strong>#ignore_ports_like</strong>(&block : Int32 -> Bool)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#ignore_urls-instance-method" class="signature"><strong>#ignore_urls</strong></a>
+        
+          <div class="summary"><p>Specifies the patterns that match URLs to not visit.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#ignore_urls_like%28%26block%3AURI-%3EBool%29-instance-method" class="signature"><strong>#ignore_urls_like</strong>(&block : URI -> Bool)</a>
+        
+          <div class="summary"><p>Adds a given pattern to the <code><a href="../Arachnid/Agent.html#ignore_urls-instance-method">#ignore_urls</a></code>.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#ignore_urls_like%28pattern%29-instance-method" class="signature"><strong>#ignore_urls_like</strong>(pattern)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#initialize_robots-instance-method" class="signature"><strong>#initialize_robots</strong></a>
+        
+          <div class="summary"><p>Initializes the robots filter.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#levels%3AHash%28URI%2CInt32%29-instance-method" class="signature"><strong>#levels</strong> : Hash(URI, Int32)</a>
+        
+          <div class="summary"><p>The visited URLs and their depth within a site.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#levels%3D%28levels%3AHash%28URI%2CInt32%29%29-instance-method" class="signature"><strong>#levels=</strong>(levels : Hash(URI, Int32))</a>
+        
+          <div class="summary"><p>The visited URLs and their depth within a site.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#limit%3AInt32%3F-instance-method" class="signature"><strong>#limit</strong> : Int32?</a>
+        
+          <div class="summary"><p>Maximum number of resources to visit.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#limit%3D%28limit%3AInt32%3F%29-instance-method" class="signature"><strong>#limit=</strong>(limit : Int32?)</a>
+        
+          <div class="summary"><p>Maximum number of resources to visit.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#limit_reached%3F-instance-method" class="signature"><strong>#limit_reached?</strong></a>
+        
+          <div class="summary"><p>Determines if the maximum limit has been reached.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#max_depth%3AInt32%3F-instance-method" class="signature"><strong>#max_depth</strong> : Int32?</a>
+        
+          <div class="summary"><p>Maximum depth.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#max_depth%3D%28max_depth%3AInt32%3F%29-instance-method" class="signature"><strong>#max_depth=</strong>(max_depth : Int32?)</a>
+        
+          <div class="summary"><p>Maximum depth.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#pause%21-instance-method" class="signature"><strong>#pause!</strong></a>
+        
+          <div class="summary"><p>Pauses the agent, causing spidering to temporarily stop.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#pause%3D%28state%29-instance-method" class="signature"><strong>#pause=</strong>(state)</a>
+        
+          <div class="summary"><p>Sets the pause state of the agent.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#paused%3F-instance-method" class="signature"><strong>#paused?</strong></a>
+        
+          <div class="summary"><p>Determines whether the agent is paused.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#post_resource%28url%2Cpost_data%3D%26quot%3B%26quot%3B%29-instance-method" class="signature"><strong>#post_resource</strong>(url, post_data = <span class="s">&quot;&quot;</span>)</a>
+        
+          <div class="summary"><p>Posts supplied form data and creates a new Resource from a given URL.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#post_resource%28url%2Cpost_data%3D%26quot%3B%26quot%3B%2C%26block%29-instance-method" class="signature"><strong>#post_resource</strong>(url, post_data = <span class="s">&quot;&quot;</span>, &block)</a>
+        
+          <div class="summary"><p>Posts supplied form data and creates a new Resource from a given URL, yielding the newly created resource.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#prepare_request%28url%2C%26block%29-instance-method" class="signature"><strong>#prepare_request</strong>(url, &block)</a>
+        
+          <div class="summary"><p>Normalizes the request path and grabs a session to handle resource get and post requests.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#queue%3AHash%28String%2CURI%29-instance-method" class="signature"><strong>#queue</strong> : Hash(String, URI)</a>
+        
+          <div class="summary"><p>Queue of URLs to visit.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#queue%3D%28new_queue%29-instance-method" class="signature"><strong>#queue=</strong>(new_queue)</a>
+        
+          <div class="summary"><p>Sets the queue of URLs to visit.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#queued%3F%28key%29-instance-method" class="signature"><strong>#queued?</strong>(key)</a>
+        
+          <div class="summary"><p>Determines whether the given URL has been queued for visiting.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#referer%3AString%3F-instance-method" class="signature"><strong>#referer</strong> : String?</a>
+        
+          <div class="summary"><p>Referer to use.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#referer%3D%28referer%3AString%3F%29-instance-method" class="signature"><strong>#referer=</strong>(referer : String?)</a>
+        
+          <div class="summary"><p>Referer to use.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#run-instance-method" class="signature"><strong>#run</strong></a>
+        
+          <div class="summary"><p>Start spidering until the queue becomes empty or the agent is paused.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#running%3F%3ABool-instance-method" class="signature"><strong>#running?</strong> : Bool</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#sanitize_url%28url%29-instance-method" class="signature"><strong>#sanitize_url</strong>(url)</a>
+        
+          <div class="summary"><p>Sanitizes a URL based on filtering options</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#schemes%3AArray%28String%29-instance-method" class="signature"><strong>#schemes</strong> : Array(String)</a>
+        
+          <div class="summary"><p>List of acceptable URL schemes to follow</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#schemes%3D%28new_schemes%29-instance-method" class="signature"><strong>#schemes=</strong>(new_schemes)</a>
+        
+          <div class="summary"><p>Sets the list of acceptable URL schemes to visit.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#sessions%3ASessionCache-instance-method" class="signature"><strong>#sessions</strong> : SessionCache</a>
+        
+          <div class="summary"><p>The session cache.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#sessions%3D%28sessions%3ASessionCache%29-instance-method" class="signature"><strong>#sessions=</strong>(sessions : SessionCache)</a>
+        
+          <div class="summary"><p>The session cache.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#skip_link%21-instance-method" class="signature"><strong>#skip_link!</strong></a>
+        
+          <div class="summary"><p>Causes the agent to skip the link being enqueued.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#skip_resource%21-instance-method" class="signature"><strong>#skip_resource!</strong></a>
+        
+          <div class="summary"><p>Causes the agent to skip the resource being visited.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#start_at%28url%2Cforce%3Dfalse%29-instance-method" class="signature"><strong>#start_at</strong>(url, force = <span class="n">false</span>)</a>
+        
+          <div class="summary"><p>Start spidering at a given URL.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#strip_fragments%3D%28strip_fragments%3ABool%29-instance-method" class="signature"><strong>#strip_fragments=</strong>(strip_fragments : Bool)</a>
+        
+          <div class="summary"><p>Specifies whether the Agent will strip URI fragments</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#strip_fragments%3F%3ABool-instance-method" class="signature"><strong>#strip_fragments?</strong> : Bool</a>
+        
+          <div class="summary"><p>Specifies whether the Agent will strip URI fragments</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#strip_query%3D%28strip_query%3ABool%29-instance-method" class="signature"><strong>#strip_query=</strong>(strip_query : Bool)</a>
+        
+          <div class="summary"><p>Specifies whether the Agent will strip URI queries</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#strip_query%3F%3ABool-instance-method" class="signature"><strong>#strip_query?</strong> : Bool</a>
+        
+          <div class="summary"><p>Specifies whether the Agent will strip URI queries</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#to_h-instance-method" class="signature"><strong>#to_h</strong></a>
+        
+          <div class="summary"><p>Converts the agent into a hash.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#urls_like%28pattern%2C%26block%3AURI-%3E%29-instance-method" class="signature"><strong>#urls_like</strong>(pattern, &block : URI -> )</a>
+        
+          <div class="summary"><p>Ssee <code><a href="../Arachnid/Agent.html#every_url_like%28pattern%2C%26block%3AURI-%3E%29-instance-method">#every_url_like</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#user_agent%3AString-instance-method" class="signature"><strong>#user_agent</strong> : String</a>
+        
+          <div class="summary"><p>User agent to use.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#user_agent%3D%28user_agent%3AString%29-instance-method" class="signature"><strong>#user_agent=</strong>(user_agent : String)</a>
+        
+          <div class="summary"><p>User agent to use.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#visit%3F%28url%29-instance-method" class="signature"><strong>#visit?</strong>(url)</a>
+        
+          <div class="summary"><p>Determines if a given URL should be visited.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#visit_exts-instance-method" class="signature"><strong>#visit_exts</strong></a>
+        
+          <div class="summary"><p>Specifies the patterns that match the URI path extensions to visit.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#visit_exts_like%28pattern%29-instance-method" class="signature"><strong>#visit_exts_like</strong>(pattern)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#visit_exts_like%28%26block%3AString-%3EBool%29-instance-method" class="signature"><strong>#visit_exts_like</strong>(&block : String -> Bool)</a>
+        
+          <div class="summary"><p>Adds a given pattern to the <code><a href="../Arachnid/Agent.html#visit_exts-instance-method">#visit_exts</a></code>.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#visit_hosts-instance-method" class="signature"><strong>#visit_hosts</strong></a>
+        
+          <div class="summary"><p>Specifies the patterns that match host-names to visit.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#visit_hosts_like%28%26block%29-instance-method" class="signature"><strong>#visit_hosts_like</strong>(&block)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#visit_hosts_like%28pattern%29-instance-method" class="signature"><strong>#visit_hosts_like</strong>(pattern)</a>
+        
+          <div class="summary"><p>Adds a given pattern to the <code><a href="../Arachnid/Agent.html#visit_hosts-instance-method">#visit_hosts</a></code>.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#visit_links-instance-method" class="signature"><strong>#visit_links</strong></a>
+        
+          <div class="summary"><p>Specifies the patterns that match the links to visit.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#visit_links_like%28pattern%29-instance-method" class="signature"><strong>#visit_links_like</strong>(pattern)</a>
+        
+          <div class="summary"><p>Adds a given pattern to the <code><a href="../Arachnid/Agent.html#visit_links-instance-method">#visit_links</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#visit_links_like%28%26block%3AString-%3EBool%29-instance-method" class="signature"><strong>#visit_links_like</strong>(&block : String -> Bool)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#visit_ports-instance-method" class="signature"><strong>#visit_ports</strong></a>
+        
+          <div class="summary"><p>Specifies the patterns that match the ports to visit.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#visit_ports_like%28pattern%29-instance-method" class="signature"><strong>#visit_ports_like</strong>(pattern)</a>
+        
+          <div class="summary"><p>Adds a given pattern to the <code><a href="../Arachnid/Agent.html#visit_ports-instance-method">#visit_ports</a></code>.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#visit_ports_like%28%26block%3AInt32-%3EBool%29-instance-method" class="signature"><strong>#visit_ports_like</strong>(&block : Int32 -> Bool)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#visit_resource%28url%29-instance-method" class="signature"><strong>#visit_resource</strong>(url)</a>
+        
+          <div class="summary"><p>Visits a given URL and enqueues the links recovered from the resource to be visited later.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#visit_urls-instance-method" class="signature"><strong>#visit_urls</strong></a>
+        
+          <div class="summary"><p>Specifies the patterns that match the URLs to visit.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#visit_urls_like%28%26block%3AURI-%3EBool%29-instance-method" class="signature"><strong>#visit_urls_like</strong>(&block : URI -> Bool)</a>
+        
+          <div class="summary"><p>Adds a given pattern to the <code><a href="../Arachnid/Agent.html#visit_urls-instance-method">#visit_urls</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#visit_urls_like%28pattern%29-instance-method" class="signature"><strong>#visit_urls_like</strong>(pattern)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#visited%3F%28url%29-instance-method" class="signature"><strong>#visited?</strong>(url)</a>
+        
+          <div class="summary"><p>Determines whether a URL was visited or not.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#visited_hosts-instance-method" class="signature"><strong>#visited_hosts</strong></a>
+        
+          <div class="summary"><p>Specifies the hosts which have been visited.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#visited_links-instance-method" class="signature"><strong>#visited_links</strong></a>
+        
+          <div class="summary"><p>Specifies the links which have been visited.</p></div>
+        
+      </li>
+    
+  </ul>
+
+
+
+
+
+<div class="methods-inherited">
+  
+    
+
+
+    
+
+
+    
+
+
+  
+    
+
+
+    
+
+
+    
+
+
+  
+</div>
+
+
+  <h2>Constructor Detail</h2>
+  
+    <div class="entry-detail" id="new(host:String?=nil,read_timeout:Int32?=nil,connect_timeout:Int32?=nil,max_redirects:Int32?=nil,do_not_track:Bool?=nil,default_headers:Hash(String,String)?=nil,host_header:String?=nil,host_headers:Hash(String|Regex,String)?=nil,user_agent:String?=nil,referer:String?=nil,fetch_delay:Int32|Time::Span?=nil,queue:Hash(String,URI)?=nil,history:Set(URI)?=nil,limit:Int32?=nil,max_depth:Int32?=nil,robots:Bool?=nil,filter_options=nil)-class-method">
+      <div class="signature">
+        
+        def self.<strong>new</strong>(host : String? = <span class="n">nil</span>, read_timeout : Int32? = <span class="n">nil</span>, connect_timeout : Int32? = <span class="n">nil</span>, max_redirects : Int32? = <span class="n">nil</span>, do_not_track : Bool? = <span class="n">nil</span>, default_headers : Hash(String, String)? = <span class="n">nil</span>, host_header : String? = <span class="n">nil</span>, host_headers : Hash(String | Regex, String)? = <span class="n">nil</span>, user_agent : String? = <span class="n">nil</span>, referer : String? = <span class="n">nil</span>, fetch_delay : Int32 | Time::Span? = <span class="n">nil</span>, queue : Hash(String, <a href="../URI.html">URI</a>)? = <span class="n">nil</span>, history : Set(<a href="../URI.html">URI</a>)? = <span class="n">nil</span>, limit : Int32? = <span class="n">nil</span>, max_depth : Int32? = <span class="n">nil</span>, robots : Bool? = <span class="n">nil</span>, filter_options = <span class="n">nil</span>)
+
+        <a class="method-permalink" href="#new%28host%3AString%3F%3Dnil%2Cread_timeout%3AInt32%3F%3Dnil%2Cconnect_timeout%3AInt32%3F%3Dnil%2Cmax_redirects%3AInt32%3F%3Dnil%2Cdo_not_track%3ABool%3F%3Dnil%2Cdefault_headers%3AHash%28String%2CString%29%3F%3Dnil%2Chost_header%3AString%3F%3Dnil%2Chost_headers%3AHash%28String%7CRegex%2CString%29%3F%3Dnil%2Cuser_agent%3AString%3F%3Dnil%2Creferer%3AString%3F%3Dnil%2Cfetch_delay%3AInt32%7CTime%3A%3ASpan%3F%3Dnil%2Cqueue%3AHash%28String%2CURI%29%3F%3Dnil%2Chistory%3ASet%28URI%29%3F%3Dnil%2Climit%3AInt32%3F%3Dnil%2Cmax_depth%3AInt32%3F%3Dnil%2Crobots%3ABool%3F%3Dnil%2Cfilter_options%3Dnil%29-class-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Creates a new <code><a href="../Arachnid/Agent.html">Agent</a></code> object.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/agent.cr#L65" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="new(**options,&amp;block:Agent-&gt;)-class-method">
+      <div class="signature">
+        
+        def self.<strong>new</strong>(**options, &block : <a href="../Arachnid/Agent.html">Agent</a> -> )
+
+        <a class="method-permalink" href="#new%28%2A%2Aoptions%2C%26block%3AAgent-%3E%29-class-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Create a new scoped <code><a href="../Arachnid/Agent.html">Agent</a></code> in a block.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/agent.cr#L123" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+
+
+
+  <h2>Class Method Detail</h2>
+  
+    <div class="entry-detail" id="host(url,**options,&amp;block:Agent-&gt;)-class-method">
+      <div class="signature">
+        
+        def self.<strong>host</strong>(url, **options, &block : <a href="../Arachnid/Agent.html">Agent</a> -> )
+
+        <a class="method-permalink" href="#host%28url%2C%2A%2Aoptions%2C%26block%3AAgent-%3E%29-class-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Creates a new <code><a href="../Arachnid/Agent.html">Agent</a></code> and spiders the given host.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/agent.cr#L148" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="site(url,**options,&amp;block:Agent-&gt;)-class-method">
+      <div class="signature">
+        
+        def self.<strong>site</strong>(url, **options, &block : <a href="../Arachnid/Agent.html">Agent</a> -> )
+
+        <a class="method-permalink" href="#site%28url%2C%2A%2Aoptions%2C%26block%3AAgent-%3E%29-class-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Creates a new <code><a href="../Arachnid/Agent.html">Agent</a></code> and spiders the web site located
+at the given URL.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/agent.cr#L137" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="start_at(url,**options,&amp;block:Agent-&gt;)-class-method">
+      <div class="signature">
+        
+        def self.<strong>start_at</strong>(url, **options, &block : <a href="../Arachnid/Agent.html">Agent</a> -> )
+
+        <a class="method-permalink" href="#start_at%28url%2C%2A%2Aoptions%2C%26block%3AAgent-%3E%29-class-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Creates a new <code><a href="../Arachnid/Agent.html">Agent</a></code> and begins spidering at the given URL.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/agent.cr#L130" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+
+
+
+  <h2>Instance Method Detail</h2>
+  
+    <div class="entry-detail" id="all_headers(&amp;block:HTTP::Headers)-instance-method">
+      <div class="signature">
+        
+        def <strong>all_headers</strong>(&block : HTTP::Headers)
+
+        <a class="method-permalink" href="#all_headers%28%26block%3AHTTP%3A%3AHeaders%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Pass the headers from every response the agent receives to a given
+block.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/agent/events.cr#L43" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="authorized:AuthStore-instance-method">
+      <div class="signature">
+        
+        def <strong>authorized</strong> : <a href="../Arachnid/AuthStore.html">AuthStore</a>
+
+        <a class="method-permalink" href="#authorized%3AAuthStore-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>HTTP Authentication credentials.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/agent.cr#L34" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="authorized=(authorized:AuthStore)-instance-method">
+      <div class="signature">
+        
+        def <strong>authorized=</strong>(authorized : <a href="../Arachnid/AuthStore.html">AuthStore</a>)
+
+        <a class="method-permalink" href="#authorized%3D%28authorized%3AAuthStore%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>HTTP Authentication credentials.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/agent.cr#L38" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="clear-instance-method">
+      <div class="signature">
+        
+        def <strong>clear</strong>
+
+        <a class="method-permalink" href="#clear-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Clears the history of the <code><a href="../Arachnid/Agent.html">Agent</a></code>.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/agent.cr#L158" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="continue!(&amp;block)-instance-method">
+      <div class="signature">
+        
+        def <strong>continue!</strong>(&block)
+
+        <a class="method-permalink" href="#continue%21%28%26block%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Continue spidering</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/agent/actions.cr#L22" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="cookies:CookieJar-instance-method">
+      <div class="signature">
+        
+        def <strong>cookies</strong> : <a href="../Arachnid/CookieJar.html">CookieJar</a>
+
+        <a class="method-permalink" href="#cookies%3ACookieJar-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Cached cookies.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/agent.cr#L55" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="cookies=(cookies:CookieJar)-instance-method">
+      <div class="signature">
+        
+        def <strong>cookies=</strong>(cookies : <a href="../Arachnid/CookieJar.html">CookieJar</a>)
+
+        <a class="method-permalink" href="#cookies%3D%28cookies%3ACookieJar%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Cached cookies.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/agent.cr#L59" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="default_headers:Hash(String,String)-instance-method">
+      <div class="signature">
+        
+        def <strong>default_headers</strong> : Hash(String, String)
+
+        <a class="method-permalink" href="#default_headers%3AHash%28String%2CString%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>HTTP Headers to use for every request.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/agent.cr#L31" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="default_headers=(default_headers:Hash(String,String))-instance-method">
+      <div class="signature">
+        
+        def <strong>default_headers=</strong>(default_headers : Hash(String, String))
+
+        <a class="method-permalink" href="#default_headers%3D%28default_headers%3AHash%28String%2CString%29%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>HTTP Headers to use for every request.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/agent.cr#L35" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="dequeue-instance-method">
+      <div class="signature">
+        
+        def <strong>dequeue</strong>
+
+        <a class="method-permalink" href="#dequeue-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Dequeues a URL that will later be visited.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/agent.cr#L508" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="enqueue(url,level=0,force=false)-instance-method">
+      <div class="signature">
+        
+        def <strong>enqueue</strong>(url, level = <span class="n">0</span>, force = <span class="n">false</span>)
+
+        <a class="method-permalink" href="#enqueue%28url%2Clevel%3D0%2Cforce%3Dfalse%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Enqueues a given URL for visiting, only if it passes all
+of the agent's rules for visiting a given URL.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/agent.cr#L278" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="every_atom(&amp;block:Resource-&gt;)-instance-method">
+      <div class="signature">
+        
+        def <strong>every_atom</strong>(&block : <a href="../Arachnid/Resource.html">Resource</a> -> )
+
+        <a class="method-permalink" href="#every_atom%28%26block%3AResource-%3E%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Pass every Atom feed that the agent visits to a given block.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/agent/events.cr#L207" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="every_atom_doc(&amp;block:XML::Node-&gt;)-instance-method">
+      <div class="signature">
+        
+        def <strong>every_atom_doc</strong>(&block : XML::Node -> )
+
+        <a class="method-permalink" href="#every_atom_doc%28%26block%3AXML%3A%3ANode-%3E%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Pass every Atom document that the agent parses to a given block.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/agent/events.cr#L179" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="every_bad_request_page(&amp;block:Resource-&gt;)-instance-method">
+      <div class="signature">
+        
+        def <strong>every_bad_request_page</strong>(&block : <a href="../Arachnid/Resource.html">Resource</a> -> )
+
+        <a class="method-permalink" href="#every_bad_request_page%28%26block%3AResource-%3E%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Pass every Bad Request resource that the agent visits to a given block.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/agent/events.cr#L77" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="every_content_type(content_type:String|Regex,&amp;block:Resource-&gt;)-instance-method">
+      <div class="signature">
+        
+        def <strong>every_content_type</strong>(content_type : String | Regex, &block : <a href="../Arachnid/Resource.html">Resource</a> -> )
+
+        <a class="method-permalink" href="#every_content_type%28content_type%3AString%7CRegex%2C%26block%3AResource-%3E%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Passes every resource with a matching content type to the given block.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/agent/events.cr#L242" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="every_css(&amp;block:Resource-&gt;)-instance-method">
+      <div class="signature">
+        
+        def <strong>every_css</strong>(&block : <a href="../Arachnid/Resource.html">Resource</a> -> )
+
+        <a class="method-permalink" href="#every_css%28%26block%3AResource-%3E%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Pass every CSS resource that the agent visits to a given block.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/agent/events.cr#L193" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="every_doc(&amp;block:Document::HTML|XML::Node-&gt;)-instance-method">
+      <div class="signature">
+        
+        def <strong>every_doc</strong>(&block : <a href="../Arachnid/Document/HTML.html">Document::HTML</a> | XML::Node -> )
+
+        <a class="method-permalink" href="#every_doc%28%26block%3ADocument%3A%3AHTML%7CXML%3A%3ANode-%3E%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Pass every HTML or XML document that the agent parses to a given
+block.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/agent/events.cr#L143" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="every_failed_url(&amp;block:URI-&gt;)-instance-method">
+      <div class="signature">
+        
+        def <strong>every_failed_url</strong>(&block : <a href="../URI.html">URI</a> -> )
+
+        <a class="method-permalink" href="#every_failed_url%28%26block%3AURI-%3E%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Pass each URL that could not be requested to the given block.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/agent/events.cr#L24" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="every_forbidden_page(&amp;block:Resource-&gt;)-instance-method">
+      <div class="signature">
+        
+        def <strong>every_forbidden_page</strong>(&block : <a href="../Arachnid/Resource.html">Resource</a> -> )
+
+        <a class="method-permalink" href="#every_forbidden_page%28%26block%3AResource-%3E%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Pass every Forbidden resource that the agent visits to a given block.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/agent/events.cr#L91" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="every_html_doc(&amp;block:Document::HTML|XML::Node-&gt;)-instance-method">
+      <div class="signature">
+        
+        def <strong>every_html_doc</strong>(&block : <a href="../Arachnid/Document/HTML.html">Document::HTML</a> | XML::Node -> )
+
+        <a class="method-permalink" href="#every_html_doc%28%26block%3ADocument%3A%3AHTML%7CXML%3A%3ANode-%3E%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Pass every HTML document that the agent parses to a given block.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/agent/events.cr#L150" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="every_html_page(&amp;block:Resource-&gt;)-instance-method">
+      <div class="signature">
+        
+        def <strong>every_html_page</strong>(&block : <a href="../Arachnid/Resource.html">Resource</a> -> )
+
+        <a class="method-permalink" href="#every_html_page%28%26block%3AResource-%3E%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Pass every HTML resource that the agent visits to a given block.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/agent/events.cr#L120" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="every_image(&amp;block:Resource-&gt;)-instance-method">
+      <div class="signature">
+        
+        def <strong>every_image</strong>(&block : <a href="../Arachnid/Resource.html">Resource</a> -> )
+
+        <a class="method-permalink" href="#every_image%28%26block%3AResource-%3E%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Passes every image resource to the given block.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/agent/events.cr#L235" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="every_internal_server_error_page(&amp;block:Resource-&gt;)-instance-method">
+      <div class="signature">
+        
+        def <strong>every_internal_server_error_page</strong>(&block : <a href="../Arachnid/Resource.html">Resource</a> -> )
+
+        <a class="method-permalink" href="#every_internal_server_error_page%28%26block%3AResource-%3E%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Pass every Internal Server Error resource that the agent visits to a
+given block.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/agent/events.cr#L106" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="every_javascript(&amp;block:Resource-&gt;)-instance-method">
+      <div class="signature">
+        
+        def <strong>every_javascript</strong>(&block : <a href="../Arachnid/Resource.html">Resource</a> -> )
+
+        <a class="method-permalink" href="#every_javascript%28%26block%3AResource-%3E%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Pass every JavaScript resource that the agent visits to a given block</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/agent/events.cr#L186" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="every_link(&amp;block:URI,URI-&gt;)-instance-method">
+      <div class="signature">
+        
+        def <strong>every_link</strong>(&block : <a href="../URI.html">URI</a>, <a href="../URI.html">URI</a> -> )
+
+        <a class="method-permalink" href="#every_link%28%26block%3AURI%2CURI-%3E%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Passes every origin and destination URI of each link to a given
+block.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/agent/events.cr#L250" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="every_missing_page(&amp;block:Resource-&gt;)-instance-method">
+      <div class="signature">
+        
+        def <strong>every_missing_page</strong>(&block : <a href="../Arachnid/Resource.html">Resource</a> -> )
+
+        <a class="method-permalink" href="#every_missing_page%28%26block%3AResource-%3E%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Pass every Missing resource that the agent visits to a given block.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/agent/events.cr#L98" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="every_ms_word(&amp;block:Resource-&gt;)-instance-method">
+      <div class="signature">
+        
+        def <strong>every_ms_word</strong>(&block : <a href="../Arachnid/Resource.html">Resource</a> -> )
+
+        <a class="method-permalink" href="#every_ms_word%28%26block%3AResource-%3E%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Pass every MS Word resource that the agent visits to a given block.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/agent/events.cr#L214" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="every_ok_page(&amp;block:Resource-&gt;)-instance-method">
+      <div class="signature">
+        
+        def <strong>every_ok_page</strong>(&block : <a href="../Arachnid/Resource.html">Resource</a> -> )
+
+        <a class="method-permalink" href="#every_ok_page%28%26block%3AResource-%3E%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Pass every OK resource that the agent visits to a given block.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/agent/events.cr#L56" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="every_pdf(&amp;block:Resource-&gt;)-instance-method">
+      <div class="signature">
+        
+        def <strong>every_pdf</strong>(&block : <a href="../Arachnid/Resource.html">Resource</a> -> )
+
+        <a class="method-permalink" href="#every_pdf%28%26block%3AResource-%3E%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Pass every PDF resource that the agent visits to a given block.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/agent/events.cr#L221" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="every_redirect_page(&amp;block:Resource-&gt;)-instance-method">
+      <div class="signature">
+        
+        def <strong>every_redirect_page</strong>(&block : <a href="../Arachnid/Resource.html">Resource</a> -> )
+
+        <a class="method-permalink" href="#every_redirect_page%28%26block%3AResource-%3E%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Pass every Redirect resource that the agent visits to a given block.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/agent/events.cr#L63" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="every_resource(&amp;block:Resource-&gt;)-instance-method">
+      <div class="signature">
+        
+        def <strong>every_resource</strong>(&block : <a href="../Arachnid/Resource.html">Resource</a> -> )
+
+        <a class="method-permalink" href="#every_resource%28%26block%3AResource-%3E%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Pass every resource that the agent visits to a given block.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/agent/events.cr#L50" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="every_rss(&amp;block:Resource-&gt;)-instance-method">
+      <div class="signature">
+        
+        def <strong>every_rss</strong>(&block : <a href="../Arachnid/Resource.html">Resource</a> -> )
+
+        <a class="method-permalink" href="#every_rss%28%26block%3AResource-%3E%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Pass every RSS feed that the agent visits to a given block.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/agent/events.cr#L200" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="every_rss_doc(&amp;block:XML::Node-&gt;)-instance-method">
+      <div class="signature">
+        
+        def <strong>every_rss_doc</strong>(&block : XML::Node -> )
+
+        <a class="method-permalink" href="#every_rss_doc%28%26block%3AXML%3A%3ANode-%3E%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Pass every RSS document that the agent parses to a given block.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/agent/events.cr#L172" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="every_timedout_page(&amp;block:Resource-&gt;)-instance-method">
+      <div class="signature">
+        
+        def <strong>every_timedout_page</strong>(&block : <a href="../Arachnid/Resource.html">Resource</a> -> )
+
+        <a class="method-permalink" href="#every_timedout_page%28%26block%3AResource-%3E%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Pass every Timeout resource that the agent visits to a given block.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/agent/events.cr#L70" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="every_txt_page(&amp;block:Resource-&gt;)-instance-method">
+      <div class="signature">
+        
+        def <strong>every_txt_page</strong>(&block : <a href="../Arachnid/Resource.html">Resource</a> -> )
+
+        <a class="method-permalink" href="#every_txt_page%28%26block%3AResource-%3E%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Pass every Plain Text resource that the agent visits to a given block.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/agent/events.cr#L113" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="every_unauthorized_page(&amp;block:Resource-&gt;)-instance-method">
+      <div class="signature">
+        
+        def <strong>every_unauthorized_page</strong>(&block : <a href="../Arachnid/Resource.html">Resource</a> -> )
+
+        <a class="method-permalink" href="#every_unauthorized_page%28%26block%3AResource-%3E%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Pass every Unauthorized resource that the agent visits to a given block.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/agent/events.cr#L84" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="every_url(&amp;block:URI-&gt;)-instance-method">
+      <div class="signature">
+        
+        def <strong>every_url</strong>(&block : <a href="../URI.html">URI</a> -> )
+
+        <a class="method-permalink" href="#every_url%28%26block%3AURI-%3E%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Pass each URL from each resource visited to the given block.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/agent/events.cr#L18" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="every_url_like(pattern,&amp;block:URI-&gt;)-instance-method">
+      <div class="signature">
+        
+        def <strong>every_url_like</strong>(pattern, &block : <a href="../URI.html">URI</a> -> )
+
+        <a class="method-permalink" href="#every_url_like%28pattern%2C%26block%3AURI-%3E%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Pass every URL that the agent visits, and matches a given pattern,
+to a given block.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/agent/events.cr#L31" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="every_xml_doc(&amp;block:XML::Node-&gt;)-instance-method">
+      <div class="signature">
+        
+        def <strong>every_xml_doc</strong>(&block : XML::Node -> )
+
+        <a class="method-permalink" href="#every_xml_doc%28%26block%3AXML%3A%3ANode-%3E%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Pass every XML document that the agent parses to a given block.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/agent/events.cr#L157" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="every_xml_page(&amp;block:Resource-&gt;)-instance-method">
+      <div class="signature">
+        
+        def <strong>every_xml_page</strong>(&block : <a href="../Arachnid/Resource.html">Resource</a> -> )
+
+        <a class="method-permalink" href="#every_xml_page%28%26block%3AResource-%3E%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Pass every XML resource that the agent visits to a given block.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/agent/events.cr#L127" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="every_xsl_doc(&amp;block:XML::Node-&gt;)-instance-method">
+      <div class="signature">
+        
+        def <strong>every_xsl_doc</strong>(&block : XML::Node -> )
+
+        <a class="method-permalink" href="#every_xsl_doc%28%26block%3AXML%3A%3ANode-%3E%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Pass every XML Stylesheet (XSL) that the agent parses to a given
+block.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/agent/events.cr#L165" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="every_xsl_page(&amp;block:Resource-&gt;)-instance-method">
+      <div class="signature">
+        
+        def <strong>every_xsl_page</strong>(&block : <a href="../Arachnid/Resource.html">Resource</a> -> )
+
+        <a class="method-permalink" href="#every_xsl_page%28%26block%3AResource-%3E%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Pass every XML Stylesheet (XSL) resource that the agent visits to a
+given block.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/agent/events.cr#L135" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="every_zip(&amp;block:Resource-&gt;)-instance-method">
+      <div class="signature">
+        
+        def <strong>every_zip</strong>(&block : <a href="../Arachnid/Resource.html">Resource</a> -> )
+
+        <a class="method-permalink" href="#every_zip%28%26block%3AResource-%3E%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Pass every ZIP resource that the agent visits to a given block.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/agent/events.cr#L228" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="failed(url)-instance-method">
+      <div class="signature">
+        
+        def <strong>failed</strong>(url)
+
+        <a class="method-permalink" href="#failed%28url%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Adds a given URL to the failures list.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/agent.cr#L533" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="failed?(url)-instance-method">
+      <div class="signature">
+        
+        def <strong>failed?</strong>(url)
+
+        <a class="method-permalink" href="#failed%3F%28url%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Determines whether a given URL could not be visited.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/agent.cr#L254" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="failures:Set(URI)-instance-method">
+      <div class="signature">
+        
+        def <strong>failures</strong> : Set(<a href="../URI.html">URI</a>)
+
+        <a class="method-permalink" href="#failures%3ASet%28URI%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>List of unreachable URIs.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/agent.cr#L46" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="failures=(new_failures)-instance-method">
+      <div class="signature">
+        
+        def <strong>failures=</strong>(new_failures)
+
+        <a class="method-permalink" href="#failures%3D%28new_failures%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Sets the list of failed URLs.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/agent.cr#L243" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="fetch_delay:Time::Span|Int32-instance-method">
+      <div class="signature">
+        
+        def <strong>fetch_delay</strong> : Time::Span | Int32
+
+        <a class="method-permalink" href="#fetch_delay%3ATime%3A%3ASpan%7CInt32-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Delay in between fetching resources.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/agent.cr#L40" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="fetch_delay=(fetch_delay:Time::Span|Int32)-instance-method">
+      <div class="signature">
+        
+        def <strong>fetch_delay=</strong>(fetch_delay : Time::Span | Int32)
+
+        <a class="method-permalink" href="#fetch_delay%3D%28fetch_delay%3ATime%3A%3ASpan%7CInt32%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Delay in between fetching resources.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/agent.cr#L44" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="get_resource(url,&amp;block)-instance-method">
+      <div class="signature">
+        
+        def <strong>get_resource</strong>(url, &block)
+
+        <a class="method-permalink" href="#get_resource%28url%2C%26block%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Gets and creates a new <code><a href="../Arachnid/Resource.html">Resource</a></code> object from a given URL,
+yielding the newly created resource.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/agent.cr#L316" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="get_resource(url)-instance-method">
+      <div class="signature">
+        
+        def <strong>get_resource</strong>(url)
+
+        <a class="method-permalink" href="#get_resource%28url%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Gets and creates a new <code><a href="../Arachnid/Resource.html">Resource</a></code> object from a given URL.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/agent.cr#L331" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="history:Set(URI)-instance-method">
+      <div class="signature">
+        
+        def <strong>history</strong> : Set(<a href="../URI.html">URI</a>)
+
+        <a class="method-permalink" href="#history%3ASet%28URI%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>History containing visited URLs.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/agent.cr#L43" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="history=(new_history)-instance-method">
+      <div class="signature">
+        
+        def <strong>history=</strong>(new_history)
+
+        <a class="method-permalink" href="#history%3D%28new_history%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Sets the history of URLs that were previously visited.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/agent.cr#L216" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="host:String?-instance-method">
+      <div class="signature">
+        
+        def <strong>host</strong> : String?
+
+        <a class="method-permalink" href="#host%3AString%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Set to limit to a single host.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/agent.cr#L19" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="host=(host:String?)-instance-method">
+      <div class="signature">
+        
+        def <strong>host=</strong>(host : String?)
+
+        <a class="method-permalink" href="#host%3D%28host%3AString%3F%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Set to limit to a single host.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/agent.cr#L23" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="host_header:String?-instance-method">
+      <div class="signature">
+        
+        def <strong>host_header</strong> : String?
+
+        <a class="method-permalink" href="#host_header%3AString%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>HTTP Host Header to use.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/agent.cr#L25" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="host_header=(host_header:String?)-instance-method">
+      <div class="signature">
+        
+        def <strong>host_header=</strong>(host_header : String?)
+
+        <a class="method-permalink" href="#host_header%3D%28host_header%3AString%3F%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>HTTP Host Header to use.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/agent.cr#L29" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="host_headers:Hash(String|Regex,String)-instance-method">
+      <div class="signature">
+        
+        def <strong>host_headers</strong> : Hash(String | Regex, String)
+
+        <a class="method-permalink" href="#host_headers%3AHash%28String%7CRegex%2CString%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>HTTP Host Headers to use for specific hosts.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/agent.cr#L28" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="host_headers=(host_headers:Hash(String|Regex,String))-instance-method">
+      <div class="signature">
+        
+        def <strong>host_headers=</strong>(host_headers : Hash(String | Regex, String))
+
+        <a class="method-permalink" href="#host_headers%3D%28host_headers%3AHash%28String%7CRegex%2CString%29%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>HTTP Host Headers to use for specific hosts.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/agent.cr#L32" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="ignore_exts-instance-method">
+      <div class="signature">
+        
+        def <strong>ignore_exts</strong>
+
+        <a class="method-permalink" href="#ignore_exts-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Specifies the patterns that match URI path extensions to not visit.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/agent/filters.cr#L164" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="ignore_exts_like(&amp;block:String-&gt;Bool)-instance-method">
+      <div class="signature">
+        
+        def <strong>ignore_exts_like</strong>(&block : String -> Bool)
+
+        <a class="method-permalink" href="#ignore_exts_like%28%26block%3AString-%3EBool%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Adds a given pattern to the <code><a href="../Arachnid/Agent.html#ignore_exts-instance-method">#ignore_exts</a></code>.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/agent/filters.cr#L169" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="ignore_exts_like(pattern)-instance-method">
+      <div class="signature">
+        
+        def <strong>ignore_exts_like</strong>(pattern)
+
+        <a class="method-permalink" href="#ignore_exts_like%28pattern%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/agent/filters.cr#L174" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="ignore_hosts-instance-method">
+      <div class="signature">
+        
+        def <strong>ignore_hosts</strong>
+
+        <a class="method-permalink" href="#ignore_hosts-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Specifies the patterns that match host-names to not visit.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/agent/filters.cr#L36" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="ignore_hosts_like(pattern)-instance-method">
+      <div class="signature">
+        
+        def <strong>ignore_hosts_like</strong>(pattern)
+
+        <a class="method-permalink" href="#ignore_hosts_like%28pattern%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Adds a given pattern to the <code><a href="../Arachnid/Agent.html#ignore_hosts-instance-method">#ignore_hosts</a></code>.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/agent/filters.cr#L41" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="ignore_hosts_like(&amp;block)-instance-method">
+      <div class="signature">
+        
+        def <strong>ignore_hosts_like</strong>(&block)
+
+        <a class="method-permalink" href="#ignore_hosts_like%28%26block%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/agent/filters.cr#L46" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="ignore_links-instance-method">
+      <div class="signature">
+        
+        def <strong>ignore_links</strong>
+
+        <a class="method-permalink" href="#ignore_links-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Specifies the patterns that match links to not visit.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/agent/filters.cr#L100" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="ignore_links_like(&amp;block:String-&gt;Bool)-instance-method">
+      <div class="signature">
+        
+        def <strong>ignore_links_like</strong>(&block : String -> Bool)
+
+        <a class="method-permalink" href="#ignore_links_like%28%26block%3AString-%3EBool%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/agent/filters.cr#L110" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="ignore_links_like(pattern)-instance-method">
+      <div class="signature">
+        
+        def <strong>ignore_links_like</strong>(pattern)
+
+        <a class="method-permalink" href="#ignore_links_like%28pattern%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Adds a given pattern to the <code><a href="../Arachnid/Agent.html#ignore_links-instance-method">#ignore_links</a></code>.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/agent/filters.cr#L105" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="ignore_ports-instance-method">
+      <div class="signature">
+        
+        def <strong>ignore_ports</strong>
+
+        <a class="method-permalink" href="#ignore_ports-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Specifies the patterns that match ports to not visit.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/agent/filters.cr#L68" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="ignore_ports_like(pattern)-instance-method">
+      <div class="signature">
+        
+        def <strong>ignore_ports_like</strong>(pattern)
+
+        <a class="method-permalink" href="#ignore_ports_like%28pattern%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Adds a given pattern to the <code><a href="../Arachnid/Agent.html#ignore_ports-instance-method">#ignore_ports</a></code>.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/agent/filters.cr#L73" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="ignore_ports_like(&amp;block:Int32-&gt;Bool)-instance-method">
+      <div class="signature">
+        
+        def <strong>ignore_ports_like</strong>(&block : Int32 -> Bool)
+
+        <a class="method-permalink" href="#ignore_ports_like%28%26block%3AInt32-%3EBool%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/agent/filters.cr#L78" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="ignore_urls-instance-method">
+      <div class="signature">
+        
+        def <strong>ignore_urls</strong>
+
+        <a class="method-permalink" href="#ignore_urls-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Specifies the patterns that match URLs to not visit.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/agent/filters.cr#L132" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="ignore_urls_like(&amp;block:URI-&gt;Bool)-instance-method">
+      <div class="signature">
+        
+        def <strong>ignore_urls_like</strong>(&block : <a href="../URI.html">URI</a> -> Bool)
+
+        <a class="method-permalink" href="#ignore_urls_like%28%26block%3AURI-%3EBool%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Adds a given pattern to the <code><a href="../Arachnid/Agent.html#ignore_urls-instance-method">#ignore_urls</a></code>.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/agent/filters.cr#L137" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="ignore_urls_like(pattern)-instance-method">
+      <div class="signature">
+        
+        def <strong>ignore_urls_like</strong>(pattern)
+
+        <a class="method-permalink" href="#ignore_urls_like%28pattern%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/agent/filters.cr#L142" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="initialize_robots-instance-method">
+      <div class="signature">
+        
+        def <strong>initialize_robots</strong>
+
+        <a class="method-permalink" href="#initialize_robots-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Initializes the robots filter.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/agent/robots.cr#L6" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="levels:Hash(URI,Int32)-instance-method">
+      <div class="signature">
+        
+        def <strong>levels</strong> : Hash(<a href="../URI.html">URI</a>, Int32)
+
+        <a class="method-permalink" href="#levels%3AHash%28URI%2CInt32%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>The visited URLs and their depth within a site.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/agent.cr#L64" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="levels=(levels:Hash(URI,Int32))-instance-method">
+      <div class="signature">
+        
+        def <strong>levels=</strong>(levels : Hash(<a href="../URI.html">URI</a>, Int32))
+
+        <a class="method-permalink" href="#levels%3D%28levels%3AHash%28URI%2CInt32%29%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>The visited URLs and their depth within a site.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/agent.cr#L68" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="limit:Int32?-instance-method">
+      <div class="signature">
+        
+        def <strong>limit</strong> : Int32?
+
+        <a class="method-permalink" href="#limit%3AInt32%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Maximum number of resources to visit.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/agent.cr#L58" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="limit=(limit:Int32?)-instance-method">
+      <div class="signature">
+        
+        def <strong>limit=</strong>(limit : Int32?)
+
+        <a class="method-permalink" href="#limit%3D%28limit%3AInt32%3F%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Maximum number of resources to visit.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/agent.cr#L62" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="limit_reached?-instance-method">
+      <div class="signature">
+        
+        def <strong>limit_reached?</strong>
+
+        <a class="method-permalink" href="#limit_reached%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Determines if the maximum limit has been reached.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/agent.cr#L513" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="max_depth:Int32?-instance-method">
+      <div class="signature">
+        
+        def <strong>max_depth</strong> : Int32?
+
+        <a class="method-permalink" href="#max_depth%3AInt32%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Maximum depth.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/agent.cr#L61" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="max_depth=(max_depth:Int32?)-instance-method">
+      <div class="signature">
+        
+        def <strong>max_depth=</strong>(max_depth : Int32?)
+
+        <a class="method-permalink" href="#max_depth%3D%28max_depth%3AInt32%3F%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Maximum depth.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/agent.cr#L65" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="pause!-instance-method">
+      <div class="signature">
+        
+        def <strong>pause!</strong>
+
+        <a class="method-permalink" href="#pause%21-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Pauses the agent, causing spidering to temporarily stop.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/agent/actions.cr#L33" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="pause=(state)-instance-method">
+      <div class="signature">
+        
+        def <strong>pause=</strong>(state)
+
+        <a class="method-permalink" href="#pause%3D%28state%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Sets the pause state of the agent.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/agent/actions.cr#L28" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="paused?-instance-method">
+      <div class="signature">
+        
+        def <strong>paused?</strong>
+
+        <a class="method-permalink" href="#paused%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Determines whether the agent is paused.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/agent/actions.cr#L39" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="post_resource(url,post_data=&amp;quot;&amp;quot;)-instance-method">
+      <div class="signature">
+        
+        def <strong>post_resource</strong>(url, post_data = <span class="s">&quot;&quot;</span>)
+
+        <a class="method-permalink" href="#post_resource%28url%2Cpost_data%3D%26quot%3B%26quot%3B%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Posts supplied form data and creates a new Resource from a given URL.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/agent.cr#L361" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="post_resource(url,post_data=&amp;quot;&amp;quot;,&amp;block)-instance-method">
+      <div class="signature">
+        
+        def <strong>post_resource</strong>(url, post_data = <span class="s">&quot;&quot;</span>, &block)
+
+        <a class="method-permalink" href="#post_resource%28url%2Cpost_data%3D%26quot%3B%26quot%3B%2C%26block%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Posts supplied form data and creates a new Resource from a given URL,
+yielding the newly created resource.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/agent.cr#L346" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="prepare_request(url,&amp;block)-instance-method">
+      <div class="signature">
+        
+        def <strong>prepare_request</strong>(url, &block)
+
+        <a class="method-permalink" href="#prepare_request%28url%2C%26block%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Normalizes the request path and grabs a session to handle
+resource get and post requests.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/agent.cr#L485" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="queue:Hash(String,URI)-instance-method">
+      <div class="signature">
+        
+        def <strong>queue</strong> : Hash(String, <a href="../URI.html">URI</a>)
+
+        <a class="method-permalink" href="#queue%3AHash%28String%2CURI%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Queue of URLs to visit.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/agent.cr#L49" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="queue=(new_queue)-instance-method">
+      <div class="signature">
+        
+        def <strong>queue=</strong>(new_queue)
+
+        <a class="method-permalink" href="#queue%3D%28new_queue%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Sets the queue of URLs to visit.
+Sets the list of failed URLs.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/agent.cr#L261" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="queued?(key)-instance-method">
+      <div class="signature">
+        
+        def <strong>queued?</strong>(key)
+
+        <a class="method-permalink" href="#queued%3F%28key%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Determines whether the given URL has been queued for visiting.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/agent.cr#L272" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="referer:String?-instance-method">
+      <div class="signature">
+        
+        def <strong>referer</strong> : String?
+
+        <a class="method-permalink" href="#referer%3AString%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Referer to use.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/agent.cr#L37" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="referer=(referer:String?)-instance-method">
+      <div class="signature">
+        
+        def <strong>referer=</strong>(referer : String?)
+
+        <a class="method-permalink" href="#referer%3D%28referer%3AString%3F%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Referer to use.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/agent.cr#L41" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="run-instance-method">
+      <div class="signature">
+        
+        def <strong>run</strong>
+
+        <a class="method-permalink" href="#run-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Start spidering until the queue becomes empty or the
+agent is paused.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/agent.cr#L198" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="running?:Bool-instance-method">
+      <div class="signature">
+        
+        def <strong>running?</strong> : Bool
+
+        <a class="method-permalink" href="#running%3F%3ABool-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/agent.cr#L16" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="sanitize_url(url)-instance-method">
+      <div class="signature">
+        
+        def <strong>sanitize_url</strong>(url)
+
+        <a class="method-permalink" href="#sanitize_url%28url%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Sanitizes a URL based on filtering options</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/agent/sanitizers.cr#L10" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="schemes:Array(String)-instance-method">
+      <div class="signature">
+        
+        def <strong>schemes</strong> : Array(String)
+
+        <a class="method-permalink" href="#schemes%3AArray%28String%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>List of acceptable URL schemes to follow</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/agent/filters.cr#L8" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="schemes=(new_schemes)-instance-method">
+      <div class="signature">
+        
+        def <strong>schemes=</strong>(new_schemes)
+
+        <a class="method-permalink" href="#schemes%3D%28new_schemes%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Sets the list of acceptable URL schemes to visit.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/agent/filters.cr#L15" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="sessions:SessionCache-instance-method">
+      <div class="signature">
+        
+        def <strong>sessions</strong> : <a href="../Arachnid/SessionCache.html">SessionCache</a>
+
+        <a class="method-permalink" href="#sessions%3ASessionCache-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>The session cache.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/agent.cr#L52" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="sessions=(sessions:SessionCache)-instance-method">
+      <div class="signature">
+        
+        def <strong>sessions=</strong>(sessions : <a href="../Arachnid/SessionCache.html">SessionCache</a>)
+
+        <a class="method-permalink" href="#sessions%3D%28sessions%3ASessionCache%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>The session cache.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/agent.cr#L56" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="skip_link!-instance-method">
+      <div class="signature">
+        
+        def <strong>skip_link!</strong>
+
+        <a class="method-permalink" href="#skip_link%21-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Causes the agent to skip the link being enqueued.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/agent/actions.cr#L44" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="skip_resource!-instance-method">
+      <div class="signature">
+        
+        def <strong>skip_resource!</strong>
+
+        <a class="method-permalink" href="#skip_resource%21-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Causes the agent to skip the resource being visited.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/agent/actions.cr#L49" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="start_at(url,force=false)-instance-method">
+      <div class="signature">
+        
+        def <strong>start_at</strong>(url, force = <span class="n">false</span>)
+
+        <a class="method-permalink" href="#start_at%28url%2Cforce%3Dfalse%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Start spidering at a given URL.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/agent.cr#L172" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="strip_fragments=(strip_fragments:Bool)-instance-method">
+      <div class="signature">
+        
+        def <strong>strip_fragments=</strong>(strip_fragments : Bool)
+
+        <a class="method-permalink" href="#strip_fragments%3D%28strip_fragments%3ABool%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Specifies whether the Agent will strip URI fragments</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/agent/sanitizers.cr#L10" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="strip_fragments?:Bool-instance-method">
+      <div class="signature">
+        
+        def <strong>strip_fragments?</strong> : Bool
+
+        <a class="method-permalink" href="#strip_fragments%3F%3ABool-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Specifies whether the Agent will strip URI fragments</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/agent/sanitizers.cr#L6" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="strip_query=(strip_query:Bool)-instance-method">
+      <div class="signature">
+        
+        def <strong>strip_query=</strong>(strip_query : Bool)
+
+        <a class="method-permalink" href="#strip_query%3D%28strip_query%3ABool%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Specifies whether the Agent will strip URI queries</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/agent/sanitizers.cr#L13" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="strip_query?:Bool-instance-method">
+      <div class="signature">
+        
+        def <strong>strip_query?</strong> : Bool
+
+        <a class="method-permalink" href="#strip_query%3F%3ABool-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Specifies whether the Agent will strip URI queries</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/agent/sanitizers.cr#L9" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="to_h-instance-method">
+      <div class="signature">
+        
+        def <strong>to_h</strong>
+
+        <a class="method-permalink" href="#to_h-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Converts the agent into a hash.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/agent.cr#L450" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="urls_like(pattern,&amp;block:URI-&gt;)-instance-method">
+      <div class="signature">
+        
+        def <strong>urls_like</strong>(pattern, &block : <a href="../URI.html">URI</a> -> )
+
+        <a class="method-permalink" href="#urls_like%28pattern%2C%26block%3AURI-%3E%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Ssee <code><a href="../Arachnid/Agent.html#every_url_like%28pattern%2C%26block%3AURI-%3E%29-instance-method">#every_url_like</a></code></p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/agent/events.cr#L37" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="user_agent:String-instance-method">
+      <div class="signature">
+        
+        def <strong>user_agent</strong> : String
+
+        <a class="method-permalink" href="#user_agent%3AString-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>User agent to use.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/agent.cr#L22" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="user_agent=(user_agent:String)-instance-method">
+      <div class="signature">
+        
+        def <strong>user_agent=</strong>(user_agent : String)
+
+        <a class="method-permalink" href="#user_agent%3D%28user_agent%3AString%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>User agent to use.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/agent.cr#L26" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="visit?(url)-instance-method">
+      <div class="signature">
+        
+        def <strong>visit?</strong>(url)
+
+        <a class="method-permalink" href="#visit%3F%28url%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Determines if a given URL should be visited.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/agent.cr#L521" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="visit_exts-instance-method">
+      <div class="signature">
+        
+        def <strong>visit_exts</strong>
+
+        <a class="method-permalink" href="#visit_exts-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Specifies the patterns that match the URI path extensions to visit.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/agent/filters.cr#L148" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="visit_exts_like(pattern)-instance-method">
+      <div class="signature">
+        
+        def <strong>visit_exts_like</strong>(pattern)
+
+        <a class="method-permalink" href="#visit_exts_like%28pattern%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/agent/filters.cr#L158" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="visit_exts_like(&amp;block:String-&gt;Bool)-instance-method">
+      <div class="signature">
+        
+        def <strong>visit_exts_like</strong>(&block : String -> Bool)
+
+        <a class="method-permalink" href="#visit_exts_like%28%26block%3AString-%3EBool%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Adds a given pattern to the <code><a href="../Arachnid/Agent.html#visit_exts-instance-method">#visit_exts</a></code>.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/agent/filters.cr#L153" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="visit_hosts-instance-method">
+      <div class="signature">
+        
+        def <strong>visit_hosts</strong>
+
+        <a class="method-permalink" href="#visit_hosts-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Specifies the patterns that match host-names to visit.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/agent/filters.cr#L20" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="visit_hosts_like(&amp;block)-instance-method">
+      <div class="signature">
+        
+        def <strong>visit_hosts_like</strong>(&block)
+
+        <a class="method-permalink" href="#visit_hosts_like%28%26block%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/agent/filters.cr#L30" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="visit_hosts_like(pattern)-instance-method">
+      <div class="signature">
+        
+        def <strong>visit_hosts_like</strong>(pattern)
+
+        <a class="method-permalink" href="#visit_hosts_like%28pattern%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Adds a given pattern to the <code><a href="../Arachnid/Agent.html#visit_hosts-instance-method">#visit_hosts</a></code>.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/agent/filters.cr#L25" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="visit_links-instance-method">
+      <div class="signature">
+        
+        def <strong>visit_links</strong>
+
+        <a class="method-permalink" href="#visit_links-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Specifies the patterns that match the links to visit.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/agent/filters.cr#L84" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="visit_links_like(pattern)-instance-method">
+      <div class="signature">
+        
+        def <strong>visit_links_like</strong>(pattern)
+
+        <a class="method-permalink" href="#visit_links_like%28pattern%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Adds a given pattern to the <code><a href="../Arachnid/Agent.html#visit_links-instance-method">#visit_links</a></code></p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/agent/filters.cr#L89" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="visit_links_like(&amp;block:String-&gt;Bool)-instance-method">
+      <div class="signature">
+        
+        def <strong>visit_links_like</strong>(&block : String -> Bool)
+
+        <a class="method-permalink" href="#visit_links_like%28%26block%3AString-%3EBool%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/agent/filters.cr#L94" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="visit_ports-instance-method">
+      <div class="signature">
+        
+        def <strong>visit_ports</strong>
+
+        <a class="method-permalink" href="#visit_ports-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Specifies the patterns that match the ports to visit.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/agent/filters.cr#L52" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="visit_ports_like(pattern)-instance-method">
+      <div class="signature">
+        
+        def <strong>visit_ports_like</strong>(pattern)
+
+        <a class="method-permalink" href="#visit_ports_like%28pattern%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Adds a given pattern to the <code><a href="../Arachnid/Agent.html#visit_ports-instance-method">#visit_ports</a></code>.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/agent/filters.cr#L57" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="visit_ports_like(&amp;block:Int32-&gt;Bool)-instance-method">
+      <div class="signature">
+        
+        def <strong>visit_ports_like</strong>(&block : Int32 -> Bool)
+
+        <a class="method-permalink" href="#visit_ports_like%28%26block%3AInt32-%3EBool%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/agent/filters.cr#L62" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="visit_resource(url)-instance-method">
+      <div class="signature">
+        
+        def <strong>visit_resource</strong>(url)
+
+        <a class="method-permalink" href="#visit_resource%28url%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Visits a given URL and enqueues the links recovered
+from the resource to be visited later.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/agent.cr#L414" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="visit_urls-instance-method">
+      <div class="signature">
+        
+        def <strong>visit_urls</strong>
+
+        <a class="method-permalink" href="#visit_urls-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Specifies the patterns that match the URLs to visit.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/agent/filters.cr#L116" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="visit_urls_like(&amp;block:URI-&gt;Bool)-instance-method">
+      <div class="signature">
+        
+        def <strong>visit_urls_like</strong>(&block : <a href="../URI.html">URI</a> -> Bool)
+
+        <a class="method-permalink" href="#visit_urls_like%28%26block%3AURI-%3EBool%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Adds a given pattern to the <code><a href="../Arachnid/Agent.html#visit_urls-instance-method">#visit_urls</a></code></p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/agent/filters.cr#L121" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="visit_urls_like(pattern)-instance-method">
+      <div class="signature">
+        
+        def <strong>visit_urls_like</strong>(pattern)
+
+        <a class="method-permalink" href="#visit_urls_like%28pattern%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/agent/filters.cr#L126" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="visited?(url)-instance-method">
+      <div class="signature">
+        
+        def <strong>visited?</strong>(url)
+
+        <a class="method-permalink" href="#visited%3F%28url%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Determines whether a URL was visited or not.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/agent.cr#L237" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="visited_hosts-instance-method">
+      <div class="signature">
+        
+        def <strong>visited_hosts</strong>
+
+        <a class="method-permalink" href="#visited_hosts-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Specifies the hosts which have been visited.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/agent.cr#L232" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="visited_links-instance-method">
+      <div class="signature">
+        
+        def <strong>visited_links</strong>
+
+        <a class="method-permalink" href="#visited_links-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Specifies the links which have been visited.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/agent.cr#L227" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+
+
+
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Crystal Docs 0.29.0">
+
+
+<link href="../../css/style.css" rel="stylesheet" type="text/css">
+
+<script type="text/javascript" src="../../js/doc.js"></script>
+<script type="text/javascript">
+  CrystalDoc.base_path = "../../";
+</script>
+
+  <meta id="repository-name" content="github.com/watzon/arachnid">
+  <title>Arachnid::Resource::HTML - github.com/watzon/arachnid</title>
+</head>
+<body>
+
+<div class="sidebar">
+  <div class="sidebar-header">
+    <div class="search-box">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false" aria-label="Search">
+    </div>
+
+    <div class="repository-links">
+      <a href="../../index.html">README</a>
+    </div>
+  </div>
+
+  <div class="search-results" class="hidden">
+    <ul class="search-list"></ul>
+  </div>
+
+  <div class="types-list">
+    <ul>
+  
+  <li class="parent open current" data-id="github.com/watzon/arachnid/Arachnid" data-name="arachnid">
+      <a href="../../Arachnid.html">Arachnid</a>
+      
+        <ul>
+  
+  <li class="parent " data-id="github.com/watzon/arachnid/Arachnid/Agent" data-name="arachnid::agent">
+      <a href="../../Arachnid/Agent.html">Agent</a>
+      
+        <ul>
+  
+  <li class="parent " data-id="github.com/watzon/arachnid/Arachnid/Agent/Actions" data-name="arachnid::agent::actions">
+      <a href="../../Arachnid/Agent/Actions.html">Actions</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/watzon/arachnid/Arachnid/Agent/Actions/Action" data-name="arachnid::agent::actions::action">
+      <a href="../../Arachnid/Agent/Actions/Action.html">Action</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/watzon/arachnid/Arachnid/Agent/Actions/Paused" data-name="arachnid::agent::actions::paused">
+      <a href="../../Arachnid/Agent/Actions/Paused.html">Paused</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/watzon/arachnid/Arachnid/Agent/Actions/RuntimeError" data-name="arachnid::agent::actions::runtimeerror">
+      <a href="../../Arachnid/Agent/Actions/RuntimeError.html">RuntimeError</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/watzon/arachnid/Arachnid/Agent/Actions/SkipLink" data-name="arachnid::agent::actions::skiplink">
+      <a href="../../Arachnid/Agent/Actions/SkipLink.html">SkipLink</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/watzon/arachnid/Arachnid/Agent/Actions/SkipResource" data-name="arachnid::agent::actions::skipresource">
+      <a href="../../Arachnid/Agent/Actions/SkipResource.html">SkipResource</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="github.com/watzon/arachnid/Arachnid/Agent/Queue" data-name="arachnid::agent::queue">
+      <a href="../../Arachnid/Agent/Queue.html">Queue</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="github.com/watzon/arachnid/Arachnid/AuthCredential" data-name="arachnid::authcredential">
+      <a href="../../Arachnid/AuthCredential.html">AuthCredential</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/watzon/arachnid/Arachnid/AuthStore" data-name="arachnid::authstore">
+      <a href="../../Arachnid/AuthStore.html">AuthStore</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/watzon/arachnid/Arachnid/CookieJar" data-name="arachnid::cookiejar">
+      <a href="../../Arachnid/CookieJar.html">CookieJar</a>
+      
+    </li>
+  
+  <li class="parent " data-id="github.com/watzon/arachnid/Arachnid/Document" data-name="arachnid::document">
+      <a href="../../Arachnid/Document.html">Document</a>
+      
+        <ul>
+  
+  <li class="parent " data-id="github.com/watzon/arachnid/Arachnid/Document/HTML" data-name="arachnid::document::html">
+      <a href="../../Arachnid/Document/HTML.html">HTML</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/watzon/arachnid/Arachnid/Document/HTML/Tag" data-name="arachnid::document::html::tag">
+      <a href="../../Arachnid/Document/HTML/Tag.html">Tag</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class="parent open current" data-id="github.com/watzon/arachnid/Arachnid/Resource" data-name="arachnid::resource">
+      <a href="../../Arachnid/Resource.html">Resource</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/watzon/arachnid/Arachnid/Resource/ContentTypes" data-name="arachnid::resource::contenttypes">
+      <a href="../../Arachnid/Resource/ContentTypes.html">ContentTypes</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/watzon/arachnid/Arachnid/Resource/Cookies" data-name="arachnid::resource::cookies">
+      <a href="../../Arachnid/Resource/Cookies.html">Cookies</a>
+      
+    </li>
+  
+  <li class=" current" data-id="github.com/watzon/arachnid/Arachnid/Resource/HTML" data-name="arachnid::resource::html">
+      <a href="../../Arachnid/Resource/HTML.html">HTML</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/watzon/arachnid/Arachnid/Resource/StatusCodes" data-name="arachnid::resource::statuscodes">
+      <a href="../../Arachnid/Resource/StatusCodes.html">StatusCodes</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="github.com/watzon/arachnid/Arachnid/Rules" data-name="arachnid::rules(t)">
+      <a href="../../Arachnid/Rules.html">Rules</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/watzon/arachnid/Arachnid/SessionCache" data-name="arachnid::sessioncache">
+      <a href="../../Arachnid/SessionCache.html">SessionCache</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="github.com/watzon/arachnid/URI" data-name="uri">
+      <a href="../../URI.html">URI</a>
+      
+    </li>
+  
+</ul>
+
+  </div>
+</div>
+
+
+<div class="main-content">
+<h1 class="type-name">
+
+  <span class="kind">module</span> Arachnid::Resource::HTML
+
+</h1>
+
+
+
+
+
+  <h2>Overview</h2>
+
+  <p><span class="flag orange">TODO</span>  Create enumerable methods for the methods that take a block</p>
+
+
+
+
+
+
+
+
+
+
+
+  <h2>Direct including types</h2>
+  <ul class="other-types-list">
+  
+    <li class="other-type"><a href="../../Arachnid/Resource.html">Arachnid::Resource</a></li>
+  
+  </ul>
+
+
+
+
+  <h2>Defined in:</h2>
+  
+    
+      <a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/resource/html.cr#L6" target="_blank">
+        arachnid/resource/html.cr
+      </a>
+    
+    <br/>
+  
+
+
+
+
+
+
+
+
+
+  <h2>Instance Method Summary</h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#each%28%26block%29-instance-method" class="signature"><strong>#each</strong>(&block)</a>
+        
+          <div class="summary"><p>Enumerates over every URL in the resource.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#each_image%28%26block%3AURI-%3E%29-instance-method" class="signature"><strong>#each_image</strong>(&block : URI -> )</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#each_link%28%26block%3AURI-%3E%29-instance-method" class="signature"><strong>#each_link</strong>(&block : URI -> )</a>
+        
+          <div class="summary"><p>Enumerates over every link in the resource.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#each_mailto%28%26block%29-instance-method" class="signature"><strong>#each_mailto</strong>(&block)</a>
+        
+          <div class="summary"><p>Enumerates over every <code>mailto:</code> link in the resource.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#each_meta_redirect%28%26block%3AURI-%3E%29-instance-method" class="signature"><strong>#each_meta_redirect</strong>(&block : URI -> )</a>
+        
+          <div class="summary"><p>Enumerates over the meta-redirect links in the resource.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#each_redirect%28%26block%3AURI-%3E%29-instance-method" class="signature"><strong>#each_redirect</strong>(&block : URI -> )</a>
+        
+          <div class="summary"><p>Enumerates over every HTTP or meta-redirect link in the resource.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#each_resource%28%26block%3AURI-%3E%29-instance-method" class="signature"><strong>#each_resource</strong>(&block : URI -> )</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#each_script%28%26block%3AURI-%3E%29-instance-method" class="signature"><strong>#each_script</strong>(&block : URI -> )</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#each_url%28%26block%3AURI-%3E%29-instance-method" class="signature"><strong>#each_url</strong>(&block : URI -> )</a>
+        
+          <div class="summary"><p>Enumerates over every URL in the resource.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#each_video%28%26block%3AURI-%3E%29-instance-method" class="signature"><strong>#each_video</strong>(&block : URI -> )</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#links-instance-method" class="signature"><strong>#links</strong></a>
+        
+          <div class="summary"><p>The links from within the resource.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#mailtos-instance-method" class="signature"><strong>#mailtos</strong></a>
+        
+          <div class="summary"><p><code>mailto:</code> links in the resource.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#meta_redirect%3F-instance-method" class="signature"><strong>#meta_redirect?</strong></a>
+        
+          <div class="summary"><p>Returns a boolean indicating whether or not resource-level meta redirects are present in this resource.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#meta_redirects-instance-method" class="signature"><strong>#meta_redirects</strong></a>
+        
+          <div class="summary"><p>The meta-redirect links of the resource.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#redirects_to-instance-method" class="signature"><strong>#redirects_to</strong></a>
+        
+          <div class="summary"><p>URLs that this document redirects to.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#title-instance-method" class="signature"><strong>#title</strong></a>
+        
+          <div class="summary"><p>The title of the HTML resource.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#to_absolute%28link%29-instance-method" class="signature"><strong>#to_absolute</strong>(link)</a>
+        
+          <div class="summary"><p>Normalizes and expands a given link into a proper URI.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#urls-instance-method" class="signature"><strong>#urls</strong></a>
+        
+          <div class="summary"><p>Absolute URIs from within the resource.</p></div>
+        
+      </li>
+    
+  </ul>
+
+
+
+
+
+<div class="methods-inherited">
+  
+</div>
+
+
+
+
+
+
+  <h2>Instance Method Detail</h2>
+  
+    <div class="entry-detail" id="each(&amp;block)-instance-method">
+      <div class="signature">
+        
+        def <strong>each</strong>(&block)
+
+        <a class="method-permalink" href="#each%28%26block%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Enumerates over every URL in the resource.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/resource/html.cr#L167" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="each_image(&amp;block:URI-&gt;)-instance-method">
+      <div class="signature">
+        
+        def <strong>each_image</strong>(&block : <a href="../../URI.html">URI</a> -> )
+
+        <a class="method-permalink" href="#each_image%28%26block%3AURI-%3E%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/resource/html.cr#L119" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="each_link(&amp;block:URI-&gt;)-instance-method">
+      <div class="signature">
+        
+        def <strong>each_link</strong>(&block : <a href="../../URI.html">URI</a> -> )
+
+        <a class="method-permalink" href="#each_link%28%26block%3AURI-%3E%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Enumerates over every link in the resource.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/resource/html.cr#L75" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="each_mailto(&amp;block)-instance-method">
+      <div class="signature">
+        
+        def <strong>each_mailto</strong>(&block)
+
+        <a class="method-permalink" href="#each_mailto%28%26block%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Enumerates over every <code>mailto:</code> link in the resource.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/resource/html.cr#L61" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="each_meta_redirect(&amp;block:URI-&gt;)-instance-method">
+      <div class="signature">
+        
+        def <strong>each_meta_redirect</strong>(&block : <a href="../../URI.html">URI</a> -> )
+
+        <a class="method-permalink" href="#each_meta_redirect%28%26block%3AURI-%3E%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Enumerates over the meta-redirect links in the resource.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/resource/html.cr#L17" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="each_redirect(&amp;block:URI-&gt;)-instance-method">
+      <div class="signature">
+        
+        def <strong>each_redirect</strong>(&block : <a href="../../URI.html">URI</a> -> )
+
+        <a class="method-permalink" href="#each_redirect%28%26block%3AURI-%3E%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Enumerates over every HTTP or meta-redirect link in the resource.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/resource/html.cr#L45" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="each_resource(&amp;block:URI-&gt;)-instance-method">
+      <div class="signature">
+        
+        def <strong>each_resource</strong>(&block : <a href="../../URI.html">URI</a> -> )
+
+        <a class="method-permalink" href="#each_resource%28%26block%3AURI-%3E%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/resource/html.cr#L111" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="each_script(&amp;block:URI-&gt;)-instance-method">
+      <div class="signature">
+        
+        def <strong>each_script</strong>(&block : <a href="../../URI.html">URI</a> -> )
+
+        <a class="method-permalink" href="#each_script%28%26block%3AURI-%3E%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/resource/html.cr#L102" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="each_url(&amp;block:URI-&gt;)-instance-method">
+      <div class="signature">
+        
+        def <strong>each_url</strong>(&block : <a href="../../URI.html">URI</a> -> )
+
+        <a class="method-permalink" href="#each_url%28%26block%3AURI-%3E%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Enumerates over every URL in the resource.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/resource/html.cr#L158" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="each_video(&amp;block:URI-&gt;)-instance-method">
+      <div class="signature">
+        
+        def <strong>each_video</strong>(&block : <a href="../../URI.html">URI</a> -> )
+
+        <a class="method-permalink" href="#each_video%28%26block%3AURI-%3E%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/resource/html.cr#L136" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="links-instance-method">
+      <div class="signature">
+        
+        def <strong>links</strong>
+
+        <a class="method-permalink" href="#links-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>The links from within the resource.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/resource/html.cr#L151" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="mailtos-instance-method">
+      <div class="signature">
+        
+        def <strong>mailtos</strong>
+
+        <a class="method-permalink" href="#mailtos-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p><code>mailto:</code> links in the resource.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/resource/html.cr#L70" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="meta_redirect?-instance-method">
+      <div class="signature">
+        
+        def <strong>meta_redirect?</strong>
+
+        <a class="method-permalink" href="#meta_redirect%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Returns a boolean indicating whether or not resource-level meta
+redirects are present in this resource.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/resource/html.cr#L33" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="meta_redirects-instance-method">
+      <div class="signature">
+        
+        def <strong>meta_redirects</strong>
+
+        <a class="method-permalink" href="#meta_redirects-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>The meta-redirect links of the resource.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/resource/html.cr#L38" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="redirects_to-instance-method">
+      <div class="signature">
+        
+        def <strong>redirects_to</strong>
+
+        <a class="method-permalink" href="#redirects_to-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>URLs that this document redirects to.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/resource/html.cr#L56" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="title-instance-method">
+      <div class="signature">
+        
+        def <strong>title</strong>
+
+        <a class="method-permalink" href="#title-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>The title of the HTML resource.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/resource/html.cr#L10" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="to_absolute(link)-instance-method">
+      <div class="signature">
+        
+        def <strong>to_absolute</strong>(link)
+
+        <a class="method-permalink" href="#to_absolute%28link%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Normalizes and expands a given link into a proper URI.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/resource/html.cr#L179" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="urls-instance-method">
+      <div class="signature">
+        
+        def <strong>urls</strong>
+
+        <a class="method-permalink" href="#urls-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Absolute URIs from within the resource.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/resource/html.cr#L172" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+
+
+
+
+</div>
+
+</body>
+</html>

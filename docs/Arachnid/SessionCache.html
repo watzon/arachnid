@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Crystal Docs 0.29.0">
+
+
+<link href="../css/style.css" rel="stylesheet" type="text/css">
+
+<script type="text/javascript" src="../js/doc.js"></script>
+<script type="text/javascript">
+  CrystalDoc.base_path = "../";
+</script>
+
+  <meta id="repository-name" content="github.com/watzon/arachnid">
+  <title>Arachnid::SessionCache - github.com/watzon/arachnid</title>
+</head>
+<body>
+
+<div class="sidebar">
+  <div class="sidebar-header">
+    <div class="search-box">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false" aria-label="Search">
+    </div>
+
+    <div class="repository-links">
+      <a href="../index.html">README</a>
+    </div>
+  </div>
+
+  <div class="search-results" class="hidden">
+    <ul class="search-list"></ul>
+  </div>
+
+  <div class="types-list">
+    <ul>
+  
+  <li class="parent open current" data-id="github.com/watzon/arachnid/Arachnid" data-name="arachnid">
+      <a href="../Arachnid.html">Arachnid</a>
+      
+        <ul>
+  
+  <li class="parent " data-id="github.com/watzon/arachnid/Arachnid/Agent" data-name="arachnid::agent">
+      <a href="../Arachnid/Agent.html">Agent</a>
+      
+        <ul>
+  
+  <li class="parent " data-id="github.com/watzon/arachnid/Arachnid/Agent/Actions" data-name="arachnid::agent::actions">
+      <a href="../Arachnid/Agent/Actions.html">Actions</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/watzon/arachnid/Arachnid/Agent/Actions/Action" data-name="arachnid::agent::actions::action">
+      <a href="../Arachnid/Agent/Actions/Action.html">Action</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/watzon/arachnid/Arachnid/Agent/Actions/Paused" data-name="arachnid::agent::actions::paused">
+      <a href="../Arachnid/Agent/Actions/Paused.html">Paused</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/watzon/arachnid/Arachnid/Agent/Actions/RuntimeError" data-name="arachnid::agent::actions::runtimeerror">
+      <a href="../Arachnid/Agent/Actions/RuntimeError.html">RuntimeError</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/watzon/arachnid/Arachnid/Agent/Actions/SkipLink" data-name="arachnid::agent::actions::skiplink">
+      <a href="../Arachnid/Agent/Actions/SkipLink.html">SkipLink</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/watzon/arachnid/Arachnid/Agent/Actions/SkipResource" data-name="arachnid::agent::actions::skipresource">
+      <a href="../Arachnid/Agent/Actions/SkipResource.html">SkipResource</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="github.com/watzon/arachnid/Arachnid/Agent/Queue" data-name="arachnid::agent::queue">
+      <a href="../Arachnid/Agent/Queue.html">Queue</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="github.com/watzon/arachnid/Arachnid/AuthCredential" data-name="arachnid::authcredential">
+      <a href="../Arachnid/AuthCredential.html">AuthCredential</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/watzon/arachnid/Arachnid/AuthStore" data-name="arachnid::authstore">
+      <a href="../Arachnid/AuthStore.html">AuthStore</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/watzon/arachnid/Arachnid/CookieJar" data-name="arachnid::cookiejar">
+      <a href="../Arachnid/CookieJar.html">CookieJar</a>
+      
+    </li>
+  
+  <li class="parent " data-id="github.com/watzon/arachnid/Arachnid/Document" data-name="arachnid::document">
+      <a href="../Arachnid/Document.html">Document</a>
+      
+        <ul>
+  
+  <li class="parent " data-id="github.com/watzon/arachnid/Arachnid/Document/HTML" data-name="arachnid::document::html">
+      <a href="../Arachnid/Document/HTML.html">HTML</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/watzon/arachnid/Arachnid/Document/HTML/Tag" data-name="arachnid::document::html::tag">
+      <a href="../Arachnid/Document/HTML/Tag.html">Tag</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class="parent " data-id="github.com/watzon/arachnid/Arachnid/Resource" data-name="arachnid::resource">
+      <a href="../Arachnid/Resource.html">Resource</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/watzon/arachnid/Arachnid/Resource/ContentTypes" data-name="arachnid::resource::contenttypes">
+      <a href="../Arachnid/Resource/ContentTypes.html">ContentTypes</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/watzon/arachnid/Arachnid/Resource/Cookies" data-name="arachnid::resource::cookies">
+      <a href="../Arachnid/Resource/Cookies.html">Cookies</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/watzon/arachnid/Arachnid/Resource/HTML" data-name="arachnid::resource::html">
+      <a href="../Arachnid/Resource/HTML.html">HTML</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/watzon/arachnid/Arachnid/Resource/StatusCodes" data-name="arachnid::resource::statuscodes">
+      <a href="../Arachnid/Resource/StatusCodes.html">StatusCodes</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="github.com/watzon/arachnid/Arachnid/Rules" data-name="arachnid::rules(t)">
+      <a href="../Arachnid/Rules.html">Rules</a>
+      
+    </li>
+  
+  <li class=" current" data-id="github.com/watzon/arachnid/Arachnid/SessionCache" data-name="arachnid::sessioncache">
+      <a href="../Arachnid/SessionCache.html">SessionCache</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="github.com/watzon/arachnid/URI" data-name="uri">
+      <a href="../URI.html">URI</a>
+      
+    </li>
+  
+</ul>
+
+  </div>
+</div>
+
+
+<div class="main-content">
+<h1 class="type-name">
+
+  <span class="kind">class</span> Arachnid::SessionCache
+
+</h1>
+
+
+  <ul class="superclass-hierarchy"><li class="superclass"><a href="../Arachnid/SessionCache.html">Arachnid::SessionCache</a></li><li class="superclass">Reference</li><li class="superclass">Object</li></ul>
+
+
+
+
+  <h2>Overview</h2>
+
+  <p>Stores active HTTP Sessions organized by scheme, host-name and port.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2>Defined in:</h2>
+  
+    
+      <a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/session_cache.cr#L6" target="_blank">
+        arachnid/session_cache.cr
+      </a>
+    
+    <br/>
+  
+
+
+
+
+
+  <h2>Constructors</h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#new%28read_timeout%3AInt32%3F%3Dnil%2Cconnect_timeout%3AInt32%3F%3Dnil%2Cmax_redirects%3AInt32%3F%3Dnil%2Cdo_not_track%3ABool%3F%3Dnil%29-class-method" class="signature"><strong>.new</strong>(read_timeout : Int32? = <span class="n">nil</span>, connect_timeout : Int32? = <span class="n">nil</span>, max_redirects : Int32? = <span class="n">nil</span>, do_not_track : Bool? = <span class="n">nil</span>)</a>
+        
+          <div class="summary"><p>Create a new session cache</p></div>
+        
+      </li>
+    
+  </ul>
+
+
+
+
+
+  <h2>Instance Method Summary</h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#%5B%5D%28url%29-instance-method" class="signature"><strong>#[]</strong>(url)</a>
+        
+          <div class="summary"><p>Provides an active session for a given URL.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#active%3F%28url%29-instance-method" class="signature"><strong>#active?</strong>(url)</a>
+        
+          <div class="summary"><p>Determines if there is an active session for the given URL</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#clear-instance-method" class="signature"><strong>#clear</strong></a>
+        
+          <div class="summary"><p>Clears the session cache</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#connect_timeout%3AInt32-instance-method" class="signature"><strong>#connect_timeout</strong> : Int32</a>
+        
+          <div class="summary"><p>Optional connect timeout.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#connect_timeout%3D%28connect_timeout%3AInt32%29-instance-method" class="signature"><strong>#connect_timeout=</strong>(connect_timeout : Int32)</a>
+        
+          <div class="summary"><p>Optional connect timeout.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#do_not_track%3D%28do_not_track%3ABool%29-instance-method" class="signature"><strong>#do_not_track=</strong>(do_not_track : Bool)</a>
+        
+          <div class="summary"><p>Should we set a DNT (Do Not Track) header?</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#do_not_track%3F%3ABool-instance-method" class="signature"><strong>#do_not_track?</strong> : Bool</a>
+        
+          <div class="summary"><p>Should we set a DNT (Do Not Track) header?</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#kill%21%28url%29-instance-method" class="signature"><strong>#kill!</strong>(url)</a>
+        
+          <div class="summary"><p>Destroys an HTTP session for the given scheme, host, and port.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#max_redirects%3AInt32%3F-instance-method" class="signature"><strong>#max_redirects</strong> : Int32?</a>
+        
+          <div class="summary"><p>Max redirects to follow.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#max_redirects%3D%28max_redirects%3AInt32%3F%29-instance-method" class="signature"><strong>#max_redirects=</strong>(max_redirects : Int32?)</a>
+        
+          <div class="summary"><p>Max redirects to follow.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#read_timeout%3AInt32-instance-method" class="signature"><strong>#read_timeout</strong> : Int32</a>
+        
+          <div class="summary"><p>Optional read timeout.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#read_timeout%3D%28read_timeout%3AInt32%29-instance-method" class="signature"><strong>#read_timeout=</strong>(read_timeout : Int32)</a>
+        
+          <div class="summary"><p>Optional read timeout.</p></div>
+        
+      </li>
+    
+  </ul>
+
+
+
+
+
+<div class="methods-inherited">
+  
+    
+
+
+    
+
+
+    
+
+
+  
+    
+
+
+    
+
+
+    
+
+
+  
+</div>
+
+
+  <h2>Constructor Detail</h2>
+  
+    <div class="entry-detail" id="new(read_timeout:Int32?=nil,connect_timeout:Int32?=nil,max_redirects:Int32?=nil,do_not_track:Bool?=nil)-class-method">
+      <div class="signature">
+        
+        def self.<strong>new</strong>(read_timeout : Int32? = <span class="n">nil</span>, connect_timeout : Int32? = <span class="n">nil</span>, max_redirects : Int32? = <span class="n">nil</span>, do_not_track : Bool? = <span class="n">nil</span>)
+
+        <a class="method-permalink" href="#new%28read_timeout%3AInt32%3F%3Dnil%2Cconnect_timeout%3AInt32%3F%3Dnil%2Cmax_redirects%3AInt32%3F%3Dnil%2Cdo_not_track%3ABool%3F%3Dnil%29-class-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Create a new session cache</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/session_cache.cr#L23" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+
+
+
+
+
+  <h2>Instance Method Detail</h2>
+  
+    <div class="entry-detail" id="[](url)-instance-method">
+      <div class="signature">
+        
+        def <strong>[]</strong>(url)
+
+        <a class="method-permalink" href="#%5B%5D%28url%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Provides an active session for a given URL.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/session_cache.cr#L47" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="active?(url)-instance-method">
+      <div class="signature">
+        
+        def <strong>active?</strong>(url)
+
+        <a class="method-permalink" href="#active%3F%28url%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Determines if there is an active session for the given URL</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/session_cache.cr#L36" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="clear-instance-method">
+      <div class="signature">
+        
+        def <strong>clear</strong>
+
+        <a class="method-permalink" href="#clear-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Clears the session cache</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/session_cache.cr#L102" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="connect_timeout:Int32-instance-method">
+      <div class="signature">
+        
+        def <strong>connect_timeout</strong> : Int32
+
+        <a class="method-permalink" href="#connect_timeout%3AInt32-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Optional connect timeout.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/session_cache.cr#L14" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="connect_timeout=(connect_timeout:Int32)-instance-method">
+      <div class="signature">
+        
+        def <strong>connect_timeout=</strong>(connect_timeout : Int32)
+
+        <a class="method-permalink" href="#connect_timeout%3D%28connect_timeout%3AInt32%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Optional connect timeout.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/session_cache.cr#L18" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="do_not_track=(do_not_track:Bool)-instance-method">
+      <div class="signature">
+        
+        def <strong>do_not_track=</strong>(do_not_track : Bool)
+
+        <a class="method-permalink" href="#do_not_track%3D%28do_not_track%3ABool%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Should we set a DNT (Do Not Track) header?</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/session_cache.cr#L24" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="do_not_track?:Bool-instance-method">
+      <div class="signature">
+        
+        def <strong>do_not_track?</strong> : Bool
+
+        <a class="method-permalink" href="#do_not_track%3F%3ABool-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Should we set a DNT (Do Not Track) header?</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/session_cache.cr#L20" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="kill!(url)-instance-method">
+      <div class="signature">
+        
+        def <strong>kill!</strong>(url)
+
+        <a class="method-permalink" href="#kill%21%28url%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Destroys an HTTP session for the given scheme, host, and port.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/session_cache.cr#L89" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="max_redirects:Int32?-instance-method">
+      <div class="signature">
+        
+        def <strong>max_redirects</strong> : Int32?
+
+        <a class="method-permalink" href="#max_redirects%3AInt32%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Max redirects to follow.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/session_cache.cr#L17" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="max_redirects=(max_redirects:Int32?)-instance-method">
+      <div class="signature">
+        
+        def <strong>max_redirects=</strong>(max_redirects : Int32?)
+
+        <a class="method-permalink" href="#max_redirects%3D%28max_redirects%3AInt32%3F%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Max redirects to follow.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/session_cache.cr#L21" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="read_timeout:Int32-instance-method">
+      <div class="signature">
+        
+        def <strong>read_timeout</strong> : Int32
+
+        <a class="method-permalink" href="#read_timeout%3AInt32-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Optional read timeout.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/session_cache.cr#L11" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="read_timeout=(read_timeout:Int32)-instance-method">
+      <div class="signature">
+        
+        def <strong>read_timeout=</strong>(read_timeout : Int32)
+
+        <a class="method-permalink" href="#read_timeout%3D%28read_timeout%3AInt32%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Optional read timeout.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/watzon/arachnid/blob/32bf4d89b826d76adc3c6f2cd160bfd2348ace03/src/arachnid/session_cache.cr#L15" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+
+
+
+
+</div>
+
+</body>
+</html>
