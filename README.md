@@ -8,9 +8,9 @@ Arachnid is a fast and powerful web scraping framework for Crystal. It provides 
   - [Usage](#Usage)
     - [Configuration](#Configuration)
     - [Crawling](#Crawling)
-      - [Arachnid#start_at(url, **options, &block : Agent ->)](#Arachnidstartaturl-options-block--Agent)
-      - [Arachnid#site(url, **options, &block : Agent ->)](#Arachnidsiteurl-options-block--Agent)
-      - [Arachnid#host(name, **options, &block : Agent ->)](#Arachnidhostname-options-block--Agent)
+      - [`Arachnid#start_at(url, **options, &block : Agent ->)`](#Arachnidstartaturl-options-block--Agent)
+      - [`Arachnid#site(url, **options, &block : Agent ->)`](#Arachnidsiteurl-options-block--Agent)
+      - [`Arachnid#host(name, **options, &block : Agent ->)`](#Arachnidhostname-options-block--Agent)
     - [Crawling Rules](#Crawling-Rules)
     - [Events](#Events)
       - [`every_url(&block : URI ->)`](#everyurlblock--URI)
@@ -167,15 +167,15 @@ There are also a few class properties on `Arachnid` itself which are used as the
 
 Arachnid provides 3 interfaces to use for crawling:
 
-#### Arachnid#start_at(url, **options, &block : Agent ->)
+#### `Arachnid#start_at(url, **options, &block : Agent ->)`
 
 `start_at` is what you want to use if you're going to be doing a full crawl of multiple sites. It doesn't filter any urls by default and will scan every link it encounters.
 
-#### Arachnid#site(url, **options, &block : Agent ->)
+#### `Arachnid#site(url, **options, &block : Agent ->)`
 
 `site` constrains the crawl to a specific site. "site" in this case is defined as all paths within a domain and it's subdomains.
 
-#### Arachnid#host(name, **options, &block : Agent ->)
+#### `Arachnid#host(name, **options, &block : Agent ->)`
 
 `host` is similar to site, but stays within the domain, not crawling subdomains.
 
