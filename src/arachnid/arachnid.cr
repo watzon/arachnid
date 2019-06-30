@@ -1,3 +1,4 @@
+require "./version"
 require "./resource"
 require "./agent"
 

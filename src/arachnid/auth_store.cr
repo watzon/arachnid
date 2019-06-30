@@ -18,7 +18,7 @@ module Arachnid
       return nil unless paths
 
       # longest path first
-      ordered_paths = paths.keys.sort { |path_key|  -path_key.size }
+      ordered_paths = paths.keys.sort { |path_key| -path_key.size }
 
       # directories of the path
       path_dirs = URI.expand_path(url.path).split('/').reject(&.empty?)

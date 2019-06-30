@@ -8,6 +8,15 @@ dependencies:
   halite:
     github: icyleaf/halite
     version: ~> 0.10.2
+  termspinner:
+    github: eliobr/termspinner
+  clim:
+    github: at-grandpa/clim
+    version: 0.7.0
+
+targets:
+  arachnid:
+    main: src/arachnid/cli.cr
 
 crystal: 0.29.0
 
