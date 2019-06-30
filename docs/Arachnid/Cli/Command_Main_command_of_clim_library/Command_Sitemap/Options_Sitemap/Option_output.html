@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Crystal Docs 0.29.0">
+
+
+<link href="../../../../../css/style.css" rel="stylesheet" type="text/css">
+
+<script type="text/javascript" src="../../../../../js/doc.js"></script>
+<script type="text/javascript">
+  CrystalDoc.base_path = "../../../../../";
+</script>
+
+  <meta id="repository-name" content="github.com/watzon/arachnid">
+  <title>Arachnid::Cli::Command_Main_command_of_clim_library::Command_Sitemap::Options_Sitemap::Option_output - github.com/watzon/arachnid</title>
+</head>
+<body>
+
+<div class="sidebar">
+  <div class="sidebar-header">
+    <div class="search-box">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false" aria-label="Search">
+    </div>
+
+    <div class="repository-links">
+      <a href="../../../../../index.html">README</a>
+    </div>
+  </div>
+
+  <div class="search-results" class="hidden">
+    <ul class="search-list"></ul>
+  </div>
+
+  <div class="types-list">
+    <ul>
+  
+  <li class="parent open current" data-id="github.com/watzon/arachnid/Arachnid" data-name="arachnid">
+      <a href="../../../../../Arachnid.html">Arachnid</a>
+      
+        <ul>
+  
+  <li class="parent " data-id="github.com/watzon/arachnid/Arachnid/Agent" data-name="arachnid::agent">
+      <a href="../../../../../Arachnid/Agent.html">Agent</a>
+      
+        <ul>
+  
+  <li class="parent " data-id="github.com/watzon/arachnid/Arachnid/Agent/Actions" data-name="arachnid::agent::actions">
+      <a href="../../../../../Arachnid/Agent/Actions.html">Actions</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/watzon/arachnid/Arachnid/Agent/Actions/Action" data-name="arachnid::agent::actions::action">
+      <a href="../../../../../Arachnid/Agent/Actions/Action.html">Action</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/watzon/arachnid/Arachnid/Agent/Actions/Paused" data-name="arachnid::agent::actions::paused">
+      <a href="../../../../../Arachnid/Agent/Actions/Paused.html">Paused</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/watzon/arachnid/Arachnid/Agent/Actions/RuntimeError" data-name="arachnid::agent::actions::runtimeerror">
+      <a href="../../../../../Arachnid/Agent/Actions/RuntimeError.html">RuntimeError</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/watzon/arachnid/Arachnid/Agent/Actions/SkipLink" data-name="arachnid::agent::actions::skiplink">
+      <a href="../../../../../Arachnid/Agent/Actions/SkipLink.html">SkipLink</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/watzon/arachnid/Arachnid/Agent/Actions/SkipResource" data-name="arachnid::agent::actions::skipresource">
+      <a href="../../../../../Arachnid/Agent/Actions/SkipResource.html">SkipResource</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="github.com/watzon/arachnid/Arachnid/Agent/Queue" data-name="arachnid::agent::queue">
+      <a href="../../../../../Arachnid/Agent/Queue.html">Queue</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="github.com/watzon/arachnid/Arachnid/AuthCredential" data-name="arachnid::authcredential">
+      <a href="../../../../../Arachnid/AuthCredential.html">AuthCredential</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/watzon/arachnid/Arachnid/AuthStore" data-name="arachnid::authstore">
+      <a href="../../../../../Arachnid/AuthStore.html">AuthStore</a>
+      
+    </li>
+  
+  <li class="parent open current" data-id="github.com/watzon/arachnid/Arachnid/Cli" data-name="arachnid::cli">
+      <a href="../../../../../Arachnid/Cli.html">Cli</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/watzon/arachnid/Arachnid/Cli/Action" data-name="arachnid::cli::action">
+      <a href="../../../../../Arachnid/Cli/Action.html">Action</a>
+      
+    </li>
+  
+  <li class="parent open current" data-id="github.com/watzon/arachnid/Arachnid/Cli/Command_Main_command_of_clim_library" data-name="arachnid::cli::command_main_command_of_clim_library">
+      <a href="../../../../../Arachnid/Cli/Command_Main_command_of_clim_library.html">Command_Main_command_of_clim_library</a>
+      
+        <ul>
+  
+  <li class="parent open current" data-id="github.com/watzon/arachnid/Arachnid/Cli/Command_Main_command_of_clim_library/Command_Sitemap" data-name="arachnid::cli::command_main_command_of_clim_library::command_sitemap">
+      <a href="../../../../../Arachnid/Cli/Command_Main_command_of_clim_library/Command_Sitemap.html">Command_Sitemap</a>
+      
+        <ul>
+  
+  <li class="parent open current" data-id="github.com/watzon/arachnid/Arachnid/Cli/Command_Main_command_of_clim_library/Command_Sitemap/Options_Sitemap" data-name="arachnid::cli::command_main_command_of_clim_library::command_sitemap::options_sitemap">
+      <a href="../../../../../Arachnid/Cli/Command_Main_command_of_clim_library/Command_Sitemap/Options_Sitemap.html">Options_Sitemap</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/watzon/arachnid/Arachnid/Cli/Command_Main_command_of_clim_library/Command_Sitemap/Options_Sitemap/Option_help" data-name="arachnid::cli::command_main_command_of_clim_library::command_sitemap::options_sitemap::option_help">
+      <a href="../../../../../Arachnid/Cli/Command_Main_command_of_clim_library/Command_Sitemap/Options_Sitemap/Option_help.html">Option_help</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/watzon/arachnid/Arachnid/Cli/Command_Main_command_of_clim_library/Command_Sitemap/Options_Sitemap/Option_json" data-name="arachnid::cli::command_main_command_of_clim_library::command_sitemap::options_sitemap::option_json">
+      <a href="../../../../../Arachnid/Cli/Command_Main_command_of_clim_library/Command_Sitemap/Options_Sitemap/Option_json.html">Option_json</a>
+      
+    </li>
+  
+  <li class=" current" data-id="github.com/watzon/arachnid/Arachnid/Cli/Command_Main_command_of_clim_library/Command_Sitemap/Options_Sitemap/Option_output" data-name="arachnid::cli::command_main_command_of_clim_library::command_sitemap::options_sitemap::option_output">
+      <a href="../../../../../Arachnid/Cli/Command_Main_command_of_clim_library/Command_Sitemap/Options_Sitemap/Option_output.html">Option_output</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/watzon/arachnid/Arachnid/Cli/Command_Main_command_of_clim_library/Command_Sitemap/Options_Sitemap/Option_xml" data-name="arachnid::cli::command_main_command_of_clim_library::command_sitemap::options_sitemap::option_xml">
+      <a href="../../../../../Arachnid/Cli/Command_Main_command_of_clim_library/Command_Sitemap/Options_Sitemap/Option_xml.html">Option_xml</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class="parent open current" data-id="github.com/watzon/arachnid/Arachnid/Cli/Command_Main_command_of_clim_library/Command_Sitemap/Options_Sitemap" data-name="arachnid::cli::command_main_command_of_clim_library::command_sitemap::options_sitemap">
+      <a href="../../../../../Arachnid/Cli/Command_Main_command_of_clim_library/Command_Sitemap/Options_Sitemap.html">Options_Sitemap</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/watzon/arachnid/Arachnid/Cli/Command_Main_command_of_clim_library/Command_Sitemap/Options_Sitemap/Option_help" data-name="arachnid::cli::command_main_command_of_clim_library::command_sitemap::options_sitemap::option_help">
+      <a href="../../../../../Arachnid/Cli/Command_Main_command_of_clim_library/Command_Sitemap/Options_Sitemap/Option_help.html">Option_help</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/watzon/arachnid/Arachnid/Cli/Command_Main_command_of_clim_library/Command_Sitemap/Options_Sitemap/Option_json" data-name="arachnid::cli::command_main_command_of_clim_library::command_sitemap::options_sitemap::option_json">
+      <a href="../../../../../Arachnid/Cli/Command_Main_command_of_clim_library/Command_Sitemap/Options_Sitemap/Option_json.html">Option_json</a>
+      
+    </li>
+  
+  <li class=" current" data-id="github.com/watzon/arachnid/Arachnid/Cli/Command_Main_command_of_clim_library/Command_Sitemap/Options_Sitemap/Option_output" data-name="arachnid::cli::command_main_command_of_clim_library::command_sitemap::options_sitemap::option_output">
+      <a href="../../../../../Arachnid/Cli/Command_Main_command_of_clim_library/Command_Sitemap/Options_Sitemap/Option_output.html">Option_output</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/watzon/arachnid/Arachnid/Cli/Command_Main_command_of_clim_library/Command_Sitemap/Options_Sitemap/Option_xml" data-name="arachnid::cli::command_main_command_of_clim_library::command_sitemap::options_sitemap::option_xml">
+      <a href="../../../../../Arachnid/Cli/Command_Main_command_of_clim_library/Command_Sitemap/Options_Sitemap/Option_xml.html">Option_xml</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="github.com/watzon/arachnid/Arachnid/Cli/Command_Main_command_of_clim_library/Command_Sitemap/RunProc" data-name="arachnid::cli::command_main_command_of_clim_library::command_sitemap::runproc">
+      <a href="../../../../../Arachnid/Cli/Command_Main_command_of_clim_library/Command_Sitemap/RunProc.html">RunProc</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class="parent " data-id="github.com/watzon/arachnid/Arachnid/Cli/Command_Main_command_of_clim_library/Command_Summarize" data-name="arachnid::cli::command_main_command_of_clim_library::command_summarize">
+      <a href="../../../../../Arachnid/Cli/Command_Main_command_of_clim_library/Command_Summarize.html">Command_Summarize</a>
+      
+        <ul>
+  
+  <li class="parent " data-id="github.com/watzon/arachnid/Arachnid/Cli/Command_Main_command_of_clim_library/Command_Summarize/Options_Summarize" data-name="arachnid::cli::command_main_command_of_clim_library::command_summarize::options_summarize">
+      <a href="../../../../../Arachnid/Cli/Command_Main_command_of_clim_library/Command_Summarize/Options_Summarize.html">Options_Summarize</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/watzon/arachnid/Arachnid/Cli/Command_Main_command_of_clim_library/Command_Summarize/Options_Summarize/Option_codes" data-name="arachnid::cli::command_main_command_of_clim_library::command_summarize::options_summarize::option_codes">
+      <a href="../../../../../Arachnid/Cli/Command_Main_command_of_clim_library/Command_Summarize/Options_Summarize/Option_codes.html">Option_codes</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/watzon/arachnid/Arachnid/Cli/Command_Main_command_of_clim_library/Command_Summarize/Options_Summarize/Option_elinks" data-name="arachnid::cli::command_main_command_of_clim_library::command_summarize::options_summarize::option_elinks">
+      <a href="../../../../../Arachnid/Cli/Command_Main_command_of_clim_library/Command_Summarize/Options_Summarize/Option_elinks.html">Option_elinks</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/watzon/arachnid/Arachnid/Cli/Command_Main_command_of_clim_library/Command_Summarize/Options_Summarize/Option_help" data-name="arachnid::cli::command_main_command_of_clim_library::command_summarize::options_summarize::option_help">
+      <a href="../../../../../Arachnid/Cli/Command_Main_command_of_clim_library/Command_Summarize/Options_Summarize/Option_help.html">Option_help</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/watzon/arachnid/Arachnid/Cli/Command_Main_command_of_clim_library/Command_Summarize/Options_Summarize/Option_ilinks" data-name="arachnid::cli::command_main_command_of_clim_library::command_summarize::options_summarize::option_ilinks">
+      <a href="../../../../../Arachnid/Cli/Command_Main_command_of_clim_library/Command_Summarize/Options_Summarize/Option_ilinks.html">Option_ilinks</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/watzon/arachnid/Arachnid/Cli/Command_Main_command_of_clim_library/Command_Summarize/Options_Summarize/Option_limit" data-name="arachnid::cli::command_main_command_of_clim_library::command_summarize::options_summarize::option_limit">
+      <a href="../../../../../Arachnid/Cli/Command_Main_command_of_clim_library/Command_Summarize/Options_Summarize/Option_limit.html">Option_limit</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/watzon/arachnid/Arachnid/Cli/Command_Main_command_of_clim_library/Command_Summarize/Options_Summarize/Option_output" data-name="arachnid::cli::command_main_command_of_clim_library::command_summarize::options_summarize::option_output">
+      <a href="../../../../../Arachnid/Cli/Command_Main_command_of_clim_library/Command_Summarize/Options_Summarize/Option_output.html">Option_output</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class="parent " data-id="github.com/watzon/arachnid/Arachnid/Cli/Command_Main_command_of_clim_library/Command_Summarize/Options_Summarize" data-name="arachnid::cli::command_main_command_of_clim_library::command_summarize::options_summarize">
+      <a href="../../../../../Arachnid/Cli/Command_Main_command_of_clim_library/Command_Summarize/Options_Summarize.html">Options_Summarize</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/watzon/arachnid/Arachnid/Cli/Command_Main_command_of_clim_library/Command_Summarize/Options_Summarize/Option_codes" data-name="arachnid::cli::command_main_command_of_clim_library::command_summarize::options_summarize::option_codes">
+      <a href="../../../../../Arachnid/Cli/Command_Main_command_of_clim_library/Command_Summarize/Options_Summarize/Option_codes.html">Option_codes</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/watzon/arachnid/Arachnid/Cli/Command_Main_command_of_clim_library/Command_Summarize/Options_Summarize/Option_elinks" data-name="arachnid::cli::command_main_command_of_clim_library::command_summarize::options_summarize::option_elinks">
+      <a href="../../../../../Arachnid/Cli/Command_Main_command_of_clim_library/Command_Summarize/Options_Summarize/Option_elinks.html">Option_elinks</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/watzon/arachnid/Arachnid/Cli/Command_Main_command_of_clim_library/Command_Summarize/Options_Summarize/Option_help" data-name="arachnid::cli::command_main_command_of_clim_library::command_summarize::options_summarize::option_help">
+      <a href="../../../../../Arachnid/Cli/Command_Main_command_of_clim_library/Command_Summarize/Options_Summarize/Option_help.html">Option_help</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/watzon/arachnid/Arachnid/Cli/Command_Main_command_of_clim_library/Command_Summarize/Options_Summarize/Option_ilinks" data-name="arachnid::cli::command_main_command_of_clim_library::command_summarize::options_summarize::option_ilinks">
+      <a href="../../../../../Arachnid/Cli/Command_Main_command_of_clim_library/Command_Summarize/Options_Summarize/Option_ilinks.html">Option_ilinks</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/watzon/arachnid/Arachnid/Cli/Command_Main_command_of_clim_library/Command_Summarize/Options_Summarize/Option_limit" data-name="arachnid::cli::command_main_command_of_clim_library::command_summarize::options_summarize::option_limit">
+      <a href="../../../../../Arachnid/Cli/Command_Main_command_of_clim_library/Command_Summarize/Options_Summarize/Option_limit.html">Option_limit</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/watzon/arachnid/Arachnid/Cli/Command_Main_command_of_clim_library/Command_Summarize/Options_Summarize/Option_output" data-name="arachnid::cli::command_main_command_of_clim_library::command_summarize::options_summarize::option_output">
+      <a href="../../../../../Arachnid/Cli/Command_Main_command_of_clim_library/Command_Summarize/Options_Summarize/Option_output.html">Option_output</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="github.com/watzon/arachnid/Arachnid/Cli/Command_Main_command_of_clim_library/Command_Summarize/RunProc" data-name="arachnid::cli::command_main_command_of_clim_library::command_summarize::runproc">
+      <a href="../../../../../Arachnid/Cli/Command_Main_command_of_clim_library/Command_Summarize/RunProc.html">RunProc</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class="parent " data-id="github.com/watzon/arachnid/Arachnid/Cli/Command_Main_command_of_clim_library/Options_Main_command_of_clim_library" data-name="arachnid::cli::command_main_command_of_clim_library::options_main_command_of_clim_library">
+      <a href="../../../../../Arachnid/Cli/Command_Main_command_of_clim_library/Options_Main_command_of_clim_library.html">Options_Main_command_of_clim_library</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/watzon/arachnid/Arachnid/Cli/Command_Main_command_of_clim_library/Options_Main_command_of_clim_library/Option_help" data-name="arachnid::cli::command_main_command_of_clim_library::options_main_command_of_clim_library::option_help">
+      <a href="../../../../../Arachnid/Cli/Command_Main_command_of_clim_library/Options_Main_command_of_clim_library/Option_help.html">Option_help</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/watzon/arachnid/Arachnid/Cli/Command_Main_command_of_clim_library/Options_Main_command_of_clim_library/Option_version" data-name="arachnid::cli::command_main_command_of_clim_library::options_main_command_of_clim_library::option_version">
+      <a href="../../../../../Arachnid/Cli/Command_Main_command_of_clim_library/Options_Main_command_of_clim_library/Option_version.html">Option_version</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class="parent " data-id="github.com/watzon/arachnid/Arachnid/Cli/Command_Main_command_of_clim_library/Options_Main_command_of_clim_library" data-name="arachnid::cli::command_main_command_of_clim_library::options_main_command_of_clim_library">
+      <a href="../../../../../Arachnid/Cli/Command_Main_command_of_clim_library/Options_Main_command_of_clim_library.html">Options_Main_command_of_clim_library</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/watzon/arachnid/Arachnid/Cli/Command_Main_command_of_clim_library/Options_Main_command_of_clim_library/Option_help" data-name="arachnid::cli::command_main_command_of_clim_library::options_main_command_of_clim_library::option_help">
+      <a href="../../../../../Arachnid/Cli/Command_Main_command_of_clim_library/Options_Main_command_of_clim_library/Option_help.html">Option_help</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/watzon/arachnid/Arachnid/Cli/Command_Main_command_of_clim_library/Options_Main_command_of_clim_library/Option_version" data-name="arachnid::cli::command_main_command_of_clim_library::options_main_command_of_clim_library::option_version">
+      <a href="../../../../../Arachnid/Cli/Command_Main_command_of_clim_library/Options_Main_command_of_clim_library/Option_version.html">Option_version</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="github.com/watzon/arachnid/Arachnid/Cli/Command_Main_command_of_clim_library/RunProc" data-name="arachnid::cli::command_main_command_of_clim_library::runproc">
+      <a href="../../../../../Arachnid/Cli/Command_Main_command_of_clim_library/RunProc.html">RunProc</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="github.com/watzon/arachnid/Arachnid/Cli/Count" data-name="arachnid::cli::count">
+      <a href="../../../../../Arachnid/Cli/Count.html">Count</a>
+      
+    </li>
+  
+  <li class="parent " data-id="github.com/watzon/arachnid/Arachnid/Cli/Sitemap" data-name="arachnid::cli::sitemap">
+      <a href="../../../../../Arachnid/Cli/Sitemap.html">Sitemap</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/watzon/arachnid/Arachnid/Cli/Sitemap/LastMod" data-name="arachnid::cli::sitemap::lastmod">
+      <a href="../../../../../Arachnid/Cli/Sitemap/LastMod.html">LastMod</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/watzon/arachnid/Arachnid/Cli/Sitemap/PageMap" data-name="arachnid::cli::sitemap::pagemap">
+      <a href="../../../../../Arachnid/Cli/Sitemap/PageMap.html">PageMap</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="github.com/watzon/arachnid/Arachnid/CookieJar" data-name="arachnid::cookiejar">
+      <a href="../../../../../Arachnid/CookieJar.html">CookieJar</a>
+      
+    </li>
+  
+  <li class="parent " data-id="github.com/watzon/arachnid/Arachnid/Document" data-name="arachnid::document">
+      <a href="../../../../../Arachnid/Document.html">Document</a>
+      
+        <ul>
+  
+  <li class="parent " data-id="github.com/watzon/arachnid/Arachnid/Document/HTML" data-name="arachnid::document::html">
+      <a href="../../../../../Arachnid/Document/HTML.html">HTML</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/watzon/arachnid/Arachnid/Document/HTML/Tag" data-name="arachnid::document::html::tag">
+      <a href="../../../../../Arachnid/Document/HTML/Tag.html">Tag</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class="parent " data-id="github.com/watzon/arachnid/Arachnid/Resource" data-name="arachnid::resource">
+      <a href="../../../../../Arachnid/Resource.html">Resource</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/watzon/arachnid/Arachnid/Resource/ContentTypes" data-name="arachnid::resource::contenttypes">
+      <a href="../../../../../Arachnid/Resource/ContentTypes.html">ContentTypes</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/watzon/arachnid/Arachnid/Resource/Cookies" data-name="arachnid::resource::cookies">
+      <a href="../../../../../Arachnid/Resource/Cookies.html">Cookies</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/watzon/arachnid/Arachnid/Resource/HTML" data-name="arachnid::resource::html">
+      <a href="../../../../../Arachnid/Resource/HTML.html">HTML</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/watzon/arachnid/Arachnid/Resource/StatusCodes" data-name="arachnid::resource::statuscodes">
+      <a href="../../../../../Arachnid/Resource/StatusCodes.html">StatusCodes</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="github.com/watzon/arachnid/Arachnid/Rules" data-name="arachnid::rules(t)">
+      <a href="../../../../../Arachnid/Rules.html">Rules</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/watzon/arachnid/Arachnid/SessionCache" data-name="arachnid::sessioncache">
+      <a href="../../../../../Arachnid/SessionCache.html">SessionCache</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="github.com/watzon/arachnid/URI" data-name="uri">
+      <a href="../../../../../URI.html">URI</a>
+      
+    </li>
+  
+</ul>
+
+  </div>
+</div>
+
+
+<div class="main-content">
+<h1 class="type-name">
+
+  <span class="kind">class</span> Arachnid::Cli::Command_Main_command_of_clim_library::Command_Sitemap::Options_Sitemap::Option_output
+
+</h1>
+
+
+  <ul class="superclass-hierarchy"><li class="superclass"><a href="../../../../../Arachnid/Cli/Command_Main_command_of_clim_library/Command_Sitemap/Options_Sitemap/Option_output.html">Arachnid::Cli::Command_Main_command_of_clim_library::Command_Sitemap::Options_Sitemap::Option_output</a></li><li class="superclass">Clim::Command::Options::Option</li><li class="superclass">Reference</li><li class="superclass">Object</li></ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2>Defined in:</h2>
+  
+
+
+
+
+
+  <h2>Constructors</h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#new%28short%3AString%2Clong%3AString%2Cdesc%3AString%2Cdefault%3AString%3F%2Crequired%3ABool%29-class-method" class="signature"><strong>.new</strong>(short : String, long : String, desc : String, default : String?, required : Bool)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#new%28short%3AString%2Cdesc%3AString%2Cdefault%3AString%3F%2Crequired%3ABool%29-class-method" class="signature"><strong>.new</strong>(short : String, desc : String, default : String?, required : Bool)</a>
+        
+      </li>
+    
+  </ul>
+
+
+
+
+
+  <h2>Instance Method Summary</h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#default%3AString%3F-instance-method" class="signature"><strong>#default</strong> : String?</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#default%3D%28default%3AString%3F%29-instance-method" class="signature"><strong>#default=</strong>(default : String?)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#desc-instance-method" class="signature"><strong>#desc</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#method_name-instance-method" class="signature"><strong>#method_name</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#set_value%28arg%3AString%29-instance-method" class="signature"><strong>#set_value</strong>(arg : String)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#set_value%3ABool-instance-method" class="signature"><strong>#set_value</strong> : Bool</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#set_value%3D%28set_value%3ABool%29-instance-method" class="signature"><strong>#set_value=</strong>(set_value : Bool)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#set_value%3F%3ABool-instance-method" class="signature"><strong>#set_value?</strong> : Bool</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#value%3AString%3F-instance-method" class="signature"><strong>#value</strong> : String?</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#value%3D%28value%3AString%3F%29-instance-method" class="signature"><strong>#value=</strong>(value : String?)</a>
+        
+      </li>
+    
+  </ul>
+
+
+
+
+
+<div class="methods-inherited">
+  
+    
+
+
+    
+
+
+    
+
+
+  
+    
+
+
+    
+
+
+    
+
+
+  
+    
+
+
+    
+
+
+    
+
+
+  
+</div>
+
+
+  <h2>Constructor Detail</h2>
+  
+    <div class="entry-detail" id="new(short:String,long:String,desc:String,default:String?,required:Bool)-class-method">
+      <div class="signature">
+        
+        def self.<strong>new</strong>(short : String, long : String, desc : String, default : String?, required : Bool)
+
+        <a class="method-permalink" href="#new%28short%3AString%2Clong%3AString%2Cdesc%3AString%2Cdefault%3AString%3F%2Crequired%3ABool%29-class-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="new(short:String,desc:String,default:String?,required:Bool)-class-method">
+      <div class="signature">
+        
+        def self.<strong>new</strong>(short : String, desc : String, default : String?, required : Bool)
+
+        <a class="method-permalink" href="#new%28short%3AString%2Cdesc%3AString%2Cdefault%3AString%3F%2Crequired%3ABool%29-class-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+
+
+
+
+
+  <h2>Instance Method Detail</h2>
+  
+    <div class="entry-detail" id="default:String?-instance-method">
+      <div class="signature">
+        
+        def <strong>default</strong> : String?
+
+        <a class="method-permalink" href="#default%3AString%3F-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="default=(default:String?)-instance-method">
+      <div class="signature">
+        
+        def <strong>default=</strong>(default : String?)
+
+        <a class="method-permalink" href="#default%3D%28default%3AString%3F%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="desc-instance-method">
+      <div class="signature">
+        
+        def <strong>desc</strong>
+
+        <a class="method-permalink" href="#desc-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="method_name-instance-method">
+      <div class="signature">
+        
+        def <strong>method_name</strong>
+
+        <a class="method-permalink" href="#method_name-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="set_value(arg:String)-instance-method">
+      <div class="signature">
+        
+        def <strong>set_value</strong>(arg : String)
+
+        <a class="method-permalink" href="#set_value%28arg%3AString%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="set_value:Bool-instance-method">
+      <div class="signature">
+        
+        def <strong>set_value</strong> : Bool
+
+        <a class="method-permalink" href="#set_value%3ABool-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="set_value=(set_value:Bool)-instance-method">
+      <div class="signature">
+        
+        def <strong>set_value=</strong>(set_value : Bool)
+
+        <a class="method-permalink" href="#set_value%3D%28set_value%3ABool%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="set_value?:Bool-instance-method">
+      <div class="signature">
+        
+        def <strong>set_value?</strong> : Bool
+
+        <a class="method-permalink" href="#set_value%3F%3ABool-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="value:String?-instance-method">
+      <div class="signature">
+        
+        def <strong>value</strong> : String?
+
+        <a class="method-permalink" href="#value%3AString%3F-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="value=(value:String?)-instance-method">
+      <div class="signature">
+        
+        def <strong>value=</strong>(value : String?)
+
+        <a class="method-permalink" href="#value%3D%28value%3AString%3F%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+
+
+
+
+</div>
+
+</body>
+</html>

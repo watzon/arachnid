@@ -136,7 +136,7 @@ module Arachnid
     # at the given URL.
     def self.site(url, **options, &block : Agent ->)
       url = url.is_a?(URI) ? url : URI.parse(url)
-      url_regex = Regex.new(url.host.to_s)
+      url_regex = Regex.new(Regex.escape(url.host.to_s))
 
       agent = new(**options, &block)
       agent.visit_hosts_like(url_regex)
@@ -147,9 +147,10 @@ module Arachnid
     # Creates a new `Agent` and spiders the given host.
     def self.host(url, **options, &block : Agent ->)
       url = url.is_a?(URI) ? url : URI.parse(url)
+      url_regex = Regex.new(Regex.escape(url.to_s))
 
-      options = options.merge(host: url.host)
       agent = new(**options, &block)
+      agent.visit_urls_like(url_regex)
 
       agent.start_at(url, force: true)
     end
@@ -537,7 +538,7 @@ module Arachnid
     end
 
     private def queue_key(url)
-      "#{url.host}:#{url.port}"
+      url.to_s
     end
   end
 end

@@ -16,7 +16,7 @@ module Arachnid
         spinner = Spinner::Spinner.new("Wait...")
 
         spider = Arachnid::Agent.new
-        spider.visit_urls_like(Regex.new(url.to_s))
+        spider.visit_urls_like(Regex.new(Regex.escape(url.to_s)))
 
         map = {
           domain: url.to_s,
