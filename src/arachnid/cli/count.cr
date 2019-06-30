@@ -64,8 +64,12 @@ module Arachnid
         report["external_links"] = external_links if external_links
         report["codes"] = codes if codes
 
-        File.write(outfile, report.to_json, mode: "w+")
-        puts "Report saved to #{outfile}"
+        if outfile
+          File.write(outfile.to_s, report.to_json, mode: "w+")
+          puts "Report saved to #{outfile}"
+        else
+          pp report
+        end
       end
     end
   end
