@@ -1,7 +1,7 @@
 require "./action"
-require "../arachnid"
 require "termspinner"
 require "json"
+require "uri"
 
 module Arachnid
   class Cli < Clim

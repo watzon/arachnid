@@ -99,6 +99,11 @@ module Arachnid
 
       raise "Cannot have less than 1 fiber" unless fibers.nil? || fibers > 0
 
+      if fibers > 10
+        Arachnid.logger.warning("A large number of fibers can lead to a massive amount of \
+        requests which can lead to unintentional DOS attacks.")
+      end
+
       @queue = Queue(URI).new(queue, fibers)
 
       @limit = limit

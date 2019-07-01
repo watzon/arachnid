@@ -1,5 +1,5 @@
 require "clim"
-require "./version"
+require "../arachnid"
 require "./cli/**"
 
 module Arachnid

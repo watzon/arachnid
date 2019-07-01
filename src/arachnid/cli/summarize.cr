@@ -1,5 +1,4 @@
 require "./action"
-require "../arachnid"
 require "termspinner"
 require "json"
 

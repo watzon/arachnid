@@ -13,6 +13,8 @@ dependencies:
   clim:
     github: at-grandpa/clim
     version: 0.7.0
+  strange:
+    github: hydecr/strange
 
 targets:
   arachnid:
