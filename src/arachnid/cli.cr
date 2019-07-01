@@ -44,8 +44,8 @@ module Arachnid
           if args.empty?
             STDERR.puts "At least one site is required"
           else
-            count = Arachnid::Cli::Count.new
-            count.run(opts, args)
+            summarize = Arachnid::Cli::Summarize.new
+            summarize.run(opts, args)
           end
         end
       end

@@ -5,7 +5,7 @@ require "json"
 
 module Arachnid
   class Cli < Clim
-    class Count < Cli::Action
+    class Summarize < Cli::Action
 
       def run(opts, urls)
         spinner = Spinner::Spinner.new("Wait...")
@@ -65,7 +65,7 @@ module Arachnid
         report["codes"] = codes if codes
 
         if outfile
-          File.write(outfile.to_s, report.to_json, mode: "w+")
+          File.write(File.expand_path(outfile.to_s, __DIR__), report.to_json, mode: "w+")
           puts "Report saved to #{outfile}"
         else
           pp report

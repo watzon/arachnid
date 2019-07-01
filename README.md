@@ -4,6 +4,9 @@ Arachnid is a fast and powerful web scraping framework for Crystal. It provides 
 
 - [Arachnid](#Arachnid)
   - [Installation](#Installation)
+  - [The CLI](#The-CLI)
+    - [Summarize](#Summarize)
+    - [Sitemap](#Sitemap)
   - [Examples](#Examples)
   - [Usage](#Usage)
     - [Configuration](#Configuration)
@@ -64,6 +67,45 @@ Arachnid is a fast and powerful web scraping framework for Crystal. It provides 
    ```
 
 2. Run `shards install`
+
+To build the CLI
+
+1. Run `shards build --release`
+
+2. Add the `./bin` directory to your path or symlink `./bin/arachnid` with `sudo ln -s /home/path/to/arachnid /usr/local/bin`
+
+## The CLI
+
+Arachnid provides a CLI for basic scanning tasks, here is what you can do with it so far:
+
+### Summarize
+
+The `summarize` subcommand allows you to generate a report for a website. It can give you the number of pages, the internal and external links for every page, and a list of pages and their status codes (helpful for finding broken pages).
+
+You can use it like this:
+
+```
+arachnid summarize https://crystal-lang.org --ilinks --elinks -c 404 503
+```
+
+This will generate a report for crystal-lang.org which will include every page and it's internal and external links, and a list of every page that returned a 404 or 503 status. For complete help use `arachnid summarize --help`
+
+### Sitemap
+
+Arachnid can also generate a XML or JSON sitemap for a website by scanning the entire site, following internal links. To do so just use the `arachnid sitemap` subcommand.
+
+```
+# XML sitemap
+arachnid sitemap https://crystal-lang.org --xml
+
+# JSON sitemap
+arachnid sitemap https://crystal-lang.org --json
+
+# Custom output file
+arachnid sitemap https://crystal-lang.org --xml -o ~/Desktop/crystal-lang.org-sitemap.xml
+```
+
+Full help is available with `arachnid sitemap --help`
 
 ## Examples
 
