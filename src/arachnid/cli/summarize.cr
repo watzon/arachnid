@@ -10,7 +10,7 @@ module Arachnid
       def run(opts, urls)
         spinner = Spinner::Spinner.new("Wait...")
 
-        spider = Arachnid::Agent.new(limit: opts.limit)
+        spider = Arachnid::Agent.new(limit: opts.limit, fibers: opts.fibers)
 
         urls.each do |url|
           spider.visit_urls_like(Regex.new(url))

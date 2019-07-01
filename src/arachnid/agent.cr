@@ -96,6 +96,9 @@ module Arachnid
       @fetch_delay = fetch_delay || 0
       @history = history || Set(URI).new
       @failures = Set(URI).new
+
+      raise "Cannot have less than 1 fiber" unless fibers.nil? || fibers > 0
+
       @queue = Queue(URI).new(queue, fibers)
 
       @limit = limit

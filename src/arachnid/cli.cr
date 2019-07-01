@@ -8,6 +8,7 @@ module Arachnid
       desc "Arachnid CLI - Simple utilities for scanning the web."
       usage "arachnid [options] [subcommand] [arguments] ..."
       version Arachnid::VERSION
+
       run do |opts, args|
         puts opts.help_string # => help string.
       end
@@ -37,6 +38,7 @@ module Arachnid
         option "-c CODES", "--codes=CODES",   type: Array(Int32), desc: "generate a map of status codes to pages \
                                                                           that responded with that code"
         option "-n", "--limit NUM",           type: Int32,        desc: "maximum number of pages to scan"
+        option "-f", "--fibers NUM",          type: Int32,        desc: "maximum amount of fibers to spin up", default: 10
         option "-o FILE", "--output=FILE",    type: String,       desc: "file to write the report to (if undefined \
                                                                           output will be printed to STDOUT"
 
@@ -72,6 +74,7 @@ module Arachnid
         option "--json",                    type: Bool, desc: "generate the sitemap in JSON format"
         option "-o FILE", "--output=FILE",  type: String, desc: "filename to write the report to. \
                                                                 default is the hostname + .json or .xml"
+        option "-f", "--fibers NUM",          type: Int32,        desc: "maximum amount of fibers to spin up", default: 10
 
         run do |opts, args|
           if args.size != 1

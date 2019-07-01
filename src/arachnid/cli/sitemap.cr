@@ -15,7 +15,7 @@ module Arachnid
         date = Time.now
         spinner = Spinner::Spinner.new("Wait...")
 
-        spider = Arachnid::Agent.new
+        spider = Arachnid::Agent.new(fibers: opts.fibers)
         spider.visit_urls_like(Regex.new(Regex.escape(url.to_s)))
 
         map = {
