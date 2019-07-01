@@ -20,7 +20,6 @@ module Arachnid
 
         opts.ignore.each do |pattern|
           pattern = Regex.new(pattern)
-          pp pattern
           spider.ignore_urls_like(pattern)
         end
 

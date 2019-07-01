@@ -70,7 +70,11 @@ module Arachnid
             @pool.shift.get
           end
 
-          break if @queue.empty? || @paused
+          break if @paused
+          if @queue.empty?
+            sleep(1)
+            break if @queue.empty?
+          end
         end
       end
     end
