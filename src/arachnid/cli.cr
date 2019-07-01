@@ -14,7 +14,7 @@ module Arachnid
       end
 
       sub "summarize" do
-        desc "Scan a site (or sites) and generate a JSON report"
+        desc "scan a site (or sites) and generate a JSON report"
         usage <<-USAGE
         arachnid summarize [sites] [options]
 
@@ -80,7 +80,7 @@ module Arachnid
 
         run do |opts, args|
           if args.size != 1
-            raise "arachnid sitemap requires exactly one site to scan. you provided #{args.size}"
+            raise "arachnid sitemap requires exactly one site to scan. you provided #{args.size}."
           elsif !opts.json && !opts.xml
             raise "you must select either xml or json"
           else
@@ -88,6 +88,66 @@ module Arachnid
             sitemap.run(opts, args)
           end
         end
+      end
+
+      sub "imgd" do
+        desc "scan a site and download all the images found"
+        usage <<-USAGE
+        arachnid imgd [url] [options]
+
+          Examples:
+
+            # Download all images from crystal-lang.org and save them to ./images
+            arachnid imgd https://crystal-lang.org -o ./images
+
+            # Download all images between 5000 and 10000 bytes
+            arachnid imgd https://crystal-lang.org -m5000 -x10000
+        USAGE
+
+        option "-n", "--limit NUM",         type: Int32,          desc: "maximum number of pages to scan"
+        option "-f", "--fibers NUM",        type: Int32,          desc: "maximum amount of fibers to spin up", default: 10
+        option "-i", "--ignore PATTERNS",   type: Array(String),  desc: "url patterns to ignore (regex)"
+        option "-o DIR", "--outdir=DIR",    type: String,         desc: "directory to save images to",         default: "./imgd-downloads"
+        option "-m NUM", "--minsize=NUM",   type: Int32,          desc: "image minimum size (in bytes)"
+        option "-x NUM", "--maxsize=NUM",   type: Int32,          desc: "image maximum size (in bytes)"
+
+        run do |opts, args|
+          if args.size != 1
+            raise "arachnid imgd requires exactly one site to scan. you provided #{args.size}."
+          else
+            img = Arachnid::Cli::ImageDownloader.new
+            img.run(opts, args)
+          end
+        end
+      end
+
+      help_template do |desc, usage, options, sub_commands|
+        longest_option = options.reduce(0) do |acc, opt|
+          option = opt[:names].join(", ")
+          option.size > acc ? option.size : acc
+        end
+
+        options_help_lines = options.map do |option|
+          option[:names].join(", ").ljust(longest_option + 5) + " - #{option[:desc]}" + ( option[:default] ? " (default: #{option[:default]})" : "" )
+        end
+
+        base = <<-BASE_HELP
+          #{usage}
+
+          #{desc}
+
+          options:
+            #{options_help_lines.join("\n    ")}
+
+        BASE_HELP
+
+        sub = <<-SUB_COMMAND_HELP
+
+          sub commands:
+            #{sub_commands.map { |command| command[:help_line].strip }.join("\n    ") }
+        SUB_COMMAND_HELP
+
+        sub_commands.empty? ? base : base + sub
       end
     end
   end
