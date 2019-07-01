@@ -6,14 +6,12 @@ module Arachnid
   class Cli < Clim
     class Summarize < Cli::Action
 
-      def run(opts, urls)
+      def run(opts, args)
+        url = URI.parse(args[0])
         spinner = Spinner::Spinner.new("Wait...")
 
         spider = Arachnid::Agent.new(limit: opts.limit, fibers: opts.fibers)
-
-        urls.each do |url|
-          spider.visit_urls_like(Regex.new(url))
-        end
+        spider.visit_urls_like(Regex.new(url.to_s))
 
         opts.ignore.each do |pattern|
           pattern = Regex.new(pattern)
@@ -50,7 +48,7 @@ module Arachnid
           end
         end
 
-        spider.start_at(urls[0])
+        spider.start_at(url)
         spinner.stop("Finished scanning!\n")
 
         generate_report(

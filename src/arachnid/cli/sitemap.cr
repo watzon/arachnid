@@ -16,7 +16,7 @@ module Arachnid
         spinner = Spinner::Spinner.new("Wait...")
 
         spider = Arachnid::Agent.new(fibers: opts.fibers)
-        spider.visit_urls_like(Regex.new(Regex.escape(url.to_s)))
+        spider.visit_urls_like(Regex.new(url.to_s))
 
         opts.ignore.each do |pattern|
           pattern = Regex.new(pattern)

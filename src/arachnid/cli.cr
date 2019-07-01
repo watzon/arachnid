@@ -105,8 +105,10 @@ module Arachnid
         USAGE
 
         option "-n", "--limit NUM",         type: Int32,          desc: "maximum number of pages to scan"
+        option "-d", "--depth NUM",         type: Int32,          desc: "maximum depth to scan"
         option "-f", "--fibers NUM",        type: Int32,          desc: "maximum amount of fibers to spin up", default: 10
         option "-i", "--ignore PATTERNS",   type: Array(String),  desc: "url patterns to ignore (regex)"
+        option "-a", "--match PATTERNS",    type: Array(String),  desc: "url patterns to match (regex)"
         option "-o DIR", "--outdir=DIR",    type: String,         desc: "directory to save images to",         default: "./imgd-downloads"
         option "-m NUM", "--minsize=NUM",   type: Int32,          desc: "image minimum size (in bytes)"
         option "-x NUM", "--maxsize=NUM",   type: Int32,          desc: "image maximum size (in bytes)"

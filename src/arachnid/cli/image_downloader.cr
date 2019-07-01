@@ -13,12 +13,21 @@ module Arachnid
         count = 0
         outdir = File.expand_path(opts.outdir, __DIR__)
 
-        spider = Arachnid::Agent.new(limit: opts.limit, fibers: opts.fibers)
+        spider = Arachnid::Agent.new(limit: opts.limit, max_depth: opts.depth, fibers: opts.fibers)
         spider.visit_urls_like(Regex.new(url.to_s))
 
         opts.ignore.each do |pattern|
           pattern = Regex.new(pattern)
           spider.ignore_urls_like(pattern)
+        end
+
+        opts.match.each do |pattern|
+          pattern = Regex.new(pattern)
+          spider.visit_urls_like(pattern)
+        end
+
+        spider.every_html_page do |page|
+          spinner.message = "Scanning #{page.url.to_s}"
         end
 
         spider.every_image do |res|
@@ -52,7 +61,7 @@ module Arachnid
           ext = extensions.first? || ".unknown"
         end
 
-        filename = basename + ext
+        "#{basename}-#{index}#{ext}"
       end
     end
   end
