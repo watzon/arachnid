@@ -33,14 +33,15 @@ module Arachnid
             arachnid summarize https://crystal-lang.org -c 404 500
         USAGE
 
-        option "-l", "--ilinks",              type: Bool,         desc: "generate a map of pages to internal links"
-        option "-L", "--elinks",              type: Bool,         desc: "generate a map of pages to external links"
-        option "-c CODES", "--codes=CODES",   type: Array(Int32), desc: "generate a map of status codes to pages \
-                                                                          that responded with that code"
-        option "-n", "--limit NUM",           type: Int32,        desc: "maximum number of pages to scan"
-        option "-f", "--fibers NUM",          type: Int32,        desc: "maximum amount of fibers to spin up", default: 10
-        option "-o FILE", "--output=FILE",    type: String,       desc: "file to write the report to (if undefined \
-                                                                          output will be printed to STDOUT"
+        option "-l", "--ilinks",              type: Bool,           desc: "generate a map of pages to internal links"
+        option "-L", "--elinks",              type: Bool,           desc: "generate a map of pages to external links"
+        option "-c CODES", "--codes=CODES",   type: Array(Int32),   desc: "generate a map of status codes to pages \
+                                                                            that responded with that code"
+        option "-n", "--limit NUM",           type: Int32,          desc: "maximum number of pages to scan"
+        option "-f", "--fibers NUM",          type: Int32,          desc: "maximum amount of fibers to spin up", default: 10
+        option "-i", "--ignore PATTERNS",     type: Array(String),  desc: "url patterns to ignore (regex)"
+        option "-o FILE", "--output=FILE",    type: String,         desc: "file to write the report to (if undefined \
+                                                                            output will be printed to STDOUT"
 
         run do |opts, args|
           if args.empty?
@@ -70,11 +71,12 @@ module Arachnid
         USAGE
 
 
-        option "--xml",                     type: Bool, desc: "generate the sitemap in XML format"
-        option "--json",                    type: Bool, desc: "generate the sitemap in JSON format"
-        option "-o FILE", "--output=FILE",  type: String, desc: "filename to write the report to. \
-                                                                default is the hostname + .json or .xml"
-        option "-f", "--fibers NUM",          type: Int32,        desc: "maximum amount of fibers to spin up", default: 10
+        option "--xml",                     type: Bool,           desc: "generate the sitemap in XML format"
+        option "--json",                    type: Bool,           desc: "generate the sitemap in JSON format"
+        option "-o FILE", "--output=FILE",  type: String,         desc: "filename to write the report to. \
+                                                                          default is the hostname + .json or .xml"
+        option "-f", "--fibers NUM",        type: Int32,          desc: "maximum amount of fibers to spin up", default: 10
+        option "-i", "--ignore PATTERNS",   type: Array(String),  desc: "url patterns to ignore (regex)"
 
         run do |opts, args|
           if args.size != 1

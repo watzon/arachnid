@@ -18,6 +18,12 @@ module Arachnid
         spider = Arachnid::Agent.new(fibers: opts.fibers)
         spider.visit_urls_like(Regex.new(Regex.escape(url.to_s)))
 
+        opts.ignore.each do |pattern|
+          pattern = Regex.new(pattern)
+          pp pattern
+          spider.ignore_urls_like(pattern)
+        end
+
         map = {
           domain: url.to_s,
           lastmod: {

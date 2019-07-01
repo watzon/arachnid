@@ -15,6 +15,12 @@ module Arachnid
           spider.visit_urls_like(Regex.new(url))
         end
 
+        opts.ignore.each do |pattern|
+          pattern = Regex.new(pattern)
+          pp pattern
+          spider.ignore_urls_like(pattern)
+        end
+
         pages = 0
         internal_links = Hash(String, Array(String)).new
         external_links = Hash(String, Array(String)).new
