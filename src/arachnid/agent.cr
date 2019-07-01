@@ -3,6 +3,7 @@ require "./agent/filters"
 require "./agent/events"
 require "./agent/actions"
 require "./agent/robots"
+require "./agent/queue"
 require "./resource"
 require "./session_cache"
 require "./cookie_jar"
@@ -44,7 +45,7 @@ module Arachnid
     getter failures : Set(URI)
 
     # Queue of URLs to visit.
-    getter queue : Hash(String, URI)
+    getter queue : Queue(URI)
 
     # The session cache.
     property sessions : SessionCache
@@ -74,7 +75,8 @@ module Arachnid
       user_agent : String? = nil,
       referer : String? = nil,
       fetch_delay : (Int32 | Time::Span)? = nil,
-      queue : Hash(String, URI)? = nil,
+      queue : Array(URI)? = nil,
+      fibers : Int32? = nil,
       history : Set(URI)? = nil,
       limit : Int32? = nil,
       max_depth : Int32? = nil,
@@ -94,7 +96,7 @@ module Arachnid
       @fetch_delay = fetch_delay || 0
       @history = history || Set(URI).new
       @failures = Set(URI).new
-      @queue = queue || {} of String => URI
+      @queue = Queue(URI).new(queue, fibers)
 
       @limit = limit
       @levels = {} of URI => Int32
@@ -164,12 +166,6 @@ module Arachnid
     end
 
     # Start spidering at a given URL.
-    # def start_at(url, &block : Resource ->)
-    #   enqueue(url)
-    #   run(&block)
-    # end
-
-    # Start spidering at a given URL.
     def start_at(url, force = false)
       enqueue(url, force: force)
       return run
@@ -177,33 +173,14 @@ module Arachnid
 
     # Start spidering until the queue becomes empty or the
     # agent is paused.
-    # def run(&block : Resource ->)
-    #   @running = true
-
-    #   until @queue.empty? || paused? || limit_reached?
-    #     begin
-    #       visit_resource(dequeue, &block)
-    #     rescue Actions::Paused
-    #       return self
-    #     rescue Actions::Action
-    #     end
-    #   end
-
-    #   @running = false
-    #   @sessions.clear
-    #   self
-    # end
-
-    # Start spidering until the queue becomes empty or the
-    # agent is paused.
     def run
       @running = true
 
-      until @queue.empty? || paused? || limit_reached? || !running?
+      @queue.run do |uri|
         begin
-          visit_resource(dequeue)
+          visit_resource(uri)
         rescue Actions::Paused
-          return self
+          @queue.pause!
         rescue Actions::Action
         end
       end
@@ -259,11 +236,11 @@ module Arachnid
 
     # Sets the queue of URLs to visit.
     # Sets the list of failed URLs.
-    def queue=(new_queue)
+    def queue=(new_queue : Array(URI))
       @queue.clear
 
       new_queue.each do |url|
-        @queue[queue_key(url)] = url
+        @queue.enqueue(url)
       end
 
       @queue
@@ -271,7 +248,7 @@ module Arachnid
 
     # Determines whether the given URL has been queued for visiting.
     def queued?(key)
-      @queue.has_key?(key)
+      @queue.queued?(key)
     end
 
     # Enqueues a given URL for visiting, only if it passes all
@@ -306,7 +283,7 @@ module Arachnid
         rescue Actions::Action
         end
 
-        @queue[queue_key(url)] = url
+        @queue.enqueue(url)
         @levels[url] = level
         true
       end
@@ -317,8 +294,8 @@ module Arachnid
     def get_resource(url, &block)
       url = url.is_a?(URI) ? url : URI.parse(url)
 
-      prepare_request(url) do |session, path, handlers|
-        new_resource = Resource.new(url, session.get(path, headers: handlers))
+      prepare_request(url) do |session, path, headers|
+        new_resource = Resource.new(url, session.get(path, headers: headers))
 
         # save any new cookies
         @cookies.from_resource(new_resource)
@@ -332,8 +309,8 @@ module Arachnid
     def get_resource(url)
       url = url.is_a?(URI) ? url : URI.parse(url)
 
-      prepare_request(url) do |session, path, handlers|
-        new_resource = Resource.new(url, session.get(path, handlers))
+      prepare_request(url) do |session, path, headers|
+        new_resource = Resource.new(url, session.get(path, headers: headers))
 
         # save any new cookies
         @cookies.from_resource(new_resource)
@@ -347,8 +324,8 @@ module Arachnid
     def post_resource(url, post_data = "", &block)
       url = url.is_a?(URI) ? url : URI.parse(url)
 
-      prepare_request(url) do |session, path, handlers|
-        new_resource = Resource.new(url, session.post(path, post_data, handlers))
+      prepare_request(url) do |session, path, headers|
+        new_resource = Resource.new(url, session.post(path, post_data, headers: headers))
 
         # save any new cookies
         @cookies.from_resource(new_resource)
@@ -362,8 +339,8 @@ module Arachnid
     def post_resource(url, post_data = "")
       url = url.is_a?(URI) ? url : URI.parse(url)
 
-      prepare_request(url) do |session, path, handlers|
-        new_resource = Resource.new(url, session.post(path, post_data, handlers))
+      prepare_request(url) do |session, path, headers|
+        new_resource = Resource.new(url, session.post(path, post_data, headers: headers))
 
         # save any new cookies
         @cookies.from_resource(new_resource)
@@ -371,44 +348,6 @@ module Arachnid
         return new_resource
       end
     end
-
-    # Visits a given URL and enqueues the links recovered
-    # from the resource to be visited later.
-    # def visit_resource(url, &block : Resource ->)
-    #   url = sanitize_url(url)
-
-    #   get_resource(url) do |resource|
-    #     @history << resource.url
-
-    #     begin
-    #       @every_resource_blocks.each { |resource_block| resource_block.call(resource) }
-    #       yield resource
-    #     rescue action : Actions::Paused
-    #       raise(action)
-    #     rescue Actions::SkipResource
-    #       return Nil
-    #     rescue Actions::Action
-    #     end
-
-    #     resource.each_url do |next_url|
-    #       begin
-    #         @every_link_blocks.each do |link_block|
-    #           link_block.call(resource.url, next_url)
-    #         end
-    #       rescue action : Actions::Paused
-    #         raise(action)
-    #       rescue Actions::SkipLink
-    #         next
-    #       rescue Actions::Action
-    #       end
-
-    #       if @max_depth.nil? || @max_depth.not_nil! > (@levels[url]? || 0)
-    #         @levels[url] ||= 0
-    #         enqueue(next_url, @levels[url] + 1)
-    #       end
-    #     end
-    #   end
-    # end
 
     # Visits a given URL and enqueues the links recovered
     # from the resource to be visited later.
@@ -507,7 +446,7 @@ module Arachnid
 
     # Dequeues a URL that will later be visited.
     def dequeue
-      @queue.shift[1]
+      @queue.dequeue
     end
 
     # Determines if the maximum limit has been reached.
@@ -535,10 +474,6 @@ module Arachnid
       @failures << url
       @every_failed_url_blocks.each { |fail_block| fail_block.call(url) }
       true
-    end
-
-    private def queue_key(url)
-      url.to_s
     end
   end
 end

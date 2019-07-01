@@ -19,9 +19,9 @@ module Arachnid
     end
 
     # Continue spidering
-    def continue!(&block)
+    def continue!
       @paused = false
-      run(&block)
+      @queue.resume
     end
 
     # Sets the pause state of the agent.

@@ -192,6 +192,7 @@ Arachnid has a ton of configration options which can be passed to the mehthods l
 - **referer** - Referer to use
 - **fetch_delay** - Delay in between fetching resources
 - **queue** - Preload the queue with urls
+- **fibers** - Maximum amount of fibers to spin up for asynchronous processing
 - **history** - Links that should not be visited
 - **limit** - Maximum number of resources to visit
 - **max_depth** - Maximum crawl depth

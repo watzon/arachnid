@@ -1,84 +1,76 @@
-require "uri"
-require "./actions"
-require "benchmark"
-
 module Arachnid
   class Agent
-    class Queue
+    # An asynchronous data queue using a pool of
+    # `Concurrent::Future` to allow for async
+    # fetching of multiple pages at once.
+    class Queue(T)
 
-      @queue : Array(URI)
+      @queue : Array(T)
 
-      @pool_size : Int32
+      @max_pool_size : Int32
 
-      @exceptions : Array(Exception)
+      @pool : Array(Concurrent::Future(Nil))
 
-      property mutex : Mutex
+      @paused : Bool
 
-      def self.new(array = nil, pool_size = nil)
-        array     ||= [] of URI
-        pool_size ||= 10
-        new(array, pool_size, nil)
+      @block : Proc(T, Void)?
+
+      delegate :clear, :empty?, to: @queue
+
+      # Create a new Queue
+      def initialize(queue : Array(T)? = nil, max_pool_size : Int32? = nil)
+        @queue = queue || [] of T
+        @max_pool_size = max_pool_size || 10
+        @pool = [] of Concurrent::Future(Nil)
+        @paused = false
+        @block = nil
       end
 
-      private def initialize(@queue : Array(URI), @pool_size : Int32, dummy)
-        @mutex = Mutex.new
-        @exceptions = [] of Exception
-      end
-
+      # Add an item to the queue
       def enqueue(item)
         @queue << item
       end
 
-      def clear
-        @queue.clear
+      private def dequeue
+        @queue.shift
       end
 
+      # See if an item is currently queued
       def queued?(url)
         @queue.includes?(url)
       end
 
-      private def worker(item : URI, &block : URI ->)
-        signal_channel = Channel::Unbuffered(Actions::Action).new
-
-        spawn do
-          begin
-            block.call(item)
-          rescue ex
-            signal_channel.send(Actions::SkipLink.new)
-          else
-            signal_channel.send(Actions::Action.new)
-          end
-        end
-
-        signal_channel.receive_select_action
+      def pause!
+        @paused = true
       end
 
-      def run(&block : URI ->)
-        pool_counter = 0
-        worker_channels = [] of Channel::ReceiveAction(Channel::Unbuffered(Actions::Action))
-        queue = @queue.each
-        more_pools = true
+      def paused?
+        @paused
+      end
+
+      def resume!
+        @paused = false
+        run(@block)
+      end
+
+      # Run the queue, calling `block` for every item.
+      # Returns when the queue is empty.
+      def run(&block : T ->)
+        # Keep a reference to the block so we can resume
+        # after pausing.
+        @block = block
+        @paused = false
 
         loop do
-          break if !more_pools && worker_channels.empty?
+          fut = future { block.call(dequeue) }
 
-          while pool_counter < @pool_size && more_pools
-            item = queue.next
-
-            if item.is_a?(Iterator::Stop::INSTANCE)
-              more_pools = false
-              break
-            end
-
-            pool_counter += 1
-            worker_channels << worker(item.as(URI), &block)
+          if @pool.size < @max_pool_size
+            @pool << fut
+          else
+            @pool.shift.get
           end
 
-          index, signal_exception = Channel.select(worker_channels)
-          worker_channels.delete_at(index)
-          pool_counter -= 1
-
-          @exceptions << signal_exception if signal_exception && signal_exception.is_a?(Actions::SkipLink)
+          break if @queue.empty? || @paused
         end
       end
     end
