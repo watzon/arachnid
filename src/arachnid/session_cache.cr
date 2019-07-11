@@ -1,5 +1,5 @@
 require "uri"
-require "halite"
+require "./http_client"
 
 module Arachnid
   # Stores active HTTP Sessions organized by scheme, host-name and port.
@@ -17,15 +17,17 @@ module Arachnid
     # Should we set a DNT (Do Not Track) header?
     property? do_not_track : Bool
 
-    @sessions = {} of Tuple(String?, String?, Int32?) => Halite::Client
+    @sessions = {} of Tuple(String?, String?, Int32?) => HTTPClient
 
     # Create a new session cache
     def initialize(
+      client,
       read_timeout : Int32? = nil,
       connect_timeout : Int32? = nil,
       max_redirects : Int32? = nil,
       do_not_track : Bool? = nil
     )
+      @client = client || HTTPClient::Default
       @read_timeout = read_timeout || Arachnid.read_timeout
       @connect_timeout = connect_timeout || Arachnid.connect_timeout
       @max_redirects = max_redirects || Arachnid.max_redirects
@@ -60,24 +62,17 @@ module Arachnid
 
       # Set headers
       headers = {
-        "DNT" => @do_not_track ? 1 : 0
+        "DNT" => @do_not_track ? "1" : "0"
       }
 
       unless @sessions.has_key?(key)
-        session = Halite::Client.new(
+        session = @client.new(
           endpoint: endpoint,
-          timeout: Halite::Timeout.new(
-            connect: @connect_timeout,
-            read:  @read_timeout
-          ),
-          follow: Halite::Follow.new(
-            hops: @max_redirects,
-            strict: false
-          ),
+          read_timeout:  @read_timeout,
+          connect_timeout: @connect_timeout,
+          max_redirects: @max_redirects,
           headers: headers,
         )
-
-        # session = session.logging(skip_request_body: true, skip_response_body: true)
 
         @sessions[key] = session
       end
