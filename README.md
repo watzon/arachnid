@@ -184,7 +184,6 @@ Arachnid has a ton of configration options which can be passed to the mehthods l
 - **read_timeout** - Read timeout
 - **connect_timeout** - Connect timeout
 - **max_redirects** - Maximum amount of redirects to follow
-- **do_not_track** - Sets the DNT header
 - **default_headers** - Default HTTP headers to use for all hosts
 - **host_header** - HTTP host header to use
 - **host_headers** - HTTP headers to use for specific hosts
@@ -199,7 +198,6 @@ Arachnid has a ton of configration options which can be passed to the mehthods l
 
 There are also a few class properties on `Arachnid` itself which are used as the defaults, unless overrided.
 
-- **do_not_track**
 - **max_redirects**
 - **connect_timeout**
 - **read_timeout**

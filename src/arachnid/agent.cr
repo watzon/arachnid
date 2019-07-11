@@ -64,11 +64,11 @@ module Arachnid
 
     # Creates a new `Agent` object.
     def initialize(
+      http_client = nil,
       host : String? = nil,
       read_timeout : Int32? = nil,
       connect_timeout : Int32? = nil,
       max_redirects : Int32? = nil,
-      do_not_track : Bool? = nil,
       default_headers : Hash(String, String)? = nil,
       host_header : String? = nil,
       host_headers : Hash(String | Regex, String)? = nil,
@@ -111,10 +111,10 @@ module Arachnid
       @max_depth = max_depth
 
       @sessions = SessionCache.new(
+        http_client || HTTPClient::Default,
         read_timeout,
         connect_timeout,
-        max_redirects,
-        do_not_track
+        max_redirects
       )
 
       @cookies = CookieJar.new

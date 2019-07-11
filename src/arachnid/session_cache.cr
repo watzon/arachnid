@@ -5,6 +5,9 @@ module Arachnid
   # Stores active HTTP Sessions organized by scheme, host-name and port.
   class SessionCache
 
+    # The HTTPClient class to use for requests
+    property client : HTTPClient.class
+
     # Optional read timeout.
     property read_timeout : Int32
 
@@ -14,24 +17,19 @@ module Arachnid
     # Max redirects to follow.
     property max_redirects : Int32?
 
-    # Should we set a DNT (Do Not Track) header?
-    property? do_not_track : Bool
-
     @sessions = {} of Tuple(String?, String?, Int32?) => HTTPClient
 
     # Create a new session cache
     def initialize(
-      client,
+      client : HTTPClient?.class = nil,
       read_timeout : Int32? = nil,
       connect_timeout : Int32? = nil,
-      max_redirects : Int32? = nil,
-      do_not_track : Bool? = nil
+      max_redirects : Int32? = nil
     )
       @client = client || HTTPClient::Default
       @read_timeout = read_timeout || Arachnid.read_timeout
       @connect_timeout = connect_timeout || Arachnid.connect_timeout
       @max_redirects = max_redirects || Arachnid.max_redirects
-      @do_not_track = do_not_track || Arachnid.do_not_track?
     end
 
     # Determines if there is an active session for the given URL
@@ -59,11 +57,6 @@ module Arachnid
       endpoint.query = nil
       endpoint.fragment = nil
       endpoint.path = ""
-
-      # Set headers
-      headers = {
-        "DNT" => @do_not_track ? "1" : "0"
-      }
 
       unless @sessions.has_key?(key)
         session = @client.new(
