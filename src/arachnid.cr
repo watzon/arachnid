@@ -59,28 +59,3 @@ module Arachnid
     end
   end
 end
-
-require "json"
-
-# Let's build a sitemap of crystal-lang.org
-# Links will be a hash of url to resource title
-links = {} of String => String
-
-# Visit a particular host, in this case `crystal-lang.org`. This will
-# not match on subdomains.
-Arachnid.host("https://crystal-lang.org") do |spider|
-  # Ignore the API secion. It's a little big.
-  spider.ignore_urls_like(/\/(api)\//)
-
-  spider.every_html_page do |page|
-    puts "Visiting #{page.url.to_s}"
-
-    # Ignore redirects for our sitemap
-    unless page.redirect?
-      # Add the url of every visited page to our sitemap
-      links[page.url.to_s] = page.title.to_s.strip
-    end
-  end
-end
-
-File.write("crystal-lang.org-sitemap.json", links.to_pretty_json)
