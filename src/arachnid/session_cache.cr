@@ -58,6 +58,8 @@ module Arachnid
       endpoint.fragment = nil
       endpoint.path = ""
 
+      headers = Hash(String, String).new
+
       unless @sessions.has_key?(key)
         session = @client.new(
           endpoint: endpoint,
