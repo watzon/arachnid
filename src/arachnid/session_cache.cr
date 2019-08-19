@@ -5,8 +5,8 @@ module Arachnid
   # Stores active HTTP Sessions organized by scheme, host-name and port.
   class SessionCache
 
-    # The HTTPClient class to use for requests
-    property client : HTTPClient.class
+    # `Marionette::Browser` instance to proxy requests through.
+    getter browser : Marionette::Browser?
 
     # Optional read timeout.
     property read_timeout : Int32
@@ -21,12 +21,12 @@ module Arachnid
 
     # Create a new session cache
     def initialize(
-      client : HTTPClient?.class = nil,
+      browser : Marionette::Browser? = nil,
       read_timeout : Int32? = nil,
       connect_timeout : Int32? = nil,
       max_redirects : Int32? = nil
     )
-      @client = client || HTTPClient::Default
+      @browser = browser
       @read_timeout = read_timeout || Arachnid.read_timeout
       @connect_timeout = connect_timeout || Arachnid.connect_timeout
       @max_redirects = max_redirects || Arachnid.max_redirects
@@ -59,12 +59,13 @@ module Arachnid
       endpoint.path = ""
 
       unless @sessions.has_key?(key)
-        session = @client.new(
+        session = HTTPClient.new(
+          browser: browser,
           endpoint: endpoint,
           read_timeout:  @read_timeout,
           connect_timeout: @connect_timeout,
           max_redirects: @max_redirects,
-          headers: headers,
+          # headers: headers,
         )
 
         @sessions[key] = session

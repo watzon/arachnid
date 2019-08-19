@@ -15,6 +15,9 @@ dependencies:
     version: 0.7.0
   strange:
     github: hydecr/strange
+  marionette:
+    github: watzon/marionette
+    branch: master
 
 targets:
   arachnid:

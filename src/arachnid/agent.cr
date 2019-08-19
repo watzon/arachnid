@@ -1,3 +1,5 @@
+require "marionette"
+
 require "./agent/sanitizers"
 require "./agent/filters"
 require "./agent/events"
@@ -16,6 +18,11 @@ module Arachnid
 
     # Set to limit to a single host.
     property host : String?
+
+    # Make all requests with a `Marionette::Browser` instance.
+    # Will be slower than normal, but will also allow the
+    # rendering of JavaScript.
+    getter browser : Marionette::Browser?
 
     # User agent to use.
     property user_agent : String
@@ -64,8 +71,8 @@ module Arachnid
 
     # Creates a new `Agent` object.
     def initialize(
-      http_client = nil,
       host : String? = nil,
+      browser : Marionette::Browser? = nil,
       read_timeout : Int32? = nil,
       connect_timeout : Int32? = nil,
       max_redirects : Int32? = nil,
@@ -84,6 +91,7 @@ module Arachnid
       filter_options = nil
     )
       @host = host
+      @browser = browser
 
       @host_header = host_header
       @host_headers = host_headers || {} of (Regex | String) => String
@@ -110,8 +118,12 @@ module Arachnid
       @levels = {} of URI => Int32
       @max_depth = max_depth
 
+      if browser && !browser.proxy
+        raise "Can't use marionette without a proxy. Make sure the extended option is true."
+      end
+
       @sessions = SessionCache.new(
-        http_client || HTTPClient::Default,
+        browser,
         read_timeout,
         connect_timeout,
         max_redirects
