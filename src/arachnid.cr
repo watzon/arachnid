@@ -70,7 +70,7 @@ marionette = Marionette.launch(headless: false, extended: true)
 
 # Visit a particular host, in this case `crystal-lang.org`. This will
 # not match on subdomains.
-Arachnid.host("https://watzon.tech", browser: marionette) do |spider|
+Arachnid.host("https://www.neuralegion.com", browser: marionette) do |spider|
   spider.every_html_page do |page|
     puts "Visiting #{page.url.to_s}"
 

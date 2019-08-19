@@ -58,11 +58,11 @@ module Arachnid
 
     def request(method, path, options)
       if browser = @browser
-        url = File.join(@endpoint.to_s, path)
+        url = URI.parse(File.join(@endpoint.to_s, path))
         headers = options[:headers]? ? options[:headers].each_with_object(HTTP::Headers.new) { |(k, v), h| h.add(k,v) } : nil
         body = options[:body]?
-        res = browser.proxy.not_nil!.exec(method, url, headers, body)
-        Halite::Response.new(URI.parse(url), res)
+        res = browser.proxy.not_nil!.exec(method, url.to_s, headers, body)
+        Halite::Response.new(url, res)
       else
         options = Halite::Options.new(**options)
         @client.request(method.to_s, path.to_s, options)
