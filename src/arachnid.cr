@@ -59,13 +59,3 @@ module Arachnid
     end
   end
 end
-
-marionette = Marionette.launch(headless: false, extended: true)
-
-# Visit a particular host, in this case `crystal-lang.org`. This will
-# not match on subdomains.
-Arachnid.start_at("https://en.wikipedia.org/wiki/Main_Page", browser: marionette) do |spider|
-  spider.every_html_page do |page|
-    puts "Visiting #{page.url.to_s}"
-  end
-end
