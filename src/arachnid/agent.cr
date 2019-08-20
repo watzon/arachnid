@@ -34,7 +34,7 @@ module Arachnid
     property host_headers : Hash(String | Regex, String)
 
     # HTTP Headers to use for every request.
-    property default_headers : Hash(String, String)
+    property default_headers : Hash(String, Array(String))
 
     # HTTP Authentication credentials.
     property authorized : AuthStore
@@ -76,7 +76,7 @@ module Arachnid
       read_timeout : Int32? = nil,
       connect_timeout : Int32? = nil,
       max_redirects : Int32? = nil,
-      default_headers : Hash(String, String)? = nil,
+      default_headers : Hash(String, Array(String))? = nil,
       host_header : String? = nil,
       host_headers : Hash(String | Regex, String)? = nil,
       user_agent : String? = nil,
@@ -95,7 +95,7 @@ module Arachnid
 
       @host_header = host_header
       @host_headers = host_headers || {} of (Regex | String) => String
-      @default_headers = default_headers || {} of String => String
+      @default_headers = default_headers || {} of String => Array(String)
 
       @user_agent = user_agent || Arachnid.user_agent
       @referer = referer
@@ -421,22 +421,22 @@ module Arachnid
       unless @host_headers.empty?
         @host_headers.each do |name, header|
           if url.host =~ name
-            headers["Host"] = header
+            headers["Host"] = [header]
             break
           end
         end
       end
 
-      headers["Host"] ||= @host_header.to_s if @host_header
-      headers["User-Agent"] ||= @user_agent.to_s
-      headers["Referer"] ||= @referer.to_s if @referer
+      headers["Host"] ||= [@host_header.to_s] if @host_header
+      headers["User-Agent"] ||= [@user_agent.to_s]
+      headers["Referer"] ||= [@referer.to_s] if @referer
 
       if authorization = @authorized.for_url(url.host.to_s)
-        headers["Authorization"] = "Basic #{authorization}"
+        headers["Authorization"] = ["Basic #{authorization}"]
       end
 
       if header_cookies = @cookies.for_host(url.host.to_s)
-        headers["Cookie"] = header_cookies.to_cookie_header
+        headers["Cookie"] = [header_cookies.to_cookie_header]
       end
 
       headers
