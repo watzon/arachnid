@@ -112,6 +112,8 @@ module Arachnid
         requests which can lead to unintentional DOS attacks.")
       end
 
+      fibers = 10 unless fibers
+      fibers = nil if browser
       @queue = Queue(URI).new(queue, fibers)
 
       @limit = limit

@@ -60,26 +60,12 @@ module Arachnid
   end
 end
 
-require "json"
-
-# Let's build a sitemap of crystal-lang.org
-# Links will be a hash of url to resource title
-links = {} of String => String
-
 marionette = Marionette.launch(headless: false, extended: true)
 
 # Visit a particular host, in this case `crystal-lang.org`. This will
 # not match on subdomains.
-Arachnid.host("https://www.neuralegion.com", browser: marionette) do |spider|
+Arachnid.start_at("https://en.wikipedia.org/wiki/Main_Page", browser: marionette) do |spider|
   spider.every_html_page do |page|
     puts "Visiting #{page.url.to_s}"
-
-    # Ignore redirects for our sitemap
-    unless page.redirect?
-      # Add the url of every visited page to our sitemap
-      links[page.url.to_s] = page.title.to_s.strip
-    end
   end
 end
-
-File.write("neuralegion-sitemap.json", links.to_pretty_json)

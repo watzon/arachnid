@@ -7,7 +7,7 @@ module Arachnid
 
       @queue : Array(T)
 
-      @max_pool_size : Int32
+      @max_pool_size : Int32?
 
       @pool : Array(Concurrent::Future(Nil))
 
@@ -20,7 +20,7 @@ module Arachnid
       # Create a new Queue
       def initialize(queue : Array(T)? = nil, max_pool_size : Int32? = nil)
         @queue = queue || [] of T
-        @max_pool_size = max_pool_size || 10
+        @max_pool_size = max_pool_size
         @pool = [] of Concurrent::Future(Nil)
         @paused = false
         @block = nil
@@ -64,10 +64,14 @@ module Arachnid
         loop do
           fut = future { block.call(dequeue) }
 
-          if @pool.size < @max_pool_size
-            @pool << fut
+          if max_size = @max_pool_size
+            if @pool.size < max_size
+              @pool << fut
+            else
+              @pool.shift.get
+            end
           else
-            @pool.shift.get
+            fut.get
           end
 
           break if @paused || @queue.empty?
