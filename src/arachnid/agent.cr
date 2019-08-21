@@ -120,8 +120,9 @@ module Arachnid
       @levels = {} of URI => Int32
       @max_depth = max_depth
 
-      if browser && !browser.proxy
-        raise "Can't use marionette without a proxy. Make sure the extended option is true."
+      if browser
+        browser.launch_proxy if !browser.proxy
+        browser.disable_cache
       end
 
       @sessions = SessionCache.new(
