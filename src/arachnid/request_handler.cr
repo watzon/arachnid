@@ -46,12 +46,10 @@ module Arachnid
     # throw an `IO::TimeoutError` if a request is made and a new client isn't fetched in time.
     def request(method, url : String | URI, headers = nil)
       uri = url.is_a?(URI) ? url : URI.parse(url)
-      pool = pool_for(url)
-      client = pool.checkout
       headers = headers ? @request_headers.merge(headers) : @request_headers
-      response = client.exec(method.to_s.upcase, uri.full_path, headers: headers)
-      pool.checkin(client)
-      response
+      pool_for(url).use do |client|
+        client.exec(method.to_s.upcase, uri.full_path, headers: headers)
+      end
     end
 
     # Retrieve the connection pool for the given `URI`.
