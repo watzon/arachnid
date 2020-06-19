@@ -1,0 +1,14 @@
+name: arachnid
+version: 0.3.0
+
+authors:
+  - Chris Watson <cawatson1993@gmail.com>
+
+dependencies:
+  pool:
+    github: watzon/pool
+    branch: master
+
+crystal: 0.35.0
+
+license: MIT
