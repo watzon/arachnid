@@ -1,5 +1,3 @@
-require "pool/connection"
-
 module Arachnid
   # Class for handling multiple simultanious requests for different hosts. Each host maintains it's own
   # dedicated pool of HTTP clients to pick from when needed, so as to keep things thread safe.
@@ -9,9 +7,6 @@ module Arachnid
     # parameters, think about wrapping it in a class that doesn't and
     # providing initializers as class variables.
     property base_client : HTTP::Client.class
-
-    # Any headers that should be sent on every request.
-    property request_headers : HTTP::Headers
 
     # The maximum number of pools items to store per host. This will be the maximum number
     # of concurrent connections that any one host can have at a time.
@@ -23,9 +18,8 @@ module Arachnid
     # The maximum amount of time to wait for a request to finish before raising an `IO::TimeoutError`.
     property connection_timeout : Time::Span
 
-    # A client specific TLS context instance.
-    # TODO: Allow this to be unique to each host.
-    property tls_context : HTTP::Client::TLSContext
+    # A map of host name to TLS context for that host
+    property tls_contexts : Hash(String, HTTP::Client::TLSContext)
 
     # A map of host name to connection pool. If `max_hosts` is a non-nil value, this hash will
     # be limited in size to that number, with older hosts being deleted to save on
@@ -34,8 +28,7 @@ module Arachnid
 
     # Create a new `RequestHandler` instance.
     def initialize(@base_client,
-                   @request_headers,
-                   @tls_context : HTTP::Client::TLSContext = nil,
+                   @tls_contexts = {} of String => HTTP::Client::TLSContext,
                    @max_pool_size  = 10,
                    @initial_pool_size = 1,
                    @connection_timeout = 1.second)
@@ -46,7 +39,6 @@ module Arachnid
     # throw an `IO::TimeoutError` if a request is made and a new client isn't fetched in time.
     def request(method, url : String | URI, headers = nil)
       uri = url.is_a?(URI) ? url : URI.parse(url)
-      headers = headers ? @request_headers.merge(headers) : @request_headers
       pool_for(url).use do |client|
         client.exec(method.to_s.upcase, uri.full_path, headers: headers)
       end
@@ -56,7 +48,7 @@ module Arachnid
     def pool_for(uri : URI)
       if host = uri.host
         session_pools[host] ||= ConnectionPool(HTTP::Client).new(capacity: @max_pool_size, initial: @initial_pool_size, timeout: @connection_timeout.total_seconds) do
-          @base_client.new(host.to_s, tls: @tls_context)
+          @base_client.new(host.to_s, tls: @tls_contexts[host.to_s]? || uri.scheme == "https")
         end
       else
         raise "Invalid URI" # TODO: Real error handling
