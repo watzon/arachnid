@@ -1,5 +1,7 @@
 # Arachnid
 
+### This project is no longer maintained. Please see [Mechanize](https://github.com/Kanezoh/mechanize.cr) for an alternative.
+
 Arachnid is a fast, soon to be multi-threading capable web crawler for Crystal. It recenty underwent a full rewrite for Crystal 0.35.1, so see the documentation below for updated usage instructions.
 
 ## Installation
